@@ -37,7 +37,6 @@ export default function Contact() {
             Resume
           </a>
         </div>
-        <p className="mt-4 font-mono text-xs text-muted">Calendar link placeholder: add your Calendly here.</p>
       </FadeIn>
 
       {/* Self-writing signature */}

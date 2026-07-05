@@ -4,7 +4,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import Hero from "@/components/Hero";
-import VideoPitch from "@/components/VideoPitch";
 import ProofTicker from "@/components/ProofTicker";
 import RecruiterMode from "@/components/RecruiterMode";
 import QuickScan from "@/components/QuickScan";
@@ -31,7 +30,6 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
       <Hero onRecruiter={() => setRecruiterOpen(true)} />
-      <VideoPitch />
       <ProofTicker />
       <QuickScan />
       <About />
