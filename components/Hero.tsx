@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useRef, useState } from "react";
 import { personal } from "@/data/personal";
@@ -129,11 +130,15 @@ export default function Hero({ onRecruiter }: { onRecruiter: () => void }) {
           className="relative mx-auto w-64 h-80 md:w-72 md:h-96"
         >
           <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-beige to-sand rotate-3" />
-          <div className="absolute inset-0 rounded-[2rem] bg-white border border-sand shadow-lift flex flex-col items-center justify-center gap-3">
-            <div className="w-24 h-24 rounded-full bg-beige border border-sand flex items-center justify-center font-display text-3xl text-clay">
-              NA
-            </div>
-            <p className="font-mono text-xs text-muted px-6 text-center">Headshot placeholder. Drop your photo in /public.</p>
+          <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-sand shadow-lift relative">
+            <Image
+              src="/img.jpg"
+              alt={`Portrait of ${personal.name}`}
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 256px, 288px"
+            />
           </div>
         </motion.div>
       </div>
