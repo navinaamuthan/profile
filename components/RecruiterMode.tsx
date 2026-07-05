@@ -10,6 +10,7 @@ const rows: [string, string][] = [
   ["Location", "Dublin, Ireland"],
   ["Experience", "PM leading 8 to 10 people. Fortune 500 delivery at E2open. ML research at Samsung and IIT Madras."],
   ["Headline proof", "Top 0.5% of 50,000+ at Google Cloud Agentic AI Hackathon. CSAT 3.2 to 4.6 on a 10,000+ user product."],
+  ["See my thinking", "Live PRD for a FinTech product I designed: atlas-prd.vercel.app"],
   ["Industries", "FinTech, finance, BigTech, enterprise SaaS"],
 ];
 

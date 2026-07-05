@@ -6,6 +6,7 @@ export type Article = {
   readingTime: string;
   featured?: boolean;
   status: "published" | "coming-soon";
+  link?: string;
 };
 
 export const articles: Article[] = [
@@ -18,6 +19,16 @@ export const articles: Article[] = [
     readingTime: "12 min read",
     featured: true,
     status: "published",
+  },
+  {
+    title: "Atlas: A PRD for a Cross-Border Credit Passport",
+    summary:
+      "A full senior-PM product spec, live as a website. Corridor-based market sizing, competitive positioning against Nova Credit, EU AI Act high-risk compliance mapped to shipped features, north-star metrics with guardrails, and an honest risk register. FinTech thinking, end to end.",
+    tags: ["FinTech", "EU AI Act", "Product Strategy", "Case Study"],
+    date: "Jul 2026",
+    readingTime: "14 min read",
+    status: "published",
+    link: "https://atlas-prd.vercel.app/",
   },
   {
     title: "MSc Dissertation: An AI Ethics Framework and Tool for Early-Stage Research",
