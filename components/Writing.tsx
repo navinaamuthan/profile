@@ -40,7 +40,7 @@ export default function Writing() {
                   {a.date}
                   {a.readingTime ? ` · ${a.readingTime}` : ""}
                 </span>
-                {a.link && <span className="text-clay">Read the live site →</span>}
+                {a.link && <span className="text-clay">{a.linkLabel ?? "Read the live site →"}</span>}
               </p>
             </article>
           );
