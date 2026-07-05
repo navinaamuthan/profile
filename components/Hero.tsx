@@ -61,6 +61,12 @@ export default function Hero({ onRecruiter }: { onRecruiter: () => void }) {
                   i === 0 ? "bg-clay text-paper border-clay" : "bg-white/60 border-sand text-ink/70"
                 }`}
               >
+                {i === 0 && (
+                  <span className="relative mr-2 inline-flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-paper opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-paper" />
+                  </span>
+                )}
                 {b}
               </span>
             ))}

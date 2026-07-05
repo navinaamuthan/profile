@@ -1,6 +1,7 @@
 "use client";
 
 import { Section, FadeIn, Counter } from "./ui";
+import Spotlight from "./Spotlight";
 import { principles } from "@/data/thinking";
 
 export default function About() {
@@ -43,10 +44,10 @@ export default function About() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {principles.map((p, i) => (
           <FadeIn key={p.title} delay={i * 0.05}>
-            <div className="card p-6 h-full hover:shadow-lift hover:-translate-y-1 transition-all">
+            <Spotlight className="card p-6 h-full hover:shadow-lift hover:-translate-y-1 transition-all">
               <p className="font-display text-xl mb-2">{p.title}</p>
               <p className="text-sm text-muted leading-relaxed">{p.note}</p>
-            </div>
+            </Spotlight>
           </FadeIn>
         ))}
       </div>
