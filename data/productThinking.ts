@@ -14,4 +14,5 @@ export const researchTopics = [
   { title: "GDPR & Financial AI", note: "Where data protection meets models that move money." },
   { title: "Explainable AI", note: "If a model cannot explain itself, someone else has to. Usually me." },
   { title: "LLM Evaluation", note: "LLM-as-Judge pipelines, adversarial testing, evaluation as a product surface." },
+  { title: "Technology governance", note: "Risk and controls, audit-ready documentation, and access management, treated as product surfaces rather than paperwork." },
 ];

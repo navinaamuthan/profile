@@ -9,7 +9,7 @@ const items: [string, string][] = [
   ["Work authorization", personal.workAuth],
   ["Location", personal.location],
   ["Experience", "Product management, Fortune 500 delivery, ML research"],
-  ["Industries", "FinTech, finance, BigTech, enterprise SaaS"],
+  ["Industries", "FinTech, finance, BigTech, regulated environments"],
   ["Looking for", "Product Manager, Business Analyst, Data Analyst, or ML roles"],
 ];
 
