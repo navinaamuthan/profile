@@ -19,6 +19,7 @@ export const articles: Article[] = [
     readingTime: "12 min read",
     featured: true,
     status: "published",
+    link: "https://drive.google.com/file/d/1Ymd89PGe-Areki3kzH4hV_GVl7ilcRhs/view?usp=sharing",
   },
   {
     title: "Atlas: A PRD for a Cross-Border Credit Passport",
