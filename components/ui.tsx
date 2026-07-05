@@ -85,9 +85,15 @@ export function Counter({ to, suffix = "", label }: { to: number; suffix?: strin
   );
 }
 
-export function Tag({ children }: { children: React.ReactNode }) {
+export function Tag({ children, dark }: { children: React.ReactNode; dark?: boolean }) {
   return (
-    <span className="inline-block font-mono text-[11px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-beige text-ink/80 border border-sand">
+    <span
+      className={`inline-block font-mono text-[11px] uppercase tracking-wider px-2.5 py-1 rounded-full border ${
+        dark
+          ? "bg-paper/10 text-paper border-paper/25"
+          : "bg-beige text-ink/80 border-sand"
+      }`}
+    >
       {children}
     </span>
   );
