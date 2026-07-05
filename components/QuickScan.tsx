@@ -9,8 +9,8 @@ const items: [string, string][] = [
   ["Work authorization", personal.workAuth],
   ["Location", personal.location],
   ["Experience", "Product management, Fortune 500 delivery, ML research"],
-  ["Industries", "Supply chain, EdTech, AI governance, FinTech"],
-  ["Looking for", "Product Manager, Analyst, ML roles"],
+  ["Industries", "FinTech, finance, BigTech, enterprise SaaS"],
+  ["Looking for", "Product Manager, Business Analyst, Data Analyst, or ML roles"],
 ];
 
 export default function QuickScan() {

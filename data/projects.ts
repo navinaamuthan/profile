@@ -9,7 +9,7 @@ export type Project = {
   tech: string[];
   metrics: string[];
   lesson: string;
-  github?: string;
+  github: string;
 };
 
 export const projects: Project[] = [
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tech: ["Google Cloud", "Agentic AI", "MCP", "LLM-as-Judge", "Python"],
     metrics: ["Top 0.5% of 50,000+ teams", "Grand Finalist", "Real financial data from ~50 to 60 users"],
     lesson: "The fastest way to make AI trustworthy is to make it argue with itself in public.",
-    github: "https://github.com/navinaamuthan",
+    github: "https://github.com/navinaamuthan/ignitrix",
   },
   {
     name: "Omdena: Cost of Living Chatbot",
@@ -44,6 +44,7 @@ export const projects: Project[] = [
     tech: ["NLP", "Python", "Conversational AI"],
     metrics: ["Final push recognition for high contribution"],
     lesson: "Open source teaches you to write code and docs for strangers. So does good product work.",
+    github: "https://github.com/navinaamuthan/omdena-cost-of-living",
   },
   {
     name: "Omdena: Autism Prediction in Toddlers",
@@ -55,6 +56,7 @@ export const projects: Project[] = [
     tech: ["Python", "scikit-learn", "ML"],
     metrics: ["Recommendation received for high performance"],
     lesson: "In health ML, a false negative is not a metric. It is a missed child.",
+    github: "https://github.com/navinaamuthan/omdena-autism-prediction",
   },
   {
     name: "Traffic Detection Visual System",
@@ -66,5 +68,6 @@ export const projects: Project[] = [
     tech: ["Computer Vision", "ML", "Python"],
     metrics: ["Grand Finalist, Bosch Fit.Kovai Hackathon 2022"],
     lesson: "Real-world CV is 20% model, 80% dealing with the real world.",
+    github: "https://github.com/navinaamuthan/traffic-detection",
   },
 ];

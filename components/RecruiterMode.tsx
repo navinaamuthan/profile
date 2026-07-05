@@ -4,13 +4,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { personal } from "@/data/personal";
 
 const rows: [string, string][] = [
-  ["Looking for", "Product Manager, Analyst, or ML roles in Dublin"],
+  ["Looking for", "Product Manager, Business Analyst, Data Analyst, or ML roles"],
   ["Current status", "MSc Computer Science (Intelligent Systems), TCD, Distinction"],
   ["Work authorization", "Stamp 1G eligible. No sponsorship required."],
   ["Location", "Dublin, Ireland"],
   ["Experience", "PM leading 8 to 10 people. Fortune 500 delivery at E2open. ML research at Samsung and IIT Madras."],
   ["Headline proof", "Top 0.5% of 50,000+ at Google Cloud Agentic AI Hackathon. CSAT 3.2 to 4.6 on a 10,000+ user product."],
-  ["Industries", "Supply chain, EdTech, FinTech, AI governance"],
+  ["Industries", "FinTech, finance, BigTech, enterprise SaaS"],
 ];
 
 export default function RecruiterMode({ open, onClose }: { open: boolean; onClose: () => void }) {

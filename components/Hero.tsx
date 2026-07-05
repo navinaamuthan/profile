@@ -78,7 +78,7 @@ export default function Hero({ onRecruiter }: { onRecruiter: () => void }) {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-5xl md:text-7xl leading-[1.02] tracking-tight"
           >
-            I build AI products people{" "}
+            I turn data into products people{" "}
             <span className="text-clay italic">actually trust</span>.
           </motion.h1>
 
