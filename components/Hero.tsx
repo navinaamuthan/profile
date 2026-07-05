@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useRef, useState } from "react";
 import { personal } from "@/data/personal";
@@ -127,17 +126,14 @@ export default function Hero({ onRecruiter }: { onRecruiter: () => void }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           style={reduce ? undefined : { transform: `perspective(900px) rotateY(${tilt.x}deg) rotateX(${-tilt.y}deg)` }}
-          className="relative mx-auto w-64 h-80 md:w-72 md:h-96"
+          className="relative mx-auto w-64 h-80 md:w-72 md:h-96 shrink-0"
         >
-          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-beige to-sand rotate-3" />
-          <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-sand shadow-lift relative">
-            <Image
+          <div aria-hidden className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-beige to-sand rotate-3" />
+          <div className="absolute inset-0 z-10 rounded-[2rem] overflow-hidden border border-sand shadow-lift">
+            <img
               src="/img.jpg"
               alt={`Portrait of ${personal.name}`}
-              fill
-              priority
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 256px, 288px"
+              className="h-full w-full object-cover object-center"
             />
           </div>
         </motion.div>
