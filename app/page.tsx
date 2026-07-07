@@ -17,7 +17,6 @@ import Writing from "@/components/Writing";
 import Bookshelf from "@/components/Bookshelf";
 import Awards from "@/components/Awards";
 import Skills from "@/components/Skills";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -42,7 +41,6 @@ export default function Home() {
       <Bookshelf />
       <Awards />
       <Skills />
-      <Testimonials />
       <Contact />
       <Footer />
       <FloatingContact />
