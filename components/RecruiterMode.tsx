@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { personal } from "@/data/personal";
 
 const rows: [string, string][] = [
-  ["Looking for", "Product Manager, Business Analyst, Data Analyst, or ML roles"],
+  ["Looking for", "Business, Data or Technology Analyst roles. Also open to AI/ML and product roles."],
   ["Current status", "MSc Computer Science (Intelligent Systems), TCD, Distinction"],
   ["Work authorization", "Stamp 1G eligible. No sponsorship required."],
   ["Location", "Dublin, Ireland"],
-  ["Experience", "PM leading 8 to 10 people. Fortune 500 delivery at E2open. ML research at Samsung and IIT Madras."],
+  ["Experience", "Fortune 500 delivery and financial dashboards at E2open. PM leading 8 to 10 people. ML research at Samsung and IIT Madras."],
   ["Headline proof", "Top 0.5% of 50,000+ at Google Cloud Agentic AI Hackathon. CSAT 3.2 to 4.6 on a 10,000+ user product."],
   ["See my thinking", "Live PRD for a FinTech product I designed: atlas-prd.vercel.app"],
   ["Industries", "FinTech, finance, BigTech, regulated environments"],

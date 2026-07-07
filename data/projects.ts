@@ -34,11 +34,12 @@ export const projects: Project[] = [
     github: "https://github.com/navinaamuthan/ignitrix",
   },
   {
-    name: "Omdena: Cost of Living Chatbot",
+    name: "Omdena: Inflation-Coping Chatbot for Lublin",
     tag: "Open Source ML",
-    problem: "People hit hardest by inflation are the least likely to have access to financial guidance.",
+    problem:
+      "Residents of Lublin, Poland were being squeezed by rising inflation, and the people hit hardest are the least likely to have access to financial guidance.",
     solution:
-      "Open source conversational AI for people affected by high inflation and rising cost of living, built with a distributed volunteer team.",
+      "Open source conversational AI helping Lublin residents cope with increased inflation and cost of living. Built as an ML Engineer on a distributed global volunteer team.",
     architecture: "Conversational AI pipeline built collaboratively across a global contributor team.",
     decisions: ["Optimised for accessibility and plain language over feature breadth"],
     tech: ["NLP", "Python", "Conversational AI"],
@@ -50,7 +51,8 @@ export const projects: Project[] = [
     name: "Omdena: Autism Prediction in Toddlers",
     tag: "ML for Health",
     problem: "Early autism screening is inconsistent and access depends heavily on geography.",
-    solution: "ML models predicting autism likelihood in toddlers from screening data, as part of an open source team.",
+    solution:
+      "ML models predicting autism likelihood in toddlers from screening data, built as an ML Engineer on an open source team.",
     architecture: "Supervised ML pipeline with careful attention to class balance and screening bias.",
     decisions: ["Prioritised recall and interpretability over leaderboard accuracy"],
     tech: ["Python", "scikit-learn", "ML"],

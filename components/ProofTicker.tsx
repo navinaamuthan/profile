@@ -8,8 +8,10 @@ const rowA = [
 ];
 const rowB = [
   "TCD MSc, Distinction",
+  "Bloomberg BPuzzled Winner",
   "NLP model at 90%+ accuracy, Samsung R&D",
   "Led teams of 8 to 10",
+  "IEEE Women in Engineering Chair",
   "Stamp 1G, no sponsorship required",
   "SQL, Python, Tableau, and hard questions",
 ];

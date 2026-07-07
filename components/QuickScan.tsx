@@ -8,9 +8,9 @@ const items: [string, string][] = [
   ["Education", "TCD MSc + Anna University B.E. (9.2/10 CGPA)"],
   ["Work authorization", personal.workAuth],
   ["Location", personal.location],
-  ["Experience", "Product management, Fortune 500 delivery, ML research"],
+  ["Experience", "Fortune 500 delivery & financial dashboards, product management, ML research"],
   ["Industries", "FinTech, finance, BigTech, regulated environments"],
-  ["Looking for", "Product Manager, Business Analyst, Data Analyst, or ML roles"],
+  ["Looking for", "Business, Data or Technology Analyst roles. Also open to AI/ML and product roles."],
 ];
 
 export default function QuickScan() {
