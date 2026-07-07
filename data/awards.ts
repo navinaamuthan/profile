@@ -7,4 +7,6 @@ export const awards: Award[] = [
   { title: "Deloitte Case Competition", scale: "University-wide", outcome: "Finalist", year: "2025", story: "Consulting-grade analysis with a technologist's toolkit." },
   { title: "ICT Youthtalk", scale: "Regional", outcome: "Winner", year: "2022", story: "Early proof that explaining technology clearly is a superpower." },
   { title: "FemTechConf", scale: "International community", outcome: "Women in Tech Ambassador", year: "2023", story: "Representation is a roadmap item too." },
+  { title: "IEEE Women in Engineering", scale: "University chapter", outcome: "Chair", year: "Undergrad", story: "Ran the chapter, the events, and the argument that engineering rooms should look like the world they build for." },
+  { title: "Trinity College Dublin", scale: "Postgraduate community", outcome: "Class Representative & STEM Convenor", year: "2025 to 2026", story: "Elected twice over: once to speak for the class, once to get more people into STEM." },
 ];

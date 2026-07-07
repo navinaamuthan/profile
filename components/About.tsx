@@ -26,6 +26,11 @@ export default function About() {
               With teams, I am the person who prototypes during the debate, brings the user quote nobody wants
               to hear, and keeps the metric on the wall. Warm by default, direct when it matters.
             </p>
+            <p>
+              I also do not sit still: IEEE Women in Engineering Chair in undergrad, Class Representative and
+              STEM Convenor at Trinity, open source ML with Omdena, and a standing habit of case competitions,
+              including winning Bloomberg&apos;s BPuzzled and reaching the Deloitte Case Competition final.
+            </p>
           </div>
         </FadeIn>
         <FadeIn delay={0.15}>
