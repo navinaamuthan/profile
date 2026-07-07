@@ -33,6 +33,7 @@ export const experience: Experience[] = [
     actions: [
       "Delivered 3 to 4 Fortune 500 client implementations end to end",
       "Systematised configuration work that used to be bespoke every time",
+      "Built financial dashboards that turned implementation data into client-facing answers",
     ],
     impact: "Cut setup time by roughly 70% across implementations.",
     tech: ["Supply chain systems", "Data mapping", "Client delivery"],

@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import ProofTicker from "@/components/ProofTicker";
 import RecruiterMode from "@/components/RecruiterMode";
 import QuickScan from "@/components/QuickScan";
+import VideoPitch from "@/components/VideoPitch";
 import About from "@/components/About";
 import BrainMap from "@/components/BrainMap";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
@@ -32,6 +33,7 @@ export default function Home() {
       <Hero onRecruiter={() => setRecruiterOpen(true)} />
       <ProofTicker />
       <QuickScan />
+      <VideoPitch />
       <About />
       <BrainMap />
       <ExperienceTimeline />
