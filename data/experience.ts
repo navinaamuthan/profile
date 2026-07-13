@@ -36,7 +36,7 @@ export const experience: Experience[] = [
       "Built financial dashboards that turned implementation data into client-facing answers",
     ],
     impact: "Cut setup time by roughly 70% across implementations.",
-    tech: ["Supply chain systems", "Data mapping", "Client delivery"],
+    tech: ["Python", "SQL", "Power BI", "Data pipelines", "Client delivery"],
     lesson: "Enterprise customers do not buy software. They buy time to value.",
   },
   {
@@ -51,7 +51,7 @@ export const experience: Experience[] = [
       "Instrumented feedback loops so every release answered a question",
     ],
     impact: "CSAT moved from 3.2 to 4.6 while the user base grew past 10,000.",
-    tech: ["Product discovery", "ML features", "Analytics", "Roadmapping"],
+    tech: ["Python", "TensorFlow", "NLP", "Computer Vision", "ML pipelines", "Analytics"],
     lesson: "Users forgive missing features. They do not forgive ignored feedback.",
   },
   {
@@ -61,7 +61,7 @@ export const experience: Experience[] = [
     challenge: "Making sense of psychological and behavioral data at human scale.",
     actions: ["Analysed behavioral data from 500+ participants", "Turned messy human signals into defensible findings"],
     impact: "Research-grade analysis on a 500+ participant dataset.",
-    tech: ["Statistical analysis", "Behavioral data", "Research methods"],
+    tech: ["Python", "Statistical analysis", "Data mining", "Research methods"],
     lesson: "Human data is noisy because humans are. Design for it.",
   },
   {
@@ -71,7 +71,7 @@ export const experience: Experience[] = [
     challenge: "An NLP problem where accuracy below the bar meant the feature simply would not ship.",
     actions: ["Built and iterated an NLP model against a hard accuracy target"],
     impact: "Delivered an NLP model with 90%+ accuracy.",
-    tech: ["NLP", "Python", "Model evaluation"],
+    tech: ["Python", "NLP", "TensorFlow", "Model evaluation", "ML pipelines"],
     lesson: "A model is a product decision wearing a lab coat.",
   },
 ];

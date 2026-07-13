@@ -1,17 +1,17 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Business & Data Analyst. AI/ML Practitioner. Product Thinker.",
-  tagline: "I turn messy data into decisions people actually trust.",
+  roleLine: "Data Scientist. AI/ML Engineer. Responsible AI Practitioner.",
+  tagline: "I build AI systems people actually trust.",
   positioning:
-    "I sit where data, AI and product overlap: an analyst who writes her own SQL and builds the dashboard herself, has shipped ML features to 10,000+ users, and turns messy data into decisions executives actually make.",
+    "I sit where data science, AI engineering and product overlap: I have shipped ML features to 10,000+ users in production, built a dual-agent adversarial AI system that placed top 0.5% of 50,000+ in Google's Cloud Agentic AI Hackathon, and my TCD dissertation is an AI-ethics compliance framework for the EU AI Act. Python, SQL, TensorFlow, PyTorch, LLMs, and cloud-native pipelines.",
   location: "Dublin, Ireland",
   email: "navinagamuthan@gmail.com",
   phone: "+353 087 177 4563",
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
-  availability: "Open to Business, Data & Technology Analyst roles",
-  workAuth: "Stamp 1G eligible. No sponsorship required.",
+  availability: "Open to Data Scientist, AI/ML & Analyst roles",
+  workAuth: "Valid visa. No sponsorship required.",
   videoUrl: "", // set to "/pitch.mp4" once the 60-second pitch video is recorded
 
   education: [
