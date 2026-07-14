@@ -3,6 +3,7 @@ export type Project = {
   flagship?: boolean;
   featured?: boolean;
   tag: string;
+  summary: string;
   problem: string;
   solution: string;
   architecture?: string;
@@ -19,6 +20,8 @@ export const projects: Project[] = [
     name: "IGNITRIX",
     flagship: true,
     tag: "Agentic AI",
+    summary:
+      "Two AI agents argue over your finances so you never have to trust just one.",
     problem:
       "Financial guidance from a single LLM is confident, fluent, and sometimes wrong. Users cannot tell which.",
     solution:
@@ -39,6 +42,8 @@ export const projects: Project[] = [
     name: "AuditAI",
     featured: true,
     tag: "Responsible AI",
+    summary:
+      "An automated EU AI Act audit pipeline that catches bias and writes the compliance report itself.",
     problem:
       "The EU AI Act makes fairness audits mandatory for high-risk AI, but most compliance work is manual, expensive, and inconsistent.",
     solution:
@@ -58,6 +63,8 @@ export const projects: Project[] = [
   {
     name: "EIREVAL",
     tag: "LLM Evaluation",
+    summary:
+      "Benchmarking how well LLMs actually understand Irish and EU financial regulation.",
     problem:
       "Nobody knew how well LLMs actually understand Irish and EU financial regulation, and guessing is not a compliance strategy.",
     solution:
@@ -70,6 +77,8 @@ export const projects: Project[] = [
   {
     name: "Atlas PRD",
     tag: "Product Thinking",
+    summary:
+      "A full product spec for a cross-border credit passport, shipped as a live site.",
     problem:
       "Migrants lose their credit history at every border. A cash credit passport needs a spec before it needs code.",
     solution:
@@ -83,6 +92,8 @@ export const projects: Project[] = [
   {
     name: "PPD Talkbot (Chatner)",
     tag: "AI for Health",
+    summary:
+      "A fine-tuned voice-enabled chatbot helping new mothers recognise postpartum depression early.",
     problem:
       "Postpartum depression is underdiagnosed, and new mothers often will not raise symptoms with anyone before they escalate.",
     solution:
@@ -95,6 +106,8 @@ export const projects: Project[] = [
   {
     name: "Omdena: Smart Farming, Kano State",
     tag: "Open Source ML",
+    summary:
+      "AI for sustainable smallholder farming in Kano State, Nigeria.",
     problem:
       "Smallholder farmers in Kano State, Nigeria needed AI-backed guidance for sustainable agriculture, with none of the data luxuries of a Silicon Valley problem.",
     solution:
@@ -107,6 +120,8 @@ export const projects: Project[] = [
   {
     name: "Few-Shot Learning with LLMs",
     tag: "LLM Education",
+    summary:
+      "An interactive Streamlit playground for learning prompt engineering hands-on.",
     problem:
       "Few-shot learning is the cheapest capability upgrade in modern LLMs, and most people still learn it by trial and error.",
     solution:
@@ -119,6 +134,8 @@ export const projects: Project[] = [
   {
     name: "SIH 2022: AUV Speed Measurement",
     tag: "Hackathon",
+    summary:
+      "Speed measurement for autonomous underwater vehicles, where GPS does not exist.",
     problem:
       "Autonomous underwater vehicles need reliable speed measurement in conditions where GPS does not exist and sensors disagree.",
     solution:
@@ -131,6 +148,8 @@ export const projects: Project[] = [
   {
     name: "Nova",
     tag: "Personal Build",
+    summary:
+      "A zero-cost, zero-server manifestation companion that runs entirely in the browser.",
     problem:
       "Manifestation apps charge subscriptions for what a browser can do for free.",
     solution:
@@ -142,6 +161,8 @@ export const projects: Project[] = [
   {
     name: "Traffic Detection Visual System",
     tag: "Computer Vision",
+    summary:
+      "Traffic detection built for chaotic Indian roads, not benchmark datasets.",
     problem:
       "Urban traffic monitoring in Indian cities needed detection that works in chaotic, dense conditions.",
     solution:
@@ -154,6 +175,8 @@ export const projects: Project[] = [
   {
     name: "Omdena: Autism Prediction in Toddlers",
     tag: "AI for Health",
+    summary:
+      "ML screening models where a false negative is a missed child.",
     problem: "Early autism screening is inconsistent and access depends heavily on geography.",
     solution:
       "ML models predicting autism likelihood in toddlers from screening data, built as an ML Engineer on an open source team.",
@@ -164,6 +187,8 @@ export const projects: Project[] = [
   {
     name: "Omdena: Inflation-Coping Chatbot for Lublin",
     tag: "Open Source ML",
+    summary:
+      "Conversational AI helping Lublin residents cope with the cost of living.",
     problem:
       "Residents of Lublin, Poland were being squeezed by rising inflation, and the people hit hardest are the least likely to have access to financial guidance.",
     solution:

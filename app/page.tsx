@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main>
       <ScrollProgress />
-      <Navbar />
+      <Navbar onRecruiter={() => setRecruiterOpen(true)} />
       <Hero onRecruiter={() => setRecruiterOpen(true)} />
       <ProofTicker />
       <QuickScan />

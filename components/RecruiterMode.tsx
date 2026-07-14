@@ -6,7 +6,7 @@ import { personal } from "@/data/personal";
 const rows: [string, string][] = [
   ["Looking for", "Business, Data or Technology Analyst roles. Also open to AI/ML and product roles."],
   ["Current status", "MSc Computer Science (Intelligent Systems), TCD, Distinction"],
-  ["Work authorization", "Stamp 1G eligible. No sponsorship required."],
+  ["Work authorization", "Valid visa. No sponsorship required."],
   ["Location", "Dublin, Ireland"],
   ["Experience", "Fortune 500 delivery and financial dashboards at E2open. PM leading 8 to 10 people. ML research at Samsung and IIT Madras."],
   ["Headline proof", "Top 0.5% of 50,000+ at Google Cloud Agentic AI Hackathon. CSAT 3.2 to 4.6 on a 10,000+ user product."],

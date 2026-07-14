@@ -14,7 +14,7 @@ const links = [
   ["Contact", "#contact"],
 ] as const;
 
-export default function Navbar() {
+export default function Navbar({ onRecruiter }: { onRecruiter?: () => void }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
   const [scrolled, setScrolled] = useState(false);
@@ -63,6 +63,14 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          {onRecruiter && (
+            <button
+              onClick={onRecruiter}
+              className="text-sm font-medium text-clay hover:text-clayDeep transition-colors focus-ring"
+            >
+              Quick gist
+            </button>
+          )}
           <a
             href={personal.github}
             target="_blank"
