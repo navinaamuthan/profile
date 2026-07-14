@@ -2,7 +2,7 @@
 
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
-import { FadeIn } from "./ui";
+import { FadeIn, GitHubIcon, LinkedInIcon } from "./ui";
 import { personal } from "@/data/personal";
 
 export default function Contact() {
@@ -27,10 +27,12 @@ export default function Contact() {
           <a href={`mailto:${personal.email}`} className="px-7 py-3.5 rounded-full bg-clay text-paper font-medium shadow-lift hover:bg-clayDeep transition-colors focus-ring">
             {personal.email}
           </a>
-          <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="px-7 py-3.5 rounded-full border border-ink/20 hover:border-clay hover:text-clay transition-colors focus-ring">
+          <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-ink/20 hover:border-clay hover:text-clay transition-colors focus-ring">
+            <LinkedInIcon size={16} />
             LinkedIn
           </a>
-          <a href={personal.github} target="_blank" rel="noopener noreferrer" className="px-7 py-3.5 rounded-full border border-ink/20 hover:border-clay hover:text-clay transition-colors focus-ring">
+          <a href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-ink/20 hover:border-clay hover:text-clay transition-colors focus-ring">
+            <GitHubIcon size={16} />
             GitHub
           </a>
           <a href={personal.resumeUrl} className="px-7 py-3.5 rounded-full border border-ink/20 hover:border-clay hover:text-clay transition-colors focus-ring">

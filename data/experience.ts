@@ -12,7 +12,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "LEWAP / Ps-Eau (UNESCO)",
-    role: "Project Lead (pro bono)",
+    role: "Project Lead",
     period: "Apr 2026 to Jun 2026",
     challenge:
       "A UNESCO water access program needed corporate strategy and stakeholder alignment across partners with very different incentives.",

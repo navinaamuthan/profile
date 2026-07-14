@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { personal } from "@/data/personal";
+import { GitHubIcon, LinkedInIcon } from "./ui";
 
 const links = [
   ["About", "#about"],
+  ["Skills", "#skills"],
   ["Experience", "#experience"],
   ["Projects", "#projects"],
-  ["Skills", "#skills"],
-  ["Writing", "#writing"],
   ["Awards", "#awards"],
   ["Contact", "#contact"],
 ] as const;
@@ -63,6 +63,26 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          <a
+            href={personal.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+            className="text-ink/60 hover:text-clay transition-colors focus-ring"
+          >
+            <GitHubIcon />
+          </a>
+          <a
+            href={personal.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            className="text-ink/60 hover:text-clay transition-colors focus-ring"
+          >
+            <LinkedInIcon />
+          </a>
           <a
             href={personal.resumeUrl}
             className="text-sm font-medium px-4 py-2 rounded-full bg-ink text-paper hover:bg-clay transition-colors focus-ring"

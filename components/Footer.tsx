@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { personal } from "@/data/personal";
+import { GitHubIcon, LinkedInIcon } from "./ui";
 
 const KONAMI = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
 
@@ -41,8 +42,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {personal.name}. Built with care in Dublin.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="text-paper/70 hover:text-clay transition-colors focus-ring">LinkedIn</a>
-            <a href={personal.github} target="_blank" rel="noopener noreferrer" className="text-paper/70 hover:text-clay transition-colors focus-ring">GitHub</a>
+            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="text-paper/70 hover:text-clay transition-colors focus-ring"><LinkedInIcon /></a>
+            <a href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="text-paper/70 hover:text-clay transition-colors focus-ring"><GitHubIcon /></a>
             <a href={`mailto:${personal.email}`} className="text-paper/70 hover:text-clay transition-colors focus-ring">Email</a>
             <a href="#top" className="px-4 py-2 rounded-full border border-paper/25 hover:border-clay hover:text-clay transition-colors focus-ring">
               Back to top

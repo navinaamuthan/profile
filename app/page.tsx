@@ -7,8 +7,9 @@ import Hero from "@/components/Hero";
 import ProofTicker from "@/components/ProofTicker";
 import RecruiterMode from "@/components/RecruiterMode";
 import QuickScan from "@/components/QuickScan";
-import VideoPitch from "@/components/VideoPitch";
+// import VideoPitch from "@/components/VideoPitch"; // no video pitch on the site
 import About from "@/components/About";
+import HowIThink from "@/components/HowIThink";
 import BrainMap from "@/components/BrainMap";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import Changelog from "@/components/Changelog";
@@ -32,17 +33,23 @@ export default function Home() {
       <Hero onRecruiter={() => setRecruiterOpen(true)} />
       <ProofTicker />
       <QuickScan />
-      <VideoPitch />
+      {/* <VideoPitch /> */}
+
+      {/* What a hirer needs first: who, what she can do, where she has done it */}
       <About />
-      <BrainMap />
+      <Skills />
       <ExperienceTimeline />
-      <Changelog />
+      <HowIThink />
       <Projects />
+      <Awards />
+
+      {/* Depth and personality below the fold */}
       <ThinkingResearch />
       <Writing />
+      <Changelog />
+      <BrainMap />
       <Bookshelf />
-      <Awards />
-      <Skills />
+
       <Contact />
       <Footer />
       <FloatingContact />
