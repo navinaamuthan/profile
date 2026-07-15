@@ -42,12 +42,4 @@ export const articles: Article[] = [
     readingTime: "Dissertation",
     status: "published",
   },
-  {
-    title: "More writing coming soon",
-    summary: "Product teardowns, AI governance notes, and lessons from building agentic systems.",
-    tags: ["Coming soon"],
-    date: "Soon",
-    readingTime: "",
-    status: "coming-soon",
-  },
 ];

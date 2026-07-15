@@ -47,7 +47,7 @@ export const projects: Project[] = [
     problem:
       "The EU AI Act makes fairness audits mandatory for high-risk AI, but most compliance work is manual, expensive, and inconsistent.",
     solution:
-      "An automated audit pipeline: it trains a credit risk model, quantifies bias across protected attributes (statistical parity, disparate impact, equalized odds), classifies the system under the EU AI Act, and has an LLM write the consulting-grade audit report. Interactive dashboard included.",
+      "It trains a credit risk model, quantifies bias across protected attributes (statistical parity, disparate impact, equalized odds), classifies the system under the EU AI Act, and has an LLM write the audit report so every sentence traces back to a number. Interactive dashboard included.",
     architecture:
       "Python audit pipeline (data quality, model training, fairness engine, risk classifier), Groq-hosted Llama 3.3 70B for the narrative report, Next.js dashboard with recharts.",
     decisions: [
@@ -76,13 +76,14 @@ export const projects: Project[] = [
   },
   {
     name: "Atlas PRD",
+    featured: true,
     tag: "Product Thinking",
     summary:
       "A full product spec for a cross-border credit passport, shipped as a live site.",
     problem:
       "Migrants lose their credit history at every border. A cash credit passport needs a spec before it needs code.",
     solution:
-      "A full product requirements document for a cross-border credit passport, shipped as a hosted site: problem framing, user segments, success metrics, and rollout strategy.",
+      "Problem framing, user segments, success metrics and a rollout strategy for a product that would let migrants carry their credit history across borders. Published as a site rather than a PDF so people actually read it.",
     tech: ["Product Strategy", "PRD", "Fintech"],
     metrics: ["Live hosted spec"],
     lesson: "A PRD is a product. Ship it like one.",

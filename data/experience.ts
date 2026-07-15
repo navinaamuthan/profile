@@ -2,11 +2,7 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
-  challenge: string;
-  actions: string[];
-  impact: string;
-  tech: string[];
-  lesson: string;
+  summary: string;
 };
 
 export const experience: Experience[] = [
@@ -14,64 +10,35 @@ export const experience: Experience[] = [
     company: "LEWAP / Ps-Eau (UNESCO)",
     role: "Project Lead",
     period: "Apr 2026 to Jun 2026",
-    challenge:
-      "A UNESCO water access program needed corporate strategy and stakeholder alignment across partners with very different incentives.",
-    actions: [
-      "Led a team of 6 across strategy, analysis and stakeholder frameworks",
-      "Built analysis and decision frameworks the program could reuse after handover",
-    ],
-    impact: "Delivered a strategy and stakeholder framework adopted by the program team.",
-    tech: ["Strategy", "Stakeholder analysis", "Frameworks"],
-    lesson: "Alignment is a deliverable. Treat it like one.",
+    summary:
+      "Led a team of 6 building strategy and stakeholder frameworks for a UNESCO water access programme. The programme team kept using them after handover.",
   },
   {
     company: "E2open",
     role: "Associate Implementation Engineer",
     period: "Sep 2024 to Jun 2025",
-    challenge:
-      "Fortune 500 supply chain implementations spanning 120+ countries, where setup time was the bottleneck between contract and value.",
-    actions: [
-      "Delivered 3 to 4 Fortune 500 client implementations end to end",
-      "Systematised configuration work that used to be bespoke every time",
-      "Built financial dashboards that turned implementation data into client-facing answers",
-    ],
-    impact: "Cut setup time by roughly 70% across implementations.",
-    tech: ["Python", "SQL", "Power BI", "Data pipelines", "Client delivery"],
-    lesson: "Enterprise customers do not buy software. They buy time to value.",
+    summary:
+      "Delivered Fortune 500 supply chain implementations across 120+ countries. Systematised configuration work that used to be bespoke every time, cutting setup time by roughly 70%, and built the financial dashboards clients saw.",
   },
   {
-    company: "iQube - R&D Hub",
+    company: "iQube, R&D Hub",
     role: "Product Manager",
     period: "Sep 2021 to Dec 2023",
-    challenge:
-      "A 10,000+ user platform with middling satisfaction and a backlog of AI ideas nobody had validated.",
-    actions: [
-      "Led a team of 8 to 10 engineers and designers",
-      "Shipped 4 to 5 AI/ML features from discovery to launch",
-      "Instrumented feedback loops so every release answered a question",
-    ],
-    impact: "CSAT moved from 3.2 to 4.6 while the user base grew past 10,000.",
-    tech: ["Python", "TensorFlow", "NLP", "Computer Vision", "ML pipelines", "Analytics"],
-    lesson: "Users forgive missing features. They do not forgive ignored feedback.",
+    summary:
+      "Led 8 to 10 engineers and designers on a platform that grew past 10,000 users. Shipped 4 to 5 AI/ML features from discovery to launch; CSAT moved from 3.2 to 4.6.",
   },
   {
     company: "IIT Madras",
     role: "Research Intern",
     period: "Jun 2023 to Aug 2023",
-    challenge: "Making sense of psychological and behavioral data at human scale.",
-    actions: ["Analysed behavioral data from 500+ participants", "Turned messy human signals into defensible findings"],
-    impact: "Research-grade analysis on a 500+ participant dataset.",
-    tech: ["Python", "Statistical analysis", "Data mining", "Research methods"],
-    lesson: "Human data is noisy because humans are. Design for it.",
+    summary:
+      "Analysed behavioural data from 500+ study participants and turned noisy human signals into research-grade findings.",
   },
   {
     company: "Samsung R&D (PRISM)",
     role: "ML Research Intern",
     period: "Nov 2022 to Mar 2023",
-    challenge: "An NLP problem where accuracy below the bar meant the feature simply would not ship.",
-    actions: ["Built and iterated an NLP model against a hard accuracy target"],
-    impact: "Delivered an NLP model with 90%+ accuracy.",
-    tech: ["Python", "NLP", "TensorFlow", "Model evaluation", "ML pipelines"],
-    lesson: "A model is a product decision wearing a lab coat.",
+    summary:
+      "Built an NLP model against a hard accuracy bar, because below it the feature would not ship. Delivered at 90%+.",
   },
 ];
