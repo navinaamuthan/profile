@@ -1,4 +1,5 @@
 import { personal } from "@/data/personal";
+import CopyEmail from "@/components/CopyEmail";
 
 export default function Contact() {
   return (
@@ -9,8 +10,8 @@ export default function Contact() {
         Email is the fastest way to reach me:{" "}
         <a href={`mailto:${personal.email}`} className="link">
           {personal.email}
-        </a>
-        . My CV is{" "}
+        </a>{" "}
+        <CopyEmail email={personal.email} />. My CV is{" "}
         <a href={personal.resumeUrl} className="link">
           here as a PDF
         </a>

@@ -20,18 +20,32 @@ export default function Intro() {
       <img
         src="/img.jpg"
         alt={personal.name}
-        className="h-20 w-20 rounded-full border border-line object-cover"
+        className="rise h-20 w-20 rounded-full border border-line object-cover"
       />
-      <h1 className="mt-7 font-display text-[2rem] leading-tight sm:text-4xl">{personal.name}</h1>
-      <p className="mt-2 text-[15px] text-muted">{personal.roleLine}</p>
+      <h1
+        className="rise mt-7 font-display text-[2rem] leading-tight sm:text-4xl"
+        style={{ animationDelay: "80ms" }}
+      >
+        {personal.name}
+      </h1>
+      <p className="rise mt-2 text-[15px] text-muted" style={{ animationDelay: "140ms" }}>
+        {personal.roleLine}
+      </p>
 
-      <div className="mt-8 space-y-4 font-display text-lg leading-relaxed text-ink/90">
+      <div
+        className="rise mt-8 space-y-4 font-display text-lg leading-relaxed text-ink/90"
+        style={{ animationDelay: "220ms" }}
+      >
         {personal.intro.map((p) => (
           <p key={p.slice(0, 24)}>{p}</p>
         ))}
       </div>
 
-      <nav className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[15px]" aria-label="Contact links">
+      <nav
+        className="rise mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[15px]"
+        style={{ animationDelay: "300ms" }}
+        aria-label="Contact links"
+      >
         {links.map((l) => (
           <a
             key={l.label}
@@ -44,7 +58,10 @@ export default function Intro() {
         ))}
       </nav>
 
-      <dl className="mt-10 space-y-3 border-t border-line pt-8">
+      <dl
+        className="rise mt-10 space-y-3 border-t border-line pt-8"
+        style={{ animationDelay: "380ms" }}
+      >
         {facts.map(([k, v]) => (
           <div key={k} className="grid gap-0.5 sm:grid-cols-[10rem_1fr] sm:gap-6">
             <dt className="text-[13px] text-muted sm:pt-[2px]">{k}</dt>

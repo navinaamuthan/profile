@@ -11,8 +11,8 @@ export const personal = {
   phone: "+353 087 177 4563",
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
-  workAuth: "Stamp 1G. No sponsorship required.",
-  openTo: "Business, data and technology analyst roles, plus AI/ML and product.",
+  workAuth: "Valid visa. No sponsorship required.",
+  openTo: "Data Scientist and AI/ML roles, plus data analyst and product.",
 
   education: [
     {

@@ -18,8 +18,21 @@ body {
   color: #fbfaf7;
 }
 
+/* Underline draws in from the left on hover */
 .link {
-  @apply underline decoration-line underline-offset-[3px] transition-colors hover:text-accent hover:decoration-accent;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor),
+    linear-gradient(#dcd8ce, #dcd8ce);
+  background-size: 0% 1px, 100% 1px;
+  background-position: 0 100%, 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s;
+}
+
+.link:hover {
+  color: #a34e27;
+  background-size: 100% 1px, 100% 1px;
 }
 
 .section {
@@ -35,8 +48,61 @@ body {
   outline-offset: 2px;
 }
 
+/* Page load: intro settles in, one element after the next */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Scroll: sections ease up as they enter the viewport */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* External project links get a small arrow that nudges on hover */
+.arrow-link .arrow {
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 0.8em;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.arrow-link:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .rise,
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .link,
+  .arrow-link .arrow {
+    transition: none;
   }
 }

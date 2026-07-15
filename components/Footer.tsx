@@ -1,4 +1,5 @@
 import { personal } from "@/data/personal";
+import LocalTime from "@/components/LocalTime";
 
 export default function Footer() {
   return (
@@ -7,7 +8,9 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {personal.name}
         </p>
-        <p>Set in Newsreader and Inter · Dublin, Ireland</p>
+        <p>
+          Set in Newsreader and Inter · <LocalTime />
+        </p>
       </div>
     </footer>
   );

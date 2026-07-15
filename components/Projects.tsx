@@ -15,11 +15,14 @@ export default function Projects() {
               {p.live || p.github ? (
                 <a
                   href={p.live ?? p.github}
-                  className="link"
+                  className="link arrow-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {p.name}
+                  <span className="arrow" aria-hidden>
+                    &#8599;
+                  </span>
                 </a>
               ) : (
                 p.name

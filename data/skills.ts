@@ -5,7 +5,7 @@ export const skillGroups: { group: string; items: string[] }[] = [
   },
   {
     group: "AI & machine learning",
-    items: ["TensorFlow", "PyTorch", "NLP", "Computer vision", "LLMs (OpenAI, Anthropic, Llama, Gemini)", "Agentic systems (MCP, LangGraph)", "Model evaluation", "Responsible AI & EU AI Act"],
+    items: ["TensorFlow", "PyTorch", "scikit-learn", "NLP", "Computer vision", "LLMs (OpenAI, Anthropic, Llama, Gemini)", "Fine-tuning & prompt engineering", "Agentic systems (MCP, LangGraph)", "ML pipeline design", "Model evaluation", "Responsible AI & EU AI Act"],
   },
   {
     group: "Cloud & tooling",
