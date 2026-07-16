@@ -3,6 +3,7 @@
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { skillCategories, evidence, type SkillCategory } from "@/data/skills";
+import { projects } from "@/data/projects";
 import { projectId } from "@/lib/slug";
 
 const icons: Record<SkillCategory["icon"], React.ReactNode> = {
@@ -34,6 +35,12 @@ const icons: Record<SkillCategory["icon"], React.ReactNode> = {
 
 export default function Skills() {
   const jumpToProjects = (names: string[]) => {
+    const first = projects.find((p) => p.name === names[0]);
+    // Projects that live in the Finder open their Quick Look directly.
+    if (first && !first.flagship && !first.featured) {
+      window.dispatchEvent(new CustomEvent("finder-open", { detail: first.name }));
+      return;
+    }
     const targets = names
       .map((n) => document.getElementById(projectId(n)))
       .filter((el): el is HTMLElement => el !== null);
@@ -54,14 +61,15 @@ export default function Skills() {
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((c, i) => (
           <Reveal key={c.id} delay={Math.min((i % 2) * 80, 160)}>
-            <div className="tile h-full">
+            <div className="tile h-full" style={{ ["--tile-color" as string]: c.color }}>
               <div className="flex items-center gap-3">
                 <span className="tile-icon">
                   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
                     {icons[c.icon]}
                   </svg>
                 </span>
-                <h3 className="font-display text-lg">{c.label}</h3>
+                <h3 className="font-display text-lg font-bold">{c.label}</h3>
+                <span className="tile-count">{c.skills.length}</span>
               </div>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {c.skills.map((s) =>
@@ -89,31 +97,39 @@ export default function Skills() {
 
       <Reveal>
         <p className="mt-5 text-[13px] text-muted">
-          Chips with a dot are backed by a project on this page. Click one to jump to it.
+          Chips with a coloured dot are backed by work on this page. Click one to open the project.
         </p>
       </Reveal>
 
       {/* Evidence chart */}
       <Reveal delay={80}>
-        <div className="mt-14 border-t border-line pt-10">
-          <h3 className="font-display text-lg">Evidence by domain</h3>
-          <p className="mt-1 text-[13px] text-muted">
-            Projects and roles on this page that back each domain. Counted, not self-rated.
-          </p>
-          <div className="mt-6 space-y-4">
+        <div className="mt-14 rounded-xl border border-line bg-white p-6 sm:p-8">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 className="font-display text-lg font-bold">Evidence by domain</h3>
+            <p className="text-[12px] text-muted">
+              projects + roles on this page per domain · counted, not self-rated
+            </p>
+          </div>
+          <div className="mt-6 space-y-5">
             {evidence.map((e, i) => (
-              <div key={e.domain} className="grid items-center gap-2 sm:grid-cols-[11rem_1fr_2rem] sm:gap-4">
-                <p className="text-[13px] text-ink/85">{e.domain}</p>
-                <div className="h-2.5 rounded-full bg-line/60" title={e.note}>
-                  <div
-                    className="bar h-full rounded-full bg-accent"
-                    style={{
-                      width: `${(e.count / max) * 100}%`,
-                      ["--bar-delay" as string]: `${i * 90}ms`,
-                    }}
-                  />
+              <div key={e.domain}>
+                <div className="grid items-center gap-3 sm:grid-cols-[11rem_1fr_2rem] sm:gap-4">
+                  <p className="text-[13px] font-medium text-ink/85">{e.domain}</p>
+                  <div className="bar-track" title={e.note}>
+                    <div
+                      className="bar"
+                      style={{
+                        width: `${(e.count / max) * 100}%`,
+                        ["--bar-color" as string]: e.color,
+                        ["--bar-delay" as string]: `${i * 90}ms`,
+                      }}
+                    />
+                  </div>
+                  <span className="bar-count hidden sm:flex" style={{ ["--bar-color" as string]: e.color }}>
+                    {e.count}
+                  </span>
                 </div>
-                <p className="hidden text-[13px] tabular-nums text-muted sm:block">{e.count}</p>
+                <p className="mt-1 text-[11px] text-muted/80 sm:pl-[12.5rem]">{e.note}</p>
               </div>
             ))}
           </div>

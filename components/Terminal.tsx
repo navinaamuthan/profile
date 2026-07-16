@@ -40,7 +40,7 @@ export function TerminalWindow({
   };
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl border border-ink/60 bg-[#14171A] shadow-2xl">
+    <div className="flex flex-col overflow-hidden rounded-xl border border-navy/60 bg-navy shadow-2xl">
       <div className="flex items-center gap-4 border-b border-paper/10 px-4 py-2.5">
         {onClose ? (
           <button onClick={onClose} aria-label="Close" className="group flex gap-1.5">
@@ -144,7 +144,7 @@ export default function Terminal() {
     <div className="lg:hidden">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="term-launcher fixed bottom-5 right-5 z-[60] flex items-center gap-2.5 rounded-full bg-ink px-5 py-3 text-[13px] text-paper shadow-lg"
+        className="term-launcher fixed bottom-5 right-5 z-[60] flex items-center gap-2.5 rounded-full bg-navy px-5 py-3 text-[13px] text-paper shadow-lg"
         aria-expanded={open}
       >
         <span className="font-mono text-accentSoft">&gt;_</span>

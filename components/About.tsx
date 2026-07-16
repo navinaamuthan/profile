@@ -2,10 +2,10 @@ import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { personal } from "@/data/personal";
 
-const stats: [string, string][] = [
-  ["Top 0.5%", "of 50,000+ teams, Google Cloud Agentic AI Hackathon"],
-  ["10,000+", "users on the platform I led as a product manager"],
-  ["120+", "countries covered by Fortune 500 implementations I delivered"],
+const stats: [string, string, string][] = [
+  ["Top 0.5%", "of 50,000+ teams, Google Cloud Agentic AI Hackathon", "#7048E8"],
+  ["10,000+", "users on the platform I led as a product manager", "#0F8B8D"],
+  ["120+", "countries covered by Fortune 500 implementations I delivered", "#E4573D"],
 ];
 
 const facts: [string, string][] = [
@@ -51,9 +51,11 @@ export default function About() {
 
       <Reveal delay={80}>
         <div className="mt-16 grid gap-10 border-t border-line pt-10 sm:grid-cols-3">
-          {stats.map(([n, label]) => (
+          {stats.map(([n, label, color]) => (
             <div key={n}>
-              <p className="font-display text-4xl tracking-tight sm:text-5xl">{n}</p>
+              <p className="font-display text-4xl font-bold tracking-tight sm:text-5xl" style={{ color }}>
+                {n}
+              </p>
               <p className="mt-2 max-w-[16rem] text-[13px] leading-relaxed text-muted">{label}</p>
             </div>
           ))}

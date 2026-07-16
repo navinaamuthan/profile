@@ -7,15 +7,33 @@ html {
 }
 
 body {
-  background-color: #fafbfc;
-  color: #14171a;
+  background-color: #f7f9fc;
+  background-image: radial-gradient(rgba(16, 24, 40, 0.055) 1px, transparent 1px);
+  background-size: 26px 26px;
+  color: #101828;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #2650d8;
-  color: #fafbfc;
+  background: #1e3a8a;
+  color: #f7f9fc;
+}
+
+/* Thin mounted frame around the whole site */
+.site-frame {
+  position: fixed;
+  inset: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.14);
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 80;
+}
+
+@media (max-width: 767px) {
+  .site-frame {
+    display: none;
+  }
 }
 
 /* ---------- links ---------- */
@@ -23,7 +41,7 @@ body {
 .link {
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor),
-    linear-gradient(#d4dae1, #d4dae1);
+    linear-gradient(#ccd6e4, #ccd6e4);
   background-size: 0% 1px, 100% 1px;
   background-position: 0 100%, 0 100%;
   background-repeat: no-repeat;
@@ -32,14 +50,14 @@ body {
 }
 
 .link:hover {
-  color: #2650d8;
+  color: #1e3a8a;
   background-size: 100% 1px, 100% 1px;
 }
 
 .link-dark {
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor),
-    linear-gradient(rgba(250, 251, 252, 0.25), rgba(250, 251, 252, 0.25));
+    linear-gradient(rgba(247, 249, 252, 0.25), rgba(247, 249, 252, 0.25));
   background-size: 0% 1px, 100% 1px;
   background-position: 0 100%, 0 100%;
   background-repeat: no-repeat;
@@ -149,26 +167,96 @@ section[id] {
   transform: translateY(16px);
 }
 
+/* ---------- featured project cards (layered) ---------- */
+
+.project-card {
+  position: relative;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  background: var(--card-color, #1e3a8a);
+  opacity: 0.1;
+  transform: rotate(-1deg) translate(-8px, 8px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover::before {
+  transform: rotate(-1.6deg) translate(-11px, 11px);
+}
+
+.project-card-front {
+  position: relative;
+  border-radius: 1.25rem;
+  border: 1px solid #dee4ee;
+  background: #fff;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+}
+
+.project-card:hover .project-card-front {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px -30px rgba(16, 24, 40, 0.4);
+}
+
+.project-num {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.25rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--card-color, #1e3a8a);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.tag-pill {
+  @apply inline-block rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em];
+  color: var(--card-color, #1e3a8a);
+  background: color-mix(in srgb, var(--card-color, #1e3a8a) 10%, transparent);
+}
+
+.metric-pill {
+  @apply inline-block rounded-full px-3 py-1 text-[12.5px] font-medium;
+  color: #fff;
+  background: var(--card-color, #1e3a8a);
+}
+
 /* ---------- skills ---------- */
 
 .tile {
-  @apply rounded-xl border border-line bg-white/70 p-5;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s,
-    border-color 0.35s;
+  @apply rounded-xl border border-line bg-white p-5;
+  border-top: 3px solid var(--tile-color, #1e3a8a);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s;
 }
 
 .tile:hover {
   transform: translateY(-3px);
-  border-color: rgba(38, 80, 216, 0.35);
-  box-shadow: 0 16px 40px -24px rgba(20, 23, 26, 0.35);
+  box-shadow: 0 18px 44px -26px rgba(16, 24, 40, 0.45);
 }
 
 .tile-icon {
-  @apply flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent;
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: var(--tile-color, #1e3a8a);
+  background: color-mix(in srgb, var(--tile-color, #1e3a8a) 12%, transparent);
+}
+
+.tile-count {
+  @apply ml-auto rounded-full px-2 py-0.5 text-[11px] tabular-nums;
+  color: var(--tile-color, #1e3a8a);
+  background: color-mix(in srgb, var(--tile-color, #1e3a8a) 10%, transparent);
 }
 
 .chip {
-  @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white/70 px-3 py-1 text-[12.5px] text-ink/80;
+  @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1 text-[12.5px] text-ink/80;
 }
 
 button.chip {
@@ -182,11 +270,34 @@ button.chip:hover {
 }
 
 .chip-dot {
-  @apply inline-block h-1.5 w-1.5 rounded-full bg-accent;
+  @apply inline-block h-1.5 w-1.5 rounded-full;
+  background: var(--tile-color, #1e3a8a);
 }
 
-/* Evidence bars scale in when their section reveals */
+/* ---------- evidence chart ---------- */
+
+.bar-track {
+  position: relative;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background: rgba(16, 24, 40, 0.06);
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent calc(100% / 7 - 1px),
+    rgba(16, 24, 40, 0.1) calc(100% / 7 - 1px),
+    rgba(16, 24, 40, 0.1) calc(100% / 7)
+  );
+}
+
 .bar {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--bar-color, #1e3a8a) 65%, #fff 0%),
+    var(--bar-color, #1e3a8a)
+  );
   transform-origin: left center;
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--bar-delay, 0ms);
@@ -196,15 +307,20 @@ button.chip:hover {
   transform: scaleX(0);
 }
 
+.bar-count {
+  @apply flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-medium tabular-nums text-white;
+  background: var(--bar-color, #1e3a8a);
+}
+
 /* Project cards flash when a skill chip points at them */
 @keyframes project-pulse {
   0% {
-    background-color: rgba(38, 80, 216, 0.08);
-    box-shadow: 0 0 0 1px rgba(38, 80, 216, 0.45);
+    background-color: rgba(30, 58, 138, 0.08);
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.5);
   }
   100% {
     background-color: transparent;
-    box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 2px transparent;
   }
 }
 
@@ -226,7 +342,8 @@ button.chip:hover {
   top: 6px;
   bottom: 6px;
   width: 1px;
-  background: #e4e8ec;
+  background: linear-gradient(#1e3a8a, #0f8b8d, #e4573d);
+  opacity: 0.35;
 }
 
 .timeline-node {
@@ -236,20 +353,21 @@ button.chip:hover {
   height: 11px;
   width: 11px;
   border-radius: 9999px;
-  border: 2px solid #2650d8;
-  background: #fafbfc;
-  transition: background-color 0.25s;
+  border: 2px solid #1e3a8a;
+  background: #f7f9fc;
+  transition: background-color 0.25s, transform 0.25s;
 }
 
 .timeline-item:hover .timeline-node {
-  background: #2650d8;
+  background: #1e3a8a;
+  transform: scale(1.25);
 }
 
 /* ---------- desktop objects (finder + terminal) ---------- */
 
 .window {
-  @apply rounded-xl border border-line bg-white/70;
-  box-shadow: 0 18px 50px -24px rgba(20, 23, 26, 0.25);
+  @apply rounded-xl border border-line bg-white;
+  box-shadow: 0 18px 50px -24px rgba(16, 24, 40, 0.3);
 }
 
 .file-tile {
@@ -257,7 +375,7 @@ button.chip:hover {
 }
 
 .file-tile:hover {
-  background-color: rgba(38, 80, 216, 0.06);
+  background-color: rgba(30, 58, 138, 0.06);
   transform: translateY(-2px);
 }
 
@@ -314,7 +432,7 @@ button.chip:hover {
 
 .term-launcher:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px -14px rgba(20, 23, 26, 0.55);
+  box-shadow: 0 14px 34px -14px rgba(11, 27, 63, 0.6);
 }
 
 .term-window {
@@ -347,7 +465,7 @@ button.chip:hover {
 }
 
 .index-row:hover .index-num {
-  color: #2650d8;
+  color: #1e3a8a;
 }
 
 .index-num {
@@ -369,13 +487,13 @@ button.chip:hover {
 /* ---------- nav ---------- */
 
 .nav-solid {
-  background: rgba(250, 251, 252, 0.85);
+  background: rgba(247, 249, 252, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e4e8ec;
+  border-bottom: 1px solid #dee4ee;
 }
 
 .nav-link.is-current {
-  color: #14171a;
+  color: #101828;
   background-size: 100% 1px, 100% 1px;
 }
 
@@ -389,7 +507,7 @@ button.chip:hover {
   display: block;
   height: 100%;
   width: 1px;
-  background: #14171a;
+  background: #101828;
   animation: cue 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
@@ -404,7 +522,7 @@ button.chip:hover {
 }
 
 :focus-visible {
-  outline: 2px solid #2650d8;
+  outline: 2px solid #1e3a8a;
   outline-offset: 2px;
 }
 
@@ -446,7 +564,10 @@ button.chip:hover {
   button.chip,
   .file-tile,
   .term-launcher,
-  .bar {
+  .bar,
+  .project-card::before,
+  .project-card-front,
+  .timeline-node {
     transition: none;
   }
 }

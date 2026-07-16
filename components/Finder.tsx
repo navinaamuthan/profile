@@ -14,17 +14,28 @@ const groups: { label: string; tags: string[] | null }[] = [
   { label: "Open source", tags: ["Open Source ML"] },
 ];
 
-function FolderIcon({ accent }: { accent?: boolean }) {
+const tagColors: Record<string, string> = {
+  "Agentic AI": "#7048E8",
+  "LLM Evaluation": "#7048E8",
+  "LLM Education": "#7048E8",
+  "Responsible AI": "#2F9E44",
+  "AI for Health": "#0F8B8D",
+  "Product Thinking": "#E4573D",
+  "Personal Build": "#E4573D",
+  Hackathon: "#D97706",
+  "Computer Vision": "#D97706",
+  "Open Source ML": "#0B7285",
+};
+
+function FolderIcon({ color }: { color: string }) {
   return (
     <svg viewBox="0 0 64 48" className="h-11 w-14" aria-hidden>
       <path
         d="M4 10c0-2.2 1.8-4 4-4h16l6 6h26c2.2 0 4 1.8 4 4v24c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V10z"
-        fill={accent ? "#A34E27" : "#D8C9B4"}
+        fill={color}
+        opacity="0.75"
       />
-      <path
-        d="M4 18h56v22c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V18z"
-        fill={accent ? "#B96038" : "#E7DAC6"}
-      />
+      <path d="M4 18h56v22c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V18z" fill={color} />
     </svg>
   );
 }
@@ -51,6 +62,19 @@ export default function Finder() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [openProject]);
+
+  // Skill chips elsewhere on the page open a project's Quick Look directly.
+  useEffect(() => {
+    const onOpen = (e: Event) => {
+      const name = (e as CustomEvent<string>).detail;
+      const p = projects.find((x) => x.name === name);
+      if (!p) return;
+      setGroup(groups[0]);
+      setOpenProject(p);
+    };
+    window.addEventListener("finder-open", onOpen);
+    return () => window.removeEventListener("finder-open", onOpen);
+  }, []);
 
   return (
     <>
@@ -92,16 +116,32 @@ export default function Finder() {
                 className="file-tile flex flex-col items-center gap-2 rounded-lg p-4 text-center"
                 title={p.summary}
               >
-                <FolderIcon accent={p.flagship || p.featured} />
-                <span className="text-[13px] leading-snug">{p.name}</span>
-                <span className="text-[11px] text-muted">{p.tag}</span>
+                <FolderIcon color={tagColors[p.tag] ?? "#1E3A8A"} />
+                <span className="text-[13px] font-medium leading-snug">
+                  {(p.flagship || p.featured) && (
+                    <span className="mr-1 text-accent" aria-hidden>
+                      ★
+                    </span>
+                  )}
+                  {p.name}
+                </span>
+                <span
+                  className="rounded-full px-2 py-0.5 text-[10px] font-medium"
+                  style={{
+                    color: tagColors[p.tag] ?? "#1E3A8A",
+                    backgroundColor: `${tagColors[p.tag] ?? "#1E3A8A"}1A`,
+                  }}
+                >
+                  {p.tag}
+                </span>
               </button>
             ))}
           </div>
         </div>
 
         <div className="border-t border-line bg-white/40 px-4 py-2 text-[11px] text-muted">
-          Click a folder for the full story. Terracotta folders are the flagship work.
+          Folder colours follow the category. ★ marks the flagship work. Click any folder for the
+          full story.
         </div>
       </div>
 

@@ -5,7 +5,7 @@ import { personal } from "@/data/personal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-ink text-paper">
+    <section id="contact" className="bg-navy text-paper">
       <div className="mx-auto max-w-6xl px-6 pb-10 pt-20 sm:pt-28 md:px-10">
         <Reveal>
           <p className="section-label text-paper/50">

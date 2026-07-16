@@ -85,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${grotesk.variable} ${inter.variable}`}>
       <body className="font-body">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <div aria-hidden className="site-frame" />
         {children}
       </body>
     </html>

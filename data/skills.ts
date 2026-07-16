@@ -8,6 +8,7 @@ export type SkillCategory = {
   id: string;
   label: string;
   icon: "sparkle" | "branch" | "chart" | "database" | "grid" | "cloud" | "kanban" | "shield";
+  color: string;
   skills: Skill[];
 };
 
@@ -16,6 +17,7 @@ export const skillCategories: SkillCategory[] = [
     id: "genai",
     label: "GenAI & agents",
     icon: "sparkle",
+    color: "#7048E8",
     skills: [
       { name: "LLM APIs (OpenAI, Anthropic)", projects: ["AuditAI", "PPD Talkbot (Chatner)"] },
       { name: "Agentic AI (MCP, LangGraph, Google ADK)", projects: ["IGNITRIX"] },
@@ -31,6 +33,7 @@ export const skillCategories: SkillCategory[] = [
     id: "ml",
     label: "Machine learning",
     icon: "branch",
+    color: "#0F8B8D",
     skills: [
       { name: "TensorFlow" },
       { name: "PyTorch" },
@@ -46,6 +49,7 @@ export const skillCategories: SkillCategory[] = [
     id: "data-science",
     label: "Data science & analysis",
     icon: "chart",
+    color: "#1E3A8A",
     skills: [
       { name: "Python (Pandas, NumPy)" },
       { name: "SQL (advanced)" },
@@ -60,6 +64,7 @@ export const skillCategories: SkillCategory[] = [
     id: "data-eng",
     label: "Data engineering",
     icon: "database",
+    color: "#3B5BDB",
     skills: [
       { name: "PostgreSQL" },
       { name: "Data pipelines & ETL" },
@@ -75,6 +80,7 @@ export const skillCategories: SkillCategory[] = [
     id: "bi",
     label: "BI & visualisation",
     icon: "grid",
+    color: "#D97706",
     skills: [
       { name: "Tableau" },
       { name: "Power BI" },
@@ -87,6 +93,7 @@ export const skillCategories: SkillCategory[] = [
     id: "engineering",
     label: "Cloud & engineering",
     icon: "cloud",
+    color: "#0B7285",
     skills: [
       { name: "AWS" },
       { name: "Google Cloud & Vertex AI", projects: ["IGNITRIX"] },
@@ -103,6 +110,7 @@ export const skillCategories: SkillCategory[] = [
     id: "product",
     label: "Product & business",
     icon: "kanban",
+    color: "#E4573D",
     skills: [
       { name: "Requirements gathering" },
       { name: "PRD authoring", projects: ["Atlas PRD"] },
@@ -117,6 +125,7 @@ export const skillCategories: SkillCategory[] = [
     id: "governance",
     label: "AI governance",
     icon: "shield",
+    color: "#2F9E44",
     skills: [
       { name: "EU AI Act", projects: ["AuditAI", "EIREVAL"] },
       { name: "GDPR (certified)" },
@@ -131,10 +140,10 @@ export const skillCategories: SkillCategory[] = [
  * Counted from the projects and roles on this site, so the chart stays honest:
  * each count is the number of projects or jobs above that evidence the domain.
  */
-export const evidence: { domain: string; count: number; note: string }[] = [
-  { domain: "Machine learning", count: 7, note: "PPD Talkbot, autism screening, traffic CV, Samsung NLP, iQube features, smart farming, Lublin chatbot" },
-  { domain: "Product & delivery", count: 5, note: "iQube PM, Atlas PRD, E2open delivery, LEWAP, Nova" },
-  { domain: "GenAI & agents", count: 4, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI" },
-  { domain: "Data & analytics", count: 4, note: "E2open dashboards, IIT Madras research, iQube analytics, AuditAI metrics" },
-  { domain: "AI governance", count: 3, note: "MSc dissertation, AuditAI, EIREVAL" },
+export const evidence: { domain: string; count: number; note: string; color: string }[] = [
+  { domain: "Machine learning", color: "#0F8B8D", count: 7, note: "PPD Talkbot, autism screening, traffic CV, Samsung NLP, iQube features, smart farming, Lublin chatbot" },
+  { domain: "Product & delivery", color: "#E4573D", count: 5, note: "iQube PM, Atlas PRD, E2open delivery, LEWAP, Nova" },
+  { domain: "GenAI & agents", color: "#7048E8", count: 4, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI" },
+  { domain: "Data & analytics", color: "#1E3A8A", count: 4, note: "E2open dashboards, IIT Madras research, iQube analytics, AuditAI metrics" },
+  { domain: "AI governance", color: "#2F9E44", count: 3, note: "MSc dissertation, AuditAI, EIREVAL" },
 ];
