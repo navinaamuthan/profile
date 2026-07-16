@@ -1,17 +1,16 @@
 import LocalTime from "@/components/LocalTime";
-import Cycle from "@/components/Cycle";
-import { personal } from "@/data/personal";
+import { TerminalWindow } from "@/components/Terminal";
 
-const nameLines: { text: string; italic?: boolean }[] = [
+const nameLines: { text: string; accent?: boolean }[] = [
   { text: "Navina" },
-  { text: "Ganapathy", italic: true },
+  { text: "Ganapathy", accent: true },
   { text: "Amuthan" },
 ];
 
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh flex-col px-6 md:px-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-16 pt-28 sm:pb-20">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-14 pt-28 sm:pb-16">
         <div
           className="rise mb-10 flex flex-wrap items-baseline justify-between gap-3 text-[13px] text-muted"
           style={{ animationDelay: "900ms" }}
@@ -25,43 +24,38 @@ export default function Hero() {
           </p>
         </div>
 
-        <h1 className="font-display text-[clamp(3.2rem,11.5vw,9rem)] leading-[0.98] tracking-[-0.02em]">
-          {nameLines.map((l, i) => (
-            <span key={l.text} className="mask">
-              <span style={{ animationDelay: `${i * 110}ms` }}>
-                {l.italic ? <em className="pr-2 text-accent">{l.text}</em> : l.text}
-              </span>
-            </span>
-          ))}
-        </h1>
+        <div className="grid items-end gap-10 lg:grid-cols-[1fr_25rem] lg:gap-14">
+          <div>
+            <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-medium leading-[0.98] tracking-[-0.03em]">
+              {nameLines.map((l, i) => (
+                <span key={l.text} className="mask">
+                  <span
+                    className={l.accent ? "text-accent" : undefined}
+                    style={{ animationDelay: `${i * 110}ms` }}
+                  >
+                    {l.text}
+                  </span>
+                </span>
+              ))}
+            </h1>
 
-        <div
-          aria-hidden
-          className="draw-line mt-10 h-px w-full bg-line"
-          style={{ animationDelay: "500ms" }}
-        />
+            <div
+              aria-hidden
+              className="draw-line mt-8 h-px w-full bg-line"
+              style={{ animationDelay: "500ms" }}
+            />
 
-        <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end">
-          <p
-            className="rise max-w-md text-[15px] leading-relaxed text-muted"
-            style={{ animationDelay: "700ms" }}
-          >
-            Data scientist and AI/ML engineer in Dublin. MSc Computer Science at Trinity College
-            Dublin, with distinction. Previously product management and Fortune 500 delivery; these
-            days, AI systems you can{" "}
-            <em className="font-display text-ink">
-              <Cycle words={["check up on", "audit", "argue with"]} />
-            </em>
-            .
-          </p>
-          <div
-            className="rise hidden items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-muted sm:flex"
-            style={{ animationDelay: "1100ms" }}
-          >
-            Scroll
-            <span className="scroll-cue h-10" aria-hidden>
-              <span />
-            </span>
+            <p
+              className="rise mt-7 max-w-md text-[15px] leading-relaxed text-muted"
+              style={{ animationDelay: "700ms" }}
+            >
+              Data scientist and AI/ML engineer in Dublin. MSc Computer Science at Trinity College
+              Dublin, with distinction. Previously product management and Fortune 500 delivery.
+            </p>
+          </div>
+
+          <div className="rise hidden lg:block" style={{ animationDelay: "800ms" }}>
+            <TerminalWindow bodyHeight="h-64" />
           </div>
         </div>
       </div>

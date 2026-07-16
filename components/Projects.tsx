@@ -58,11 +58,11 @@ export default function Projects() {
 
       <Reveal>
         <h3 className="mt-20 border-t border-line pt-8 font-display text-lg text-muted">
-          The whole drive
+          Project archive
         </h3>
         <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">
-          All {projects.length} projects, filed the way they would be on my desk. Open a folder for
-          the story, the skills it proves, and the links.
+          All {projects.length} projects. Open a folder for the story, the skills it used, and the
+          links.
         </p>
       </Reveal>
       <Reveal delay={100}>

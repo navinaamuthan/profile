@@ -9,6 +9,7 @@ const items = [
   { label: "Work", href: "#work", id: "work" },
   { label: "Skills", href: "#skills", id: "skills" },
   { label: "Writing", href: "#writing", id: "writing" },
+  { label: "Recognition", href: "#recognition", id: "recognition" },
   { label: "Contact", href: "#contact", id: "contact" },
 ];
 

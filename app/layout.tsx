@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Newsreader, Inter } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { personal } from "@/data/personal";
 
-const newsreader = Newsreader({
+const grotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-newsreader",
-  style: ["normal", "italic"],
+  variable: "--font-grotesk",
   display: "swap",
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -83,7 +82,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${inter.variable}`}>
+    <html lang="en" className={`${grotesk.variable} ${inter.variable}`}>
       <body className="font-body">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}

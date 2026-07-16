@@ -5,14 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#FBFAF7",
-        ink: "#23211C",
-        muted: "#6F6A60",
-        line: "#E7E3DA",
-        accent: "#A34E27",
+        paper: "#FAFBFC",
+        ink: "#14171A",
+        muted: "#5D6673",
+        line: "#E4E8EC",
+        accent: "#2650D8",
+        accentSoft: "#7C97F2",
       },
       fontFamily: {
-        display: ["var(--font-newsreader)", "Georgia", "serif"],
+        display: ["var(--font-grotesk)", "system-ui", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },

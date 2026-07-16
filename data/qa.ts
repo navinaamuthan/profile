@@ -79,8 +79,8 @@ const entries: Entry[] = [
   {
     keywords: ["skills", "stack", "tools", "technologies", "tech", "python", "sql", "tableau", "know"],
     answer: {
-      text: "Five buckets: data science (SQL, Python, R, statistics, A/B testing), ML & AI (TensorFlow, PyTorch, NLP, computer vision, LLMs, agentic systems, fairness auditing), engineering & cloud (GCP, AWS, Azure, Docker, Spark), BI (Tableau, Power BI), and product & delivery. The Capabilities section lists all of them, and chips with a dot jump to the project that proves the skill.",
-      links: [{ label: "Capabilities section", href: "#skills" }],
+      text: "Eight groups: GenAI & agents (LLM APIs, RAG, MCP, LangGraph), machine learning (TensorFlow, PyTorch, XGBoost, NLP, CV), data science (Python, SQL, R, A/B testing), data engineering (PostgreSQL, ETL, Spark), BI (Tableau, Power BI), cloud & engineering (AWS, GCP, TypeScript), product & business, and AI governance (EU AI Act, GDPR certified). The Skills section lists every one, and chips with a dot jump to the project that proves the skill.",
+      links: [{ label: "Skills section", href: "#skills" }],
     },
   },
   {
@@ -167,8 +167,8 @@ const commands: Record<string, NaviAnswer> = {
     links: [{ label: "Selected work", href: "#work" }],
   },
   skills: {
-    text: "All of them are in the Capabilities section, split into data science, ML & AI, engineering, BI, and product.",
-    links: [{ label: "Capabilities", href: "#skills" }],
+    text: "All of them are in the Skills section, split into GenAI & agents, machine learning, data science, data engineering, BI, cloud & engineering, product, and governance.",
+    links: [{ label: "Skills", href: "#skills" }],
   },
   whoami: {
     text: "A guest on Navina's site. If you are hiring in Dublin, you are exactly where you should be.",

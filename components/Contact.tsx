@@ -14,7 +14,7 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="mt-8 font-display text-[clamp(2.6rem,7vw,5.5rem)] leading-[1.02] tracking-tight">
-            Say hello<em className="text-accent">.</em>
+            Say hello<span className="text-accent">.</span>
           </h2>
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/70">
             If you are hiring for data, analytics or AI work in Dublin, I would like to hear about
@@ -52,7 +52,7 @@ export default function Contact() {
             © {new Date().getFullYear()} {personal.name}
           </p>
           <p>
-            Set in Newsreader and Inter · <LocalTime />
+            Set in Space Grotesk and Inter · <LocalTime />
           </p>
           <a href="#top" className="link-dark">
             Back to top ↑
