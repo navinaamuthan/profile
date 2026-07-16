@@ -16,6 +16,9 @@ export default function Experience() {
                     {e.role} <span className="text-muted">· {e.company}</span>
                   </h3>
                   <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">{e.summary}</p>
+                  <p className="mt-3 text-[12px] uppercase tracking-[0.08em] text-muted/80">
+                    {e.tools.join(" · ")}
+                  </p>
                 </div>
               </div>
             </Reveal>

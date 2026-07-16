@@ -179,6 +179,77 @@ body {
   transform: translateY(16px);
 }
 
+/* Anchored sections stop short of the fixed nav */
+section[id] {
+  scroll-margin-top: 76px;
+}
+
+/* ---------- skills ---------- */
+
+.tab {
+  @apply rounded-full border border-line px-4 py-1.5 text-[13px] text-muted;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+}
+
+.tab:hover {
+  @apply border-ink/40 text-ink;
+}
+
+.tab.is-active {
+  @apply border-ink bg-ink text-paper;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white/40 px-3.5 py-1.5 text-[13px] text-ink/80;
+  animation: rise 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+button.chip {
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s;
+}
+
+button.chip:hover {
+  @apply border-accent text-accent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px -8px rgba(163, 78, 39, 0.5);
+}
+
+.chip-dot {
+  @apply inline-block h-1.5 w-1.5 rounded-full bg-accent;
+}
+
+/* Project cards flash warm when a skill chip points at them */
+@keyframes project-pulse {
+  0% {
+    background-color: rgba(163, 78, 39, 0.1);
+    box-shadow: 0 0 0 1px rgba(163, 78, 39, 0.45);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px transparent;
+  }
+}
+
+.is-highlighted {
+  animation: project-pulse 2.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  border-radius: 0.75rem;
+}
+
+/* ---------- cycling word (hero) ---------- */
+
+.cycle {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.cycle-inner {
+  display: inline-block;
+  animation: mask-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* ---------- rows ---------- */
 
 /* Index rows shift right and warm up on hover */
@@ -218,6 +289,12 @@ body {
   border-bottom: 1px solid #e7e3da;
 }
 
+/* Scrollspy: the section you are reading stays marked in the nav */
+.nav-link.is-current {
+  color: #23211c;
+  background-size: 100% 1px, 100% 1px;
+}
+
 /* ---------- reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -235,8 +312,15 @@ body {
     transition: none;
   }
   .breathe,
-  .scroll-cue > span {
+  .scroll-cue > span,
+  .chip,
+  .cycle-inner,
+  .is-highlighted {
     animation: none;
+  }
+  .tab,
+  button.chip {
+    transition: none;
   }
   .link,
   .link-dark,

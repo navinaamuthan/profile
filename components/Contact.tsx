@@ -54,6 +54,9 @@ export default function Contact() {
           <p>
             Set in Newsreader and Inter · <LocalTime />
           </p>
+          <a href="#top" className="link-dark">
+            Back to top ↑
+          </a>
         </footer>
       </div>
     </section>

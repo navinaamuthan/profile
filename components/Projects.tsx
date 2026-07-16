@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/data/projects";
+import { projectId } from "@/lib/slug";
 
 export default function Projects() {
   const featured = projects.filter((p) => p.flagship || p.featured);
@@ -11,7 +12,10 @@ export default function Projects() {
       <div className="space-y-16">
         {featured.map((p, i) => (
           <Reveal key={p.name}>
-            <article className="grid gap-6 md:grid-cols-[auto_1fr] md:gap-10">
+            <article
+              id={projectId(p.name)}
+              className="grid scroll-mt-28 gap-6 p-2 md:grid-cols-[auto_1fr] md:gap-10"
+            >
               <p className="font-display text-lg text-line md:pt-2 md:text-2xl" aria-hidden>
                 {String(i + 1).padStart(2, "0")}
               </p>
@@ -61,7 +65,10 @@ export default function Projects() {
         {rest.map((p, i) => (
           <li key={p.name} className={i === 0 ? "" : "border-t border-line"}>
             <Reveal delay={Math.min(i * 40, 160)}>
-              <div className="index-row grid gap-1 py-5 sm:grid-cols-[minmax(11rem,14rem)_1fr] sm:gap-8">
+              <div
+                id={projectId(p.name)}
+                className="index-row grid scroll-mt-28 gap-1 px-2 py-5 sm:grid-cols-[minmax(11rem,14rem)_1fr] sm:gap-8"
+              >
                 <p className="text-[15px]">
                   {p.github || p.live ? (
                     <a

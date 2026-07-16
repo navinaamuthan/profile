@@ -1,4 +1,5 @@
 import LocalTime from "@/components/LocalTime";
+import Cycle from "@/components/Cycle";
 import { personal } from "@/data/personal";
 
 const nameLines: { text: string; italic?: boolean }[] = [
@@ -47,7 +48,11 @@ export default function Hero() {
           >
             Data scientist and AI/ML engineer in Dublin. MSc Computer Science at Trinity College
             Dublin, with distinction. Previously product management and Fortune 500 delivery; these
-            days, AI systems you can check up on.
+            days, AI systems you can{" "}
+            <em className="font-display text-ink">
+              <Cycle words={["check up on", "audit", "argue with"]} />
+            </em>
+            .
           </p>
           <div
             className="rise hidden items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-muted sm:flex"
