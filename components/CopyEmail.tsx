@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-export default function CopyEmail({ email }: { email: string }) {
+export default function CopyEmail({ email, dark = false }: { email: string; dark?: boolean }) {
   const [copied, setCopied] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>();
 
@@ -20,7 +20,7 @@ export default function CopyEmail({ email }: { email: string }) {
   return (
     <button
       onClick={copy}
-      className="link cursor-pointer text-[13px] text-muted"
+      className={`${dark ? "link-dark text-paper/50" : "link text-muted"} cursor-pointer text-[13px]`}
       aria-live="polite"
     >
       {copied ? "copied" : "copy address"}

@@ -1,17 +1,22 @@
+import Section from "@/components/Section";
+import Reveal from "@/components/Reveal";
 import { skillGroups } from "@/data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="section">
-      <h2 className="section-heading">Skills</h2>
-      <dl className="mt-7 space-y-4">
-        {skillGroups.map((g) => (
-          <div key={g.group} className="grid gap-0.5 sm:grid-cols-[10rem_1fr] sm:gap-6">
-            <dt className="text-[13px] text-muted sm:pt-[2px]">{g.group}</dt>
-            <dd className="text-[15px] leading-relaxed">{g.items.join(", ")}</dd>
+    <Section id="skills" index="04" label="Capabilities">
+      <dl>
+        {skillGroups.map((g, i) => (
+          <div key={g.group} className={i === 0 ? "" : "border-t border-line"}>
+            <Reveal delay={Math.min(i * 60, 180)}>
+              <div className="grid gap-2 py-7 sm:grid-cols-[minmax(11rem,14rem)_1fr] sm:gap-8">
+                <dt className="font-display text-lg">{g.group}</dt>
+                <dd className="text-[15px] leading-loose text-muted">{g.items.join("  ·  ")}</dd>
+              </div>
+            </Reveal>
           </div>
         ))}
       </dl>
-    </section>
+    </Section>
   );
 }
