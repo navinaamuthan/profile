@@ -20,7 +20,15 @@ All content lives in `/data`. Components never need touching for content changes
 - `data/projects.ts` - projects; `flagship`/`featured` control which get the full write-up
 - `data/writing.ts` - articles (add new objects for new posts)
 - `data/awards.ts` - recognition list
-- `data/skills.ts` - skill groups
+- `data/skills.ts` - skill categories; skills with a `projects` array link to project cards
+- `data/qa.ts` - everything Navi (the terminal widget) can answer, plus its keyword matcher
+
+## Navi, the terminal widget
+
+Navi is deliberately not an LLM: it is a deterministic keyword matcher over `data/qa.ts`,
+so it can never invent facts. To teach it a new answer, add an entry there. If a real
+model is ever wanted, swap the `answer()` call in `components/Terminal.tsx` for an API
+route and keep `data/qa.ts` as the grounding document.
 
 Replace `public/resume.pdf` to update the CV link, and `public/img.jpg` for the photo.
 

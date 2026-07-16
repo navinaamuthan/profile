@@ -1,11 +1,11 @@
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
+import Finder from "@/components/Finder";
 import { projects } from "@/data/projects";
 import { projectId } from "@/lib/slug";
 
 export default function Projects() {
   const featured = projects.filter((p) => p.flagship || p.featured);
-  const rest = projects.filter((p) => !p.flagship && !p.featured);
 
   return (
     <Section id="work" index="03" label="Selected work">
@@ -58,40 +58,18 @@ export default function Projects() {
 
       <Reveal>
         <h3 className="mt-20 border-t border-line pt-8 font-display text-lg text-muted">
-          Also built
+          The whole drive
         </h3>
+        <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">
+          All {projects.length} projects, filed the way they would be on my desk. Open a folder for
+          the story, the skills it proves, and the links.
+        </p>
       </Reveal>
-      <ul className="mt-2">
-        {rest.map((p, i) => (
-          <li key={p.name} className={i === 0 ? "" : "border-t border-line"}>
-            <Reveal delay={Math.min(i * 40, 160)}>
-              <div
-                id={projectId(p.name)}
-                className="index-row grid scroll-mt-28 gap-1 px-2 py-5 sm:grid-cols-[minmax(11rem,14rem)_1fr] sm:gap-8"
-              >
-                <p className="text-[15px]">
-                  {p.github || p.live ? (
-                    <a
-                      href={p.github ?? p.live}
-                      className="link arrow-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {p.name}
-                      <span className="arrow" aria-hidden>
-                        &#8599;
-                      </span>
-                    </a>
-                  ) : (
-                    <span className="font-medium">{p.name}</span>
-                  )}
-                </p>
-                <p className="text-[15px] leading-relaxed text-muted">{p.summary}</p>
-              </div>
-            </Reveal>
-          </li>
-        ))}
-      </ul>
+      <Reveal delay={100}>
+        <div className="mt-6">
+          <Finder />
+        </div>
+      </Reveal>
     </Section>
   );
 }
