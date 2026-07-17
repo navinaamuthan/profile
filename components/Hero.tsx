@@ -11,15 +11,15 @@ const nameLines: { text: string; accent?: boolean }[] = [
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh flex-col px-6 md:px-10">
-      {/* The game hangs from the top, in the hero's empty air */}
+      {/* The game bar hangs directly off the nav, full content width */}
       <div
-        className="rise absolute left-1/2 top-14 z-0 hidden w-[380px] -translate-x-1/2 xl:block"
+        className="rise mx-auto hidden w-full max-w-6xl pt-[60px] lg:block"
         style={{ animationDelay: "1100ms" }}
       >
         <Game />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-14 pt-28 sm:pb-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-14 pt-12 sm:pb-16">
         <div
           className="rise mb-10 flex flex-wrap items-center justify-between gap-3"
           style={{ animationDelay: "900ms" }}

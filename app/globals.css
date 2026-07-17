@@ -286,41 +286,6 @@ button.chip:hover {
   background: var(--tile-color, #0071e3);
 }
 
-/* Hanging game card: swings gently from the top of the hero */
-.pendulum {
-  transform-origin: 50% -72px;
-  animation: sway 7s ease-in-out infinite;
-}
-
-@keyframes sway {
-  0%,
-  100% {
-    transform: rotate(1.1deg);
-  }
-  50% {
-    transform: rotate(-1.1deg);
-  }
-}
-
-.string {
-  position: absolute;
-  top: -64px;
-  height: 70px;
-  width: 1px;
-  background: rgba(29, 29, 31, 0.3);
-  transform-origin: bottom center;
-}
-
-.string-l {
-  left: 26%;
-  transform: rotate(12deg);
-}
-
-.string-r {
-  right: 26%;
-  transform: rotate(-12deg);
-}
-
 /* Icon chips for the hero meta row */
 .meta-chip {
   @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-[12.5px] font-medium text-muted;
@@ -651,8 +616,7 @@ button.chip:hover {
   .quicklook-overlay,
   .term-window,
   .term-msg,
-  .cursor-blink,
-  .pendulum {
+  .cursor-blink {
     animation: none;
   }
   .link,

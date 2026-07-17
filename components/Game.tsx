@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const W = 380;
-const H = 124;
-const GROUND = H - 22;
-const PLAYER_X = 34;
+const W = 1080;
+const H = 118;
+const GROUND = H - 24;
+const PLAYER_X = 56;
 const SIZE = 16;
 const OFFER_COLORS = ["#E4573D", "#7048E8", "#0F8B8D", "#D97706", "#2F9E44", "#2997FF"];
 
@@ -28,9 +28,9 @@ export default function Game() {
     let y = 0;
     let vy = 0;
     let t = 0;
-    let speed = 3.8;
+    let speed = 4.6;
     let offers = 0;
-    let nextSpawn = 50;
+    let nextSpawn = 40;
     let blocks: { x: number; w: number; h: number }[] = [];
     let coins: { x: number; cy: number; c: string; got: boolean }[] = [];
 
@@ -43,9 +43,9 @@ export default function Game() {
       y = 0;
       vy = 0;
       t = 0;
-      speed = 3.8;
+      speed = 4.6;
       offers = 0;
-      nextSpawn = 50;
+      nextSpawn = 40;
       blocks = [];
       coins = [];
     };
@@ -130,7 +130,7 @@ export default function Game() {
               got: false,
             });
           }
-          nextSpawn = t + 45 + Math.random() * 55 - Math.min(t / 70, 20);
+          nextSpawn = t + 36 + Math.random() * 46 - Math.min(t / 70, 16);
         }
 
         for (const b of blocks) b.x -= speed;
@@ -163,31 +163,29 @@ export default function Game() {
   }, []);
 
   return (
-    <div className="pendulum relative">
-      <span className="string string-l" aria-hidden />
-      <span className="string string-r" aria-hidden />
-      <div className="overflow-hidden rounded-xl border border-white/10 bg-graphite shadow-2xl">
-        <div className="flex items-center justify-between px-4 py-2">
-          <p className="font-mono text-[11px] text-paper/60">offer run</p>
-          <p className="font-mono text-[11px] text-paper/40">best: {best}</p>
-        </div>
-        <canvas
-          ref={canvasRef}
-          width={W}
-          height={H}
-          tabIndex={0}
-          role="img"
-          aria-label="A small jumping game. Press space to play."
-          onClick={() => actionRef.current()}
-          onKeyDown={(e) => {
-            if (e.key === " " || e.key === "ArrowUp") {
-              e.preventDefault();
-              actionRef.current();
-            }
-          }}
-          className="block cursor-pointer outline-none"
-        />
+    <div className="overflow-hidden rounded-b-2xl border border-t-0 border-white/10 bg-graphite shadow-xl">
+      <div className="flex items-center justify-between px-5 pt-2.5">
+        <p className="font-mono text-[11px] text-paper/60">
+          offer run · space or click to jump
+        </p>
+        <p className="font-mono text-[11px] text-paper/40">best: {best}</p>
       </div>
+      <canvas
+        ref={canvasRef}
+        width={W}
+        height={H}
+        tabIndex={0}
+        role="img"
+        aria-label="A small jumping game. Press space to play."
+        onClick={() => actionRef.current()}
+        onKeyDown={(e) => {
+          if (e.key === " " || e.key === "ArrowUp") {
+            e.preventDefault();
+            actionRef.current();
+          }
+        }}
+        className="block h-auto w-full cursor-pointer outline-none"
+      />
     </div>
   );
 }
