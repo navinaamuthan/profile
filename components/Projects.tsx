@@ -10,7 +10,7 @@ export default function Projects() {
   const featured = projects.filter((p) => p.flagship || p.featured);
 
   return (
-    <Section id="work" index="03" label="Selected work">
+    <Section id="work" index="03" label="Selected work" color="#7048E8">
       <div className="space-y-12">
         {featured.map((p, i) => {
           const color = cardColors[i % cardColors.length];
@@ -71,12 +71,11 @@ export default function Projects() {
       </div>
 
       <Reveal>
-        <h3 className="mt-20 border-t border-line pt-8 font-display text-lg text-muted">
-          Project archive
+        <h3 className="mt-20 border-t border-line pt-10 font-display text-2xl font-bold text-ink">
+          Everything else I&apos;ve built
         </h3>
-        <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">
-          All {projects.length} projects. Open a folder for the story, the skills it used, and the
-          links.
+        <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-ink/70">
+          Twelve folders, colour-coded by category. Click around.
         </p>
       </Reveal>
       <Reveal delay={100}>

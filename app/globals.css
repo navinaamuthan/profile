@@ -256,22 +256,43 @@ section[id] {
 }
 
 .chip {
-  @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1 text-[12.5px] text-ink/80;
+  @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium text-ink;
+  background: color-mix(in srgb, var(--tile-color, #64748b) 8%, #fff);
+  border: 1px solid color-mix(in srgb, var(--tile-color, #64748b) 28%, #fff);
 }
 
 button.chip {
   cursor: pointer;
-  transition: border-color 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: border-color 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s;
 }
 
 button.chip:hover {
-  @apply border-accent text-accent;
-  transform: translateY(-1px);
+  border-color: var(--tile-color, #1e3a8a);
+  color: var(--tile-color, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -10px color-mix(in srgb, var(--tile-color, #1e3a8a) 60%, transparent);
+}
+
+/* Chips sitting on a dark band */
+.chip-dark {
+  @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium text-paper/90;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .chip-dot {
   @apply inline-block h-1.5 w-1.5 rounded-full;
   background: var(--tile-color, #1e3a8a);
+}
+
+/* Soft light behind the hero terminal */
+.glow {
+  position: absolute;
+  inset: -12%;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(112, 72, 232, 0.16), rgba(30, 58, 138, 0.08) 60%, transparent);
+  pointer-events: none;
 }
 
 /* ---------- evidence chart ---------- */
@@ -361,6 +382,21 @@ button.chip:hover {
 .timeline-item:hover .timeline-node {
   background: #1e3a8a;
   transform: scale(1.25);
+}
+
+/* Timeline on the dark experience band */
+.timeline-dark::before {
+  background: linear-gradient(#4fd1d9, #96acf9, #e4573d);
+  opacity: 0.55;
+}
+
+.timeline-dark .timeline-node {
+  border-color: #4fd1d9;
+  background: #0b1b3f;
+}
+
+.timeline-dark .timeline-item:hover .timeline-node {
+  background: #4fd1d9;
 }
 
 /* ---------- desktop objects (finder + terminal) ---------- */
@@ -492,9 +528,28 @@ button.chip:hover {
   border-bottom: 1px solid #dee4ee;
 }
 
-.nav-link.is-current {
-  color: #101828;
-  background-size: 100% 1px, 100% 1px;
+.nav-pill {
+  @apply flex items-center gap-0.5 rounded-full border border-line bg-white/85 p-1;
+  backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  @apply flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium text-muted;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-item:hover {
+  @apply text-ink;
+  background: rgba(16, 24, 40, 0.05);
+}
+
+.nav-item.is-visited {
+  color: var(--nav-color, #1e3a8a);
+}
+
+.nav-item.is-current {
+  background: #101828;
+  color: #f7f9fc;
 }
 
 /* ---------- misc ---------- */

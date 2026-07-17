@@ -1,6 +1,7 @@
 import Reveal from "@/components/Reveal";
 import CopyEmail from "@/components/CopyEmail";
 import LocalTime from "@/components/LocalTime";
+import Game from "@/components/Game";
 import { personal } from "@/data/personal";
 
 export default function Contact() {
@@ -45,6 +46,10 @@ export default function Contact() {
               CV
             </a>
           </nav>
+        </Reveal>
+
+        <Reveal>
+          <Game />
         </Reveal>
 
         <footer className="mt-20 flex flex-wrap items-baseline justify-between gap-2 border-t border-paper/15 pt-6 text-[13px] text-paper/50 sm:mt-28">

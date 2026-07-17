@@ -6,14 +6,14 @@ export default function Writing() {
   const published = articles.filter((a) => a.status === "published");
 
   return (
-    <Section id="writing" index="05" label="Writing">
+    <Section id="writing" index="05" label="Writing" color="#E4573D">
       <div>
         {published.map((a, i) => (
           <div key={a.title} className={i === 0 ? "" : "border-t border-line"}>
             <Reveal delay={Math.min(i * 60, 180)}>
               <article className="index-row py-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-1">
-                  <h3 className="max-w-xl font-display text-xl leading-snug sm:text-2xl">
+                  <h3 className="max-w-xl font-display text-xl font-bold leading-snug sm:text-2xl">
                     {a.link ? (
                       <a
                         href={a.link}

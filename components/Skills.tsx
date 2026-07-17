@@ -54,10 +54,8 @@ export default function Skills() {
     }
   };
 
-  const max = Math.max(...evidence.map((e) => e.count));
-
   return (
-    <Section id="skills" index="04" label="Skills">
+    <Section id="skills" index="04" label="Skills" color="#D97706">
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((c, i) => (
           <Reveal key={c.id} delay={Math.min((i % 2) * 80, 160)}>
@@ -96,40 +94,42 @@ export default function Skills() {
       </div>
 
       <Reveal>
-        <p className="mt-5 text-[13px] text-muted">
-          Chips with a coloured dot are backed by work on this page. Click one to open the project.
+        <p className="mt-6 text-[15px] font-medium text-ink/80">
+          A coloured dot on a chip means there is a real project behind it on this page. Click the
+          chip and the project opens.
         </p>
       </Reveal>
 
-      {/* Evidence chart */}
+      {/* Where the proof sits: one dot per project or role */}
       <Reveal delay={80}>
-        <div className="mt-14 rounded-xl border border-line bg-white p-6 sm:p-8">
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <h3 className="font-display text-lg font-bold">Evidence by domain</h3>
-            <p className="text-[12px] text-muted">
-              projects + roles on this page per domain · counted, not self-rated
-            </p>
-          </div>
-          <div className="mt-6 space-y-5">
-            {evidence.map((e, i) => (
-              <div key={e.domain}>
-                <div className="grid items-center gap-3 sm:grid-cols-[11rem_1fr_2rem] sm:gap-4">
-                  <p className="text-[13px] font-medium text-ink/85">{e.domain}</p>
-                  <div className="bar-track" title={e.note}>
-                    <div
-                      className="bar"
-                      style={{
-                        width: `${(e.count / max) * 100}%`,
-                        ["--bar-color" as string]: e.color,
-                        ["--bar-delay" as string]: `${i * 90}ms`,
-                      }}
-                    />
-                  </div>
-                  <span className="bar-count hidden sm:flex" style={{ ["--bar-color" as string]: e.color }}>
+        <div className="mt-14 rounded-2xl border border-line bg-white p-7 sm:p-9">
+          <h3 className="font-display text-2xl font-bold">Where the proof sits</h3>
+          <p className="mt-1.5 text-[14px] text-muted">
+            One dot = one project or job on this page. No self-ratings, just a count.
+          </p>
+          <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {evidence.map((e) => (
+              <div
+                key={e.domain}
+                className="rounded-xl p-4"
+                style={{ background: `${e.color}0D`, border: `1px solid ${e.color}30` }}
+              >
+                <div className="flex items-baseline justify-between gap-3">
+                  <p className="font-display text-[15px] font-bold text-ink">{e.domain}</p>
+                  <p className="font-display text-2xl font-bold" style={{ color: e.color }}>
                     {e.count}
-                  </span>
+                  </p>
                 </div>
-                <p className="mt-1 text-[11px] text-muted/80 sm:pl-[12.5rem]">{e.note}</p>
+                <div className="mt-2 flex gap-1.5" aria-hidden>
+                  {Array.from({ length: e.count }).map((_, d) => (
+                    <span
+                      key={d}
+                      className="h-2.5 w-2.5 rounded-full"
+                      style={{ background: e.color }}
+                    />
+                  ))}
+                </div>
+                <p className="mt-3 text-[12px] leading-relaxed text-muted">{e.note}</p>
               </div>
             ))}
           </div>

@@ -138,6 +138,48 @@ const entries: Entry[] = [
     },
   },
   {
+    keywords: ["awards", "award", "won", "recognition", "prizes", "achievements", "hackathons"],
+    answer: {
+      text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022 and the Bosch Fit.Kovai Hackathon 2022, winner of Bloomberg BPuzzled at Trinity, finalist in the Deloitte Case Competition, and winner of ICT Youthtalk.",
+      links: [{ label: "Recognition section", href: "#recognition" }],
+    },
+  },
+  {
+    keywords: ["leadership", "lead", "led", "team", "mentoring", "community", "chair"],
+    answer: {
+      text: "She led 8 to 10 engineers and designers as a PM, a team of 6 on a UNESCO water access programme, chaired her IEEE Women in Engineering chapter, and was elected Class Representative and STEM Convenor at Trinity College Dublin. FemTechConf made her a Women in Tech Ambassador.",
+      links: [{ label: "Recognition section", href: "#recognition" }],
+    },
+  },
+  {
+    keywords: ["certifications", "certification", "certified", "gdpr"],
+    answer: {
+      text: "GDPR certified, with an MSc dissertation that turned EU AI Act and GDPR obligations into a working compliance tool. Responsible AI is a working discipline for her, not a slide.",
+      links: [{ label: "Skills section", href: "#skills" }],
+    },
+  },
+  {
+    keywords: ["atlas", "prd", "spec", "passport"],
+    answer: {
+      text: "Atlas is a complete product spec for a cross-border credit passport, published as a live site rather than a PDF: problem framing, user segments, success metrics, EU AI Act compliance mapping, and a rollout strategy.",
+      links: [{ label: "Atlas, live", href: "https://atlas-prd.vercel.app" }],
+    },
+  },
+  {
+    keywords: ["eireval", "benchmark", "benchmarking", "evaluate", "evaluation"],
+    answer: {
+      text: "EIREVAL benchmarks how well LLMs actually understand Irish and EU financial regulation, built to put numbers on what models get right and where they hallucinate.",
+      links: [{ label: "GitHub", href: "https://github.com/navinaamuthan/eireval" }],
+    },
+  },
+  {
+    keywords: ["samsung", "iit", "madras", "research", "intern", "internship"],
+    answer: {
+      text: "Two research stints: an ML research internship at Samsung R&D (PRISM), where she built an NLP model and shipped at 90%+ accuracy, and a research internship at IIT Madras analysing behavioural data from 500+ study participants.",
+      links: [{ label: "Experience section", href: "#experience" }],
+    },
+  },
+  {
     keywords: ["projects", "work", "built", "portfolio", "case", "studies"],
     answer: {
       text: "Twelve projects live in the folder above, from IGNITRIX (adversarial financial agents) to AuditAI (EU AI Act audits) to Atlas (a PRD shipped as a product). Open any file for the full story and the skills it proves.",
@@ -177,9 +219,11 @@ const commands: Record<string, NaviAnswer> = {
 
 export const suggestions = [
   "Does she need sponsorship?",
-  "What is IGNITRIX?",
   "Why should I hire her?",
-  "What is her stack?",
+  "What did she do at E2open?",
+  "What awards has she won?",
+  "Any leadership experience?",
+  "What is IGNITRIX?",
 ];
 
 export function answer(raw: string): NaviAnswer {

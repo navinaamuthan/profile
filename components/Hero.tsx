@@ -46,7 +46,7 @@ export default function Hero() {
             />
 
             <p
-              className="rise mt-7 max-w-md text-[15px] leading-relaxed text-muted"
+              className="rise mt-7 max-w-lg text-[17px] font-medium leading-relaxed text-ink/80"
               style={{ animationDelay: "700ms" }}
             >
               Data scientist and AI/ML engineer in Dublin. MSc Computer Science at Trinity College
@@ -54,8 +54,11 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="rise hidden lg:block" style={{ animationDelay: "800ms" }}>
-            <TerminalWindow bodyHeight="h-64" />
+          <div className="rise relative hidden lg:block" style={{ animationDelay: "800ms" }}>
+            <div className="glow" aria-hidden />
+            <div className="relative">
+              <TerminalWindow bodyHeight="h-64" />
+            </div>
           </div>
         </div>
       </div>
