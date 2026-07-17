@@ -2,19 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const W = 640;
-const H = 150;
-const GROUND = H - 26;
-const PLAYER_X = 42;
-const SIZE = 18;
-const COLORS = ["#E4573D", "#7048E8", "#4FD1D9", "#D97706", "#2F9E44"];
+const W = 380;
+const H = 124;
+const GROUND = H - 22;
+const PLAYER_X = 34;
+const SIZE = 16;
+const OFFER_COLORS = ["#E4573D", "#7048E8", "#0F8B8D", "#D97706", "#2F9E44", "#2997FF"];
 
 type Phase = "idle" | "running" | "over";
 
 export default function Game() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const phaseRef = useRef<Phase>("idle");
-  const [phase, setPhase] = useState<Phase>("idle");
+  const [, setPhase] = useState<Phase>("idle");
   const [best, setBest] = useState(0);
   const actionRef = useRef<() => void>(() => {});
 
@@ -28,10 +28,11 @@ export default function Game() {
     let y = 0;
     let vy = 0;
     let t = 0;
-    let speed = 4.2;
-    let score = 0;
-    let nextSpawn = 60;
-    let obstacles: { x: number; w: number; h: number; c: string }[] = [];
+    let speed = 3.8;
+    let offers = 0;
+    let nextSpawn = 50;
+    let blocks: { x: number; w: number; h: number }[] = [];
+    let coins: { x: number; cy: number; c: string; got: boolean }[] = [];
 
     const setPhaseBoth = (p: Phase) => {
       phaseRef.current = p;
@@ -42,10 +43,11 @@ export default function Game() {
       y = 0;
       vy = 0;
       t = 0;
-      speed = 4.2;
-      score = 0;
-      nextSpawn = 60;
-      obstacles = [];
+      speed = 3.8;
+      offers = 0;
+      nextSpawn = 50;
+      blocks = [];
+      coins = [];
     };
 
     actionRef.current = () => {
@@ -53,15 +55,14 @@ export default function Game() {
         reset();
         setPhaseBoth("running");
       } else if (y === 0) {
-        vy = -10.8;
+        vy = -9.8;
       }
     };
 
     const draw = () => {
       ctx.clearRect(0, 0, W, H);
 
-      // ground
-      ctx.strokeStyle = "rgba(247,249,252,0.35)";
+      ctx.strokeStyle = "rgba(245,245,247,0.3)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(0, GROUND + SIZE + 1);
@@ -69,69 +70,84 @@ export default function Game() {
       ctx.stroke();
 
       // player
-      ctx.fillStyle = "#F7F9FC";
-      const py = GROUND + y;
+      ctx.fillStyle = "#F5F5F7";
       ctx.beginPath();
-      ctx.roundRect(PLAYER_X, py, SIZE, SIZE, 4);
+      ctx.roundRect(PLAYER_X, GROUND + y, SIZE, SIZE, 4);
       ctx.fill();
 
-      // obstacles
-      for (const o of obstacles) {
-        ctx.fillStyle = o.c;
+      // grey blocks to jump
+      for (const b of blocks) {
+        ctx.fillStyle = "#6E6E73";
         ctx.beginPath();
-        ctx.roundRect(o.x, GROUND + SIZE - o.h, o.w, o.h, 3);
+        ctx.roundRect(b.x, GROUND + SIZE - b.h, b.w, b.h, 3);
         ctx.fill();
       }
 
-      // score
-      ctx.fillStyle = "rgba(247,249,252,0.65)";
-      ctx.font = "12px ui-monospace, SFMono-Regular, Menlo, monospace";
-      ctx.textAlign = "right";
-      ctx.fillText(String(Math.floor(score)).padStart(5, "0"), W - 14, 22);
+      // offers to catch
+      for (const c of coins) {
+        if (c.got) continue;
+        ctx.fillStyle = c.c;
+        ctx.beginPath();
+        ctx.arc(c.x, c.cy, 5, 0, Math.PI * 2);
+        ctx.fill();
+      }
 
+      ctx.fillStyle = "rgba(245,245,247,0.7)";
+      ctx.font = "11px ui-monospace, SFMono-Regular, Menlo, monospace";
+      ctx.textAlign = "right";
+      ctx.fillText(`offers ${offers}`, W - 10, 18);
+
+      ctx.textAlign = "center";
       if (phaseRef.current === "idle") {
-        ctx.textAlign = "center";
-        ctx.fillStyle = "rgba(247,249,252,0.8)";
-        ctx.font = "13px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx.fillText("click or press space to start", W / 2, H / 2 - 6);
+        ctx.fillStyle = "rgba(245,245,247,0.85)";
+        ctx.font = "12px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx.fillText("click to play: catch the colour", W / 2, H / 2 - 4);
       }
       if (phaseRef.current === "over") {
-        ctx.textAlign = "center";
-        ctx.fillStyle = "#F7F9FC";
-        ctx.font = "bold 14px ui-monospace, SFMono-Regular, Menlo, monospace";
-        ctx.fillText("rejected. click to reapply", W / 2, H / 2 - 6);
+        ctx.fillStyle = "#F5F5F7";
+        ctx.font = "bold 12px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx.fillText(`${offers} offers collected. go again?`, W / 2, H / 2 - 4);
       }
     };
 
     const tick = () => {
       if (phaseRef.current === "running") {
         t += 1;
-        score += 0.15;
-        speed = 4.2 + Math.min(t / 900, 3);
+        speed = 3.8 + Math.min(t / 800, 2.6);
 
-        vy += 0.55;
+        vy += 0.52;
         y = Math.min(y + vy, 0);
         if (y === 0) vy = 0;
 
         if (t >= nextSpawn) {
-          const h = 16 + Math.random() * 22;
-          obstacles.push({
-            x: W + 10,
-            w: 12 + Math.random() * 10,
-            h,
-            c: COLORS[Math.floor(Math.random() * COLORS.length)],
-          });
-          nextSpawn = t + 55 + Math.random() * 70 - Math.min(t / 60, 25);
+          if (Math.random() < 0.45) {
+            blocks.push({ x: W + 10, w: 11 + Math.random() * 9, h: 14 + Math.random() * 18 });
+          } else {
+            coins.push({
+              x: W + 10,
+              cy: GROUND - 14 - Math.random() * 26,
+              c: OFFER_COLORS[Math.floor(Math.random() * OFFER_COLORS.length)],
+              got: false,
+            });
+          }
+          nextSpawn = t + 45 + Math.random() * 55 - Math.min(t / 70, 20);
         }
-        obstacles = obstacles.filter((o) => o.x + o.w > -5);
-        for (const o of obstacles) o.x -= speed;
+
+        for (const b of blocks) b.x -= speed;
+        for (const c of coins) c.x -= speed;
+        blocks = blocks.filter((b) => b.x + b.w > -5);
+        coins = coins.filter((c) => c.x > -8);
 
         const py = GROUND + y;
-        for (const o of obstacles) {
-          const ox = o.x;
-          const oy = GROUND + SIZE - o.h;
-          if (PLAYER_X < ox + o.w && PLAYER_X + SIZE > ox && py + SIZE > oy) {
-            setBest((b) => Math.max(b, Math.floor(score)));
+        for (const c of coins) {
+          if (!c.got && c.x > PLAYER_X - 4 && c.x < PLAYER_X + SIZE + 4 && c.cy > py - 6 && c.cy < py + SIZE + 6) {
+            c.got = true;
+            offers += 1;
+          }
+        }
+        for (const b of blocks) {
+          if (PLAYER_X < b.x + b.w && PLAYER_X + SIZE > b.x && py + SIZE > GROUND + SIZE - b.h) {
+            setBest((v) => Math.max(v, offers));
             setPhaseBoth("over");
             break;
           }
@@ -146,37 +162,32 @@ export default function Game() {
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  const onKey = (e: React.KeyboardEvent) => {
-    if (e.key === " " || e.key === "ArrowUp") {
-      e.preventDefault();
-      actionRef.current();
-    }
-  };
-
   return (
-    <div className="mt-20 hidden sm:block">
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className="font-display text-xl font-bold text-paper">
-          The job hunt, playable
-        </h3>
-        <p className="font-mono text-[12px] text-paper/50">
-          best this visit: {best.toString().padStart(5, "0")}
-        </p>
+    <div className="pendulum relative">
+      <span className="string string-l" aria-hidden />
+      <span className="string string-r" aria-hidden />
+      <div className="overflow-hidden rounded-xl border border-white/10 bg-graphite shadow-2xl">
+        <div className="flex items-center justify-between px-4 py-2">
+          <p className="font-mono text-[11px] text-paper/60">offer run</p>
+          <p className="font-mono text-[11px] text-paper/40">best: {best}</p>
+        </div>
+        <canvas
+          ref={canvasRef}
+          width={W}
+          height={H}
+          tabIndex={0}
+          role="img"
+          aria-label="A small jumping game. Press space to play."
+          onClick={() => actionRef.current()}
+          onKeyDown={(e) => {
+            if (e.key === " " || e.key === "ArrowUp") {
+              e.preventDefault();
+              actionRef.current();
+            }
+          }}
+          className="block cursor-pointer outline-none"
+        />
       </div>
-      <p className="mt-1 text-[13px] text-paper/60">
-        Jump the rejections. Space or click. {phase === "over" ? "It happens to everyone." : ""}
-      </p>
-      <canvas
-        ref={canvasRef}
-        width={W}
-        height={H}
-        tabIndex={0}
-        role="img"
-        aria-label="A small jumping game. Press space to play."
-        onClick={() => actionRef.current()}
-        onKeyDown={onKey}
-        className="mt-4 w-full max-w-[40rem] cursor-pointer rounded-xl border border-paper/15 bg-white/5 outline-none focus-visible:border-paper/40"
-      />
     </div>
   );
 }

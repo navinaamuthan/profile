@@ -40,7 +40,7 @@ export function TerminalWindow({
   };
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-xl border border-navy/60 bg-navy shadow-2xl">
+    <div className="flex flex-col overflow-hidden rounded-xl border border-white/10 bg-graphite shadow-2xl">
       <div className="flex items-center gap-4 border-b border-paper/10 px-4 py-2.5">
         {onClose ? (
           <button onClick={onClose} aria-label="Close" className="group flex gap-1.5">
@@ -58,7 +58,10 @@ export function TerminalWindow({
           </span>
         )}
         <p className="flex-1 text-center font-mono text-[12px] text-paper/50">
-          navi — ask about Navina
+          <svg viewBox="0 0 24 24" className="mr-1.5 inline-block h-3 w-3 -translate-y-px" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M4 17l6-5-6-5m8 10h8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          guest — navi — 80×24
         </p>
         <span className="w-12" aria-hidden />
       </div>
@@ -67,6 +70,7 @@ export function TerminalWindow({
         ref={bodyRef}
         className={`${bodyHeight} space-y-4 overflow-y-auto p-4 font-mono text-[13px] leading-relaxed`}
       >
+        <p className="text-paper/40">Last login: today, from somewhere hiring · ttys001</p>
         {msgs.map((m, i) =>
           m.who === "guest" ? (
             <p key={i} className="text-paper/90">
@@ -144,7 +148,7 @@ export default function Terminal() {
     <div className="lg:hidden">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="term-launcher fixed bottom-5 right-5 z-[60] flex items-center gap-2.5 rounded-full bg-navy px-5 py-3 text-[13px] text-paper shadow-lg"
+        className="term-launcher fixed bottom-5 right-5 z-[60] flex items-center gap-2.5 rounded-full bg-graphite px-5 py-3 text-[13px] text-paper shadow-lg"
         aria-expanded={open}
       >
         <span className="font-mono text-accentSoft">&gt;_</span>

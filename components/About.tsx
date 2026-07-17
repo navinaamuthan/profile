@@ -17,7 +17,7 @@ const facts: [string, string][] = [
 
 export default function About() {
   return (
-    <Section id="about" index="01" label="About" color="#1E3A8A">
+    <Section id="about" index="01" label="About" color="#0071E3">
       <div className="grid gap-12 md:grid-cols-[1fr_260px] md:gap-16">
         <Reveal>
           <div className="space-y-5 font-display text-xl font-medium leading-relaxed text-ink sm:text-[1.35rem]">

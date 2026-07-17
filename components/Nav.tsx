@@ -7,7 +7,7 @@ const items: { label: string; id: string; color: string; icon: React.ReactNode }
   {
     label: "About",
     id: "about",
-    color: "#1E3A8A",
+    color: "#0071E3",
     icon: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 0114 0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
   },
   {
@@ -114,7 +114,7 @@ export default function Nav() {
           </div>
           <a
             href={personal.resumeUrl}
-            className="rounded-full bg-accent px-4 py-1.5 text-[13px] font-semibold text-white transition-colors hover:bg-navy"
+            className="rounded-full bg-accent px-4 py-1.5 text-[13px] font-semibold text-white transition-colors hover:bg-graphite"
           >
             CV
           </a>

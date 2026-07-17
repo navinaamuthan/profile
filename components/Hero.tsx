@@ -1,4 +1,5 @@
 import LocalTime from "@/components/LocalTime";
+import Game from "@/components/Game";
 import { TerminalWindow } from "@/components/Terminal";
 
 const nameLines: { text: string; accent?: boolean }[] = [
@@ -10,23 +11,44 @@ const nameLines: { text: string; accent?: boolean }[] = [
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh flex-col px-6 md:px-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-14 pt-28 sm:pb-16">
+      {/* The game hangs from the top, in the hero's empty air */}
+      <div
+        className="rise absolute left-1/2 top-14 z-0 hidden w-[380px] -translate-x-1/2 xl:block"
+        style={{ animationDelay: "1100ms" }}
+      >
+        <Game />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end pb-14 pt-28 sm:pb-16">
         <div
-          className="rise mb-10 flex flex-wrap items-baseline justify-between gap-3 text-[13px] text-muted"
+          className="rise mb-10 flex flex-wrap items-center justify-between gap-3"
           style={{ animationDelay: "900ms" }}
         >
-          <p className="flex items-center gap-2">
-            <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-accent" />
+          <p className="meta-chip">
+            <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-leaf" />
             Open to data science, AI/ML and analyst roles
           </p>
-          <p>
-            53.35°N, 6.26°W · <LocalTime />
-          </p>
+          <span className="flex flex-wrap gap-2">
+            <span className="meta-chip">
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                <path d="M12 21s-6.5-5.2-6.5-10.2a6.5 6.5 0 1113 0C18.5 15.8 12 21 12 21z" />
+                <circle cx="12" cy="10.5" r="2.3" />
+              </svg>
+              Dublin · 53.35°N, 6.26°W
+            </span>
+            <span className="meta-chip">
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M12 7.5V12l3 2" strokeLinecap="round" />
+              </svg>
+              <LocalTime />
+            </span>
+          </span>
         </div>
 
-        <div className="grid items-end gap-10 lg:grid-cols-[1fr_25rem] lg:gap-14">
+        <div className="grid items-end gap-10 lg:grid-cols-[1fr_27rem] lg:gap-14">
           <div>
-            <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-medium leading-[0.98] tracking-[-0.03em]">
+            <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-bold leading-[0.98] tracking-[-0.03em]">
               {nameLines.map((l, i) => (
                 <span key={l.text} className="mask">
                   <span
@@ -57,7 +79,7 @@ export default function Hero() {
           <div className="rise relative hidden lg:block" style={{ animationDelay: "800ms" }}>
             <div className="glow" aria-hidden />
             <div className="relative">
-              <TerminalWindow bodyHeight="h-64" />
+              <TerminalWindow bodyHeight="h-72" />
             </div>
           </div>
         </div>
