@@ -286,6 +286,13 @@ button.chip:hover {
   background: var(--tile-color, #0071e3);
 }
 
+.chip-emphasis {
+  @apply px-3.5 py-2 text-[14px] font-semibold;
+  background: color-mix(in srgb, var(--tile-color, #0071e3) 16%, #fff);
+  border-color: color-mix(in srgb, var(--tile-color, #0071e3) 45%, #fff);
+  color: color-mix(in srgb, var(--tile-color, #0071e3) 72%, #1d1d1f);
+}
+
 /* Icon chips for the hero meta row */
 .meta-chip {
   @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-[12.5px] font-medium text-muted;

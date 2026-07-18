@@ -2,17 +2,36 @@ export type Skill = {
   name: string;
   /** Names of projects (from data/projects.ts) where this skill is visible. */
   projects?: string[];
+  /** Rendered with stronger visual weight in the Skills section. */
+  emphasis?: boolean;
 };
 
 export type SkillCategory = {
   id: string;
   label: string;
-  icon: "sparkle" | "branch" | "chart" | "database" | "grid" | "cloud" | "kanban" | "shield";
+  icon: "code" | "sparkle" | "branch" | "chart" | "database" | "grid" | "cloud" | "kanban" | "shield";
   color: string;
   skills: Skill[];
 };
 
 export const skillCategories: SkillCategory[] = [
+  {
+    id: "languages",
+    label: "Programming languages",
+    icon: "code",
+    color: "#0071E3",
+    skills: [
+      { name: "Java", emphasis: true },
+      { name: "C", emphasis: true },
+      { name: "ReactJS", emphasis: true, projects: ["Nova", "IGNITRIX"] },
+      { name: "Python", projects: ["AuditAI", "IGNITRIX"] },
+      { name: "TypeScript", projects: ["Nova", "AuditAI"] },
+      { name: "SQL" },
+      { name: "R" },
+      { name: "MATLAB" },
+      { name: "Bash" },
+    ],
+  },
   {
     id: "genai",
     label: "GenAI & agents",
@@ -53,7 +72,6 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Python (Pandas, NumPy)" },
       { name: "SQL (advanced)" },
-      { name: "R" },
       { name: "Exploratory data analysis", projects: ["PPD Talkbot (Chatner)"] },
       { name: "A/B testing" },
       { name: "Data mining" },
@@ -73,7 +91,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "Data cleaning & validation" },
       { name: "Automated reporting" },
       { name: "MongoDB" },
-      { name: "Palantir Foundry" },
     ],
   },
   {
@@ -98,12 +115,9 @@ export const skillCategories: SkillCategory[] = [
       { name: "AWS" },
       { name: "Google Cloud & Vertex AI", projects: ["IGNITRIX"] },
       { name: "Git & CI/CD" },
-      { name: "TypeScript & Next.js", projects: ["Nova", "AuditAI"] },
-      { name: "React & Node.js", projects: ["Nova"] },
+      { name: "Next.js", projects: ["Nova", "AuditAI"] },
+      { name: "Node.js", projects: ["Nova", "IGNITRIX"] },
       { name: "RESTful APIs" },
-      { name: "Java" },
-      { name: "MATLAB" },
-      { name: "Bash" },
     ],
   },
   {
@@ -118,6 +132,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Agile & sprint planning" },
       { name: "User stories, Jira & Confluence" },
       { name: "Implementation consulting" },
+      { name: "Business development & partnerships" },
+      { name: "Vendor & partner management" },
       { name: "Solution scoping & lifecycle ownership" },
       { name: "Root cause analysis" },
       { name: "Technical training" },

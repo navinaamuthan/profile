@@ -7,6 +7,9 @@ import { projects } from "@/data/projects";
 import { projectId } from "@/lib/slug";
 
 const icons: Record<SkillCategory["icon"], React.ReactNode> = {
+  code: (
+    <path d="M9 7L4 12l5 5M15 7l5 5-5 5M13 4l-2 16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+  ),
   sparkle: (
     <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM19 15l.9 2.6L22.5 18.5l-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9L19 15z" />
   ),
@@ -54,11 +57,17 @@ export default function Skills() {
     }
   };
 
+  const chipClass = (emphasis?: boolean) => (emphasis ? "chip chip-emphasis" : "chip");
+
   return (
     <Section id="skills" index="04" label="Skills" color="#D97706">
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((c, i) => (
-          <Reveal key={c.id} delay={Math.min((i % 2) * 80, 160)}>
+          <Reveal
+            key={c.id}
+            delay={Math.min((i % 2) * 80, 160)}
+            className={c.id === "languages" ? "md:col-span-2" : undefined}
+          >
             <div className="tile h-full" style={{ ["--tile-color" as string]: c.color }}>
               <div className="flex items-center gap-3">
                 <span className="tile-icon">
@@ -74,7 +83,7 @@ export default function Skills() {
                   s.projects ? (
                     <button
                       key={s.name}
-                      className="chip"
+                      className={chipClass(s.emphasis)}
                       onClick={() => jumpToProjects(s.projects!)}
                       title={`Used in ${s.projects.join(", ")}`}
                     >
@@ -82,7 +91,7 @@ export default function Skills() {
                       <span className="chip-dot" aria-hidden />
                     </button>
                   ) : (
-                    <span key={s.name} className="chip">
+                    <span key={s.name} className={chipClass(s.emphasis)}>
                       {s.name}
                     </span>
                   )

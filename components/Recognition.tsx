@@ -4,10 +4,18 @@ import { awards, type Award } from "@/data/awards";
 
 const isCompetition = (a: Award) => /winner|finalist/i.test(a.outcome);
 
-const tierColor = (outcome: string) => {
+const competitionColor = (outcome: string) => {
   if (/winner/i.test(outcome)) return "#D97706";
   if (/grand finalist/i.test(outcome)) return "#7048E8";
   return "#6E6E73";
+};
+
+/** Distinct accents for leadership roles so the column isn't flat grey. */
+const roleColor = (a: Award) => {
+  if (/IEEE/i.test(a.title)) return "#0F8B8D";
+  if (/Trinity|Class Representative|STEM/i.test(a.title + a.outcome)) return "#1E3A8A";
+  if (/FemTech/i.test(a.title)) return "#E4573D";
+  return "#2F9E44";
 };
 
 function TrophyIcon() {
@@ -22,10 +30,12 @@ function PeopleIcon() {
   );
 }
 
-function Row({ a, icon }: { a: Award; icon: React.ReactNode }) {
-  const color = tierColor(a.outcome);
+function Row({ a, icon, color }: { a: Award; icon: React.ReactNode; color: string }) {
   return (
-    <div className="index-row flex items-start gap-3.5 rounded-xl border border-line bg-white p-4">
+    <div
+      className="index-row flex items-start gap-3.5 rounded-xl border bg-white p-4"
+      style={{ borderColor: `${color}33` }}
+    >
       <span
         className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
         style={{ color, background: `${color}17` }}
@@ -65,7 +75,7 @@ export default function Recognition() {
           <div className="mt-5 space-y-3">
             {competitions.map((a, i) => (
               <Reveal key={a.title} delay={Math.min(i * 50, 200)}>
-                <Row a={a} icon={<TrophyIcon />} />
+                <Row a={a} icon={<TrophyIcon />} color={competitionColor(a.outcome)} />
               </Reveal>
             ))}
           </div>
@@ -77,7 +87,7 @@ export default function Recognition() {
           <div className="mt-5 space-y-3">
             {roles.map((a, i) => (
               <Reveal key={a.title} delay={Math.min(i * 50, 200)}>
-                <Row a={a} icon={<PeopleIcon />} />
+                <Row a={a} icon={<PeopleIcon />} color={roleColor(a)} />
               </Reveal>
             ))}
           </div>
