@@ -11,6 +11,7 @@ const stats: [string, string, string][] = [
 const facts: [string, string][] = [
   ["Location", personal.location],
   ["Work authorisation", personal.workAuth],
+  ["Availability", personal.availability],
   ["Education", "MSc Computer Science, Trinity College Dublin, Distinction"],
   ["Open to", personal.openTo],
 ];

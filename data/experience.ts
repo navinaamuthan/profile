@@ -20,8 +20,8 @@ export const experience: Experience[] = [
     role: "Associate Implementation Engineer",
     period: "Sep 2024 to Jun 2025",
     summary:
-      "Delivered Fortune 500 supply chain implementations across 120+ countries. Systematised configuration work that used to be bespoke every time, cutting setup time by roughly 70%, and built the financial dashboards clients saw.",
-    tools: ["Python", "SQL", "Power BI", "Excel", "Data pipelines", "ETL", "Client consulting", "Agile"],
+      "Owned technical delivery for Fortune 500 clients across 120+ countries: Python scripts, SQL pipelines, API integration debugging, and root cause analysis explained to client VPs in language they could act on. Systematised configuration work that used to be bespoke every time, cutting setup time by roughly 70%, and built the financial dashboards clients saw.",
+    tools: ["Python", "SQL", "APIs", "Power BI", "Excel", "Data pipelines", "ETL", "Root cause analysis", "Client consulting", "Agile"],
   },
   {
     company: "iQube, R&D Hub",

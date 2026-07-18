@@ -26,7 +26,7 @@ export default function Hero() {
         >
           <p className="meta-chip">
             <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-leaf" />
-            Open to data science, AI/ML and analyst roles
+            Open to solutions engineering, data science and AI/ML roles
           </p>
           <span className="flex flex-wrap gap-2">
             <span className="meta-chip">
@@ -72,7 +72,8 @@ export default function Hero() {
               style={{ animationDelay: "700ms" }}
             >
               Data scientist and AI/ML engineer in Dublin. MSc Computer Science at Trinity College
-              Dublin, with distinction. Previously product management and Fortune 500 delivery.
+              Dublin, with distinction. Previously product management and Fortune 500 technical
+              delivery across 120+ countries.
             </p>
           </div>
 

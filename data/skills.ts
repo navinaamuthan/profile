@@ -118,6 +118,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Agile & sprint planning" },
       { name: "User stories, Jira & Confluence" },
       { name: "Implementation consulting" },
+      { name: "Solution scoping & lifecycle ownership" },
+      { name: "Root cause analysis" },
       { name: "Technical training" },
     ],
   },

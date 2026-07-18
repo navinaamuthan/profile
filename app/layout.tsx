@@ -15,12 +15,15 @@ const siteUrl = "https://navinaamuthan.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Navina Ganapathy Amuthan | Business & Data Analyst in Dublin (SQL, Tableau, AI)",
+    default: "Navina Ganapathy Amuthan | Data Scientist & Solutions Engineer in Dublin (Python, SQL, AI)",
     template: "%s | Navina Ganapathy Amuthan",
   },
   description:
-    "Business & Data Analyst in Dublin. SQL, Tableau, Python. Fortune 500 delivery at E2open, TCD MSc Computer Science (Distinction), top 0.5% at Google's Agentic AI Hackathon. Stamp 1G, no sponsorship required.",
+    "Data scientist and solutions engineer in Dublin. Python, SQL, APIs, shipped AI. Fortune 500 technical delivery across 120+ countries at E2open, TCD MSc Computer Science (Distinction), top 0.5% at Google's Cloud Agentic AI Hackathon. No sponsorship required.",
   keywords: [
+    "Solutions Engineer Dublin",
+    "Ads Solutions Engineer",
+    "Technical Solutions Consultant Dublin",
     "Business Analyst Dublin",
     "Data Analyst Dublin",
     "Technology Analyst Dublin",

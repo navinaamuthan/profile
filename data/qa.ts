@@ -138,6 +138,17 @@ const entries: Entry[] = [
     },
   },
   {
+    keywords: ["solutions", "solution", "gtech", "ads", "client", "clients", "consulting", "scale", "troubleshoot", "troubleshooting"],
+    phrases: ["solutions engineer", "solutions engineering", "client facing"],
+    answer: {
+      text: "Solutions engineering is her natural habitat: technical and client-facing at the same time. At E2open she owned delivery for Fortune 500 clients across 120+ countries, writing Python and SQL, debugging API integrations, then explaining root cause to VPs in plain language. And she builds fast when it counts: IGNITRIX went from zero to a working multi-agent system (React, Node.js, Python, Firebase) in 48 hours, top 0.5% of 50,000+ teams.",
+      links: [
+        { label: "Experience", href: "#experience" },
+        { label: "IGNITRIX", href: "#project-ignitrix" },
+      ],
+    },
+  },
+  {
     keywords: ["awards", "award", "won", "recognition", "prizes", "achievements", "hackathons"],
     answer: {
       text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022 and the Bosch Fit.Kovai Hackathon 2022, winner of Bloomberg BPuzzled at Trinity, finalist in the Deloitte Case Competition, and winner of ICT Youthtalk.",
