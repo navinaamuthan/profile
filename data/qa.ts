@@ -111,8 +111,19 @@ const entries: Entry[] = [
     keywords: ["available", "availability", "start", "notice", "when", "open"],
     phrases: ["start date"],
     answer: {
-      text: "She is actively looking: data scientist and AI/ML roles first, data analyst and product roles too. For start dates and specifics, email her directly.",
+      text: "Available immediately, Dublin based, no sponsorship needed. She is looking at solutions engineering, data science and AI/ML roles first, with analyst and product roles also on the table.",
       links: [{ label: `Email ${personal.email}`, href: `mailto:${personal.email}` }],
+    },
+  },
+  {
+    keywords: ["solutions", "solution", "gtech", "ads", "scale", "scaling", "client", "clients"],
+    phrases: ["solutions engineer", "solutions engineering"],
+    answer: {
+      text: "Solutions engineering is the intersection she works at: build the technical thing, then make it work for the client at scale. At E2open that meant owning delivery for Fortune 500 clients across 120+ countries, from Python and SQL pipelines to explaining root cause to a VP the next morning. IGNITRIX shows the build speed: a production-grade multi-agent system (React, Node.js gateway, Python agents, Firebase) in 48 hours.",
+      links: [
+        { label: "Experience", href: "#experience" },
+        { label: "IGNITRIX", href: "#project-ignitrix" },
+      ],
     },
   },
   {
@@ -126,7 +137,7 @@ const entries: Entry[] = [
     keywords: ["hire", "why", "fit", "strengths", "different", "special", "unique"],
     phrases: ["why should"],
     answer: {
-      text: "Three reasons with receipts. She ships end to end: top 0.5% of 50,000+ teams at Google's agentic AI hackathon. She has real delivery scars: Fortune 500 implementations in 120+ countries, setup time cut by 70%. And she works where the market is heading: AI that has to survive regulators, with an EU AI Act dissertation and audit tooling to show for it.",
+      text: "Three reasons with receipts. She ships end to end, fast: a production-grade multi-agent AI system built in 48 hours, top 0.5% of 50,000+ teams at Google's agentic AI hackathon. She has real client-delivery scars: Fortune 500 implementations in 120+ countries, SQL pipelines over 100k+ records, setup time cut by 70%. And she translates between the two worlds: the same root cause analysis that fixed the pipeline gets explained to a VP in language they can act on.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },

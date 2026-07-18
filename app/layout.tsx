@@ -45,15 +45,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Navina Ganapathy Amuthan | Business & Data Analyst in Dublin",
+    title: "Navina Ganapathy Amuthan | Data Scientist & Solutions Engineer in Dublin",
     description:
-      "I turn messy data into decisions people actually trust. SQL, Tableau, Python, shipped AI. Dublin based. Stamp 1G, no sponsorship required.",
+      "I build technical solutions for clients, then make them scale. Python, SQL, APIs, shipped AI. Dublin based, no sponsorship required, available immediately.",
     siteName: "Navina Ganapathy Amuthan",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Navina Ganapathy Amuthan | Business & Data Analyst in Dublin",
-    description: "I turn messy data into decisions people actually trust. Dublin based. Stamp 1G, no sponsorship required.",
+    title: "Navina Ganapathy Amuthan | Data Scientist & Solutions Engineer in Dublin",
+    description:
+      "I build technical solutions for clients, then make them scale. Dublin based, no sponsorship required, available immediately.",
   },
   robots: { index: true, follow: true },
 };
@@ -62,13 +63,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: personal.name,
-  jobTitle: "Business & Data Analyst",
+  jobTitle: "Data Scientist & Solutions Engineer",
   email: `mailto:${personal.email}`,
   url: siteUrl,
   address: { "@type": "PostalAddress", addressLocality: "Dublin", addressCountry: "IE" },
   alumniOf: ["Trinity College Dublin", "Anna University"],
   sameAs: [personal.linkedin, personal.github],
   knowsAbout: [
+    "Solutions Engineering",
     "Business Analysis",
     "Data Analysis",
     "SQL",

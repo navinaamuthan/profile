@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Navina Ganapathy Amuthan | Business & Data Analyst in Dublin";
+export const alt = "Navina Ganapathy Amuthan | Data Scientist & Solutions Engineer in Dublin";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,37 +16,37 @@ export default function OG() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          background: "#faf6f0",
-          fontFamily: "Georgia, serif",
+          background: "#F5F5F7",
+          fontFamily: "system-ui, sans-serif",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 26, letterSpacing: 6, textTransform: "uppercase", color: "#b0653f", fontFamily: "monospace" }}>
-            Business &amp; Data Analyst · Dublin
+          <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#0071E3", fontWeight: 700 }}>
+            Solutions Engineering · Data Science · Dublin
           </div>
-          <div style={{ fontSize: 76, lineHeight: 1.05, color: "#1f1b16", marginTop: 28, fontWeight: 700 }}>
+          <div style={{ fontSize: 78, lineHeight: 1.04, color: "#1D1D1F", marginTop: 28, fontWeight: 700, letterSpacing: -2 }}>
             Navina Ganapathy Amuthan
           </div>
-          <div style={{ fontSize: 34, color: "#5c5347", marginTop: 24, fontStyle: "italic" }}>
-            I turn messy data into decisions people actually trust.
+          <div style={{ fontSize: 32, color: "#6E6E73", marginTop: 24 }}>
+            I build technical solutions for clients, then make them scale.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div style={{ display: "flex", flexDirection: "column", fontSize: 24, color: "#5c5347", lineHeight: 1.6 }}>
-            <div>SQL · Tableau · Python · shipped AI</div>
+          <div style={{ display: "flex", flexDirection: "column", fontSize: 23, color: "#6E6E73", lineHeight: 1.6 }}>
+            <div>Python · SQL · APIs · agentic AI · Fortune 500 delivery, 120+ countries</div>
             <div>TCD MSc CS, Distinction · Top 0.5% of 50,000+, Google Agentic AI Hackathon</div>
           </div>
           <div
             style={{
-              fontSize: 22,
-              color: "#faf6f0",
-              background: "#b0653f",
+              fontSize: 21,
+              color: "#F5F5F7",
+              background: "#1D1D1F",
               padding: "14px 28px",
               borderRadius: 999,
-              fontFamily: "monospace",
+              fontWeight: 600,
             }}
           >
-            Stamp 1G · No sponsorship required
+            No sponsorship required
           </div>
         </div>
       </div>
