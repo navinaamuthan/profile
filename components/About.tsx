@@ -3,9 +3,9 @@ import Reveal from "@/components/Reveal";
 import { personal } from "@/data/personal";
 
 const stats: [string, string, string][] = [
-  ["Top 0.5%", "of 50,000+ teams — full-stack agentic product, Google Cloud Agentic AI Hackathon", "#7048E8"],
-  ["10,000+", "production users on AI/ML features I shipped end to end", "#0F8B8D"],
-  ["120+", "countries covered by Fortune 500 production implementations I delivered", "#E4573D"],
+  ["Top 0.5%", "of 50,000+ — production agentic AI system, Google Cloud Hackathon", "#8B6914"],
+  ["10,000+", "users on AI/ML features shipped end to end in production", "#5C7C6A"],
+  ["120+", "countries — Fortune 500 production delivery (Python, SQL, APIs)", "#A67C52"],
 ];
 
 const facts: [string, string][] = [
@@ -18,7 +18,7 @@ const facts: [string, string][] = [
 
 export default function About() {
   return (
-    <Section id="about" index="01" label="About" color="#0071E3">
+    <Section id="about" index="01" label="About" color="#A67C52">
       <div className="grid gap-12 md:grid-cols-[1fr_260px] md:gap-16">
         <Reveal>
           <div className="space-y-5 font-display text-xl font-medium leading-relaxed text-ink sm:text-[1.35rem]">

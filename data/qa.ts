@@ -79,7 +79,7 @@ const entries: Entry[] = [
   {
     keywords: ["skills", "stack", "tools", "technologies", "tech", "python", "sql", "tableau", "know"],
     answer: {
-      text: "Programming languages first (Java, C, JavaScript, Python, TypeScript, SQL), then Frontend & UX (React, Next.js), Software engineering (Node, APIs, Docker, CI/CD), GenAI, machine learning, data science, data engineering & cloud (AWS, Azure, GCP), BI, and security/governance. Chips with a dot jump to the proving project.",
+      text: "Programming languages (Python, Java, JavaScript, C), GenAI/RAG/agents, machine learning, software engineering (APIs, Docker, CI/CD, testing), frontend, MLOps & cloud (Azure), data analysis, BI, and governance. Chips with a dot jump to the proving project.",
       links: [{ label: "Skills section", href: "#skills" }],
     },
   },
@@ -111,18 +111,30 @@ const entries: Entry[] = [
     keywords: ["available", "availability", "start", "notice", "when", "open"],
     phrases: ["start date"],
     answer: {
-      text: "Available immediately, Dublin based, no sponsorship needed. She is open to software engineering, AI/ML, and data roles.",
+      text: "Available immediately, Dublin based, no sponsorship needed. Primary tracks: software engineering and AI/ML associate engineering. Also open to data and business analyst roles.",
       links: [{ label: `Email ${personal.email}`, href: `mailto:${personal.email}` }],
     },
   },
   {
-    keywords: ["software", "engineer", "fullstack", "full-stack", "frontend", "react", "javascript", "coding", "code"],
+    keywords: ["software", "engineer", "fullstack", "full-stack", "frontend", "react", "javascript", "coding", "code", "microsoft", "identity"],
     phrases: ["software engineer", "full stack", "software engineering"],
     answer: {
-      text: "She positions as a software engineer who ships full-stack end to end: React and TypeScript UIs, Node and Python services, modular design, security-minded gateways, and production delivery. AuditAI and IGNITRIX are the clearest receipts; E2open shows she can own production systems for Fortune 500 clients.",
+      text: "Primary fit for software engineering IC roles: React and TypeScript UIs, Node and Python services, modular design, secure gateways, and production delivery. AuditAI and IGNITRIX are the clearest receipts; E2open shows Fortune 500 production ownership.",
       links: [
-        { label: "Skills", href: "#skills" },
+        { label: "Role fit", href: "#fit" },
         { label: "AuditAI", href: "#project-auditai" },
+        { label: "IGNITRIX", href: "#project-ignitrix" },
+      ],
+    },
+  },
+  {
+    keywords: ["jpmorgan", "jpmc", "chase", "associate", "copilot", "rag", "mlops", "docker", "azure", "genai"],
+    phrases: ["ai/ml", "aiml", "associate engineer", "machine learning"],
+    answer: {
+      text: "Strong match for AI/ML Associate Engineer profiles: production Python and Java, RAG and agent workflows (IGNITRIX), evaluation harnesses (EIREVAL), bias and fairness monitoring (AuditAI), REST APIs, Docker, CI/CD, and Azure exposure — plus enterprise governance from EU AI Act work.",
+      links: [
+        { label: "Role fit", href: "#fit" },
+        { label: "Skills", href: "#skills" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
       ],
     },
@@ -131,10 +143,21 @@ const entries: Entry[] = [
     keywords: ["solutions", "solution", "gtech", "ads", "scale", "scaling", "client", "clients"],
     phrases: ["solutions engineer", "solutions engineering"],
     answer: {
-      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software roles, the sharper fit is full-stack engineering: React, Node, Python, modular services, and secure UX — see AuditAI and IGNITRIX.",
+      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software and AI/ML roles, the sharper fit is production engineering: React, Node, Python, RAG, modular services — see AuditAI and IGNITRIX.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
+      ],
+    },
+  },
+  {
+    keywords: ["analyst", "analysis", "dashboard", "reporting", "excel", "tableau", "powerbi", "insights", "visualisation", "visualization"],
+    phrases: ["data analyst", "business analyst", "power bi"],
+    answer: {
+      text: "Yes — data and business analysis sit alongside her software engineering work. At E2open she owned SQL pipelines and Power BI financial dashboards for Fortune 500 stakeholders. Stack for analyst roles: SQL, Excel, Power BI, Tableau, Python, and turning messy data into decisions people can act on.",
+      links: [
+        { label: "Skills", href: "#skills" },
+        { label: "Experience", href: "#experience" },
       ],
     },
   },
@@ -243,19 +266,19 @@ const commands: Record<string, NaviAnswer> = {
     links: [{ label: "Selected work", href: "#work" }],
   },
   skills: {
-    text: "All of them are in the Skills section: programming languages, frontend & UX, software engineering, GenAI, ML, data, cloud, BI, and security/governance.",
+    text: "All of them are in the Skills section: languages, GenAI/RAG/agents, ML, software engineering, frontend, MLOps & cloud, data, BI, and governance.",
     links: [{ label: "Skills", href: "#skills" }],
   },
   whoami: {
-    text: "A guest on Navina's site. If you are hiring a software engineer, AI/ML or data person in Dublin, you are exactly where you should be.",
+    text: "A guest on Navina's site. If you are hiring for software engineering, AI/ML associate, or data/business analyst roles, you are exactly where you should be.",
   },
 };
 
 export const suggestions = [
   "Does she need sponsorship?",
   "Why should I hire her?",
+  "Is she a fit for AI/ML Associate?",
   "Is she a software engineer?",
-  "What did she do at E2open?",
   "What is AuditAI?",
   "What is IGNITRIX?",
 ];

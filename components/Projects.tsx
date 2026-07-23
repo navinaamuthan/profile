@@ -4,13 +4,13 @@ import Finder from "@/components/Finder";
 import { projects } from "@/data/projects";
 import { projectId } from "@/lib/slug";
 
-const cardColors = ["#1E3A8A", "#0F8B8D", "#E4573D"];
+const cardColors = ["#A67C52", "#8B6914", "#1B3A4B"];
 
 export default function Projects() {
   const featured = projects.filter((p) => p.flagship || p.featured);
 
   return (
-    <Section id="work" index="03" label="Selected work" color="#7048E8">
+    <Section id="work" index="03" label="Selected work" color="#8B6914">
       <div className="space-y-12">
         {featured.map((p, i) => {
           const color = cardColors[i % cardColors.length];

@@ -17,8 +17,31 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "AuditAI",
+    name: "AIEF",
     flagship: true,
+    tag: "Research · AI Governance",
+    summary:
+      "An ontology-driven engine that assesses an AI research proposal against four governance frameworks at once.",
+    problem:
+      "AI ethics review is fragmented: TCD REAMS, the EU AI Act, Horizon Europe, and ACM/NeurIPS guidelines each demand their own compliance pass, with no shared way to trace a finding back to a specific requirement or fundamental right.",
+    solution:
+      "My MSc dissertation, built as a real tool: a 207-requirement OWL ontology spanning TCD REAMS, the EU AI Act (Article 27 FRIA), Horizon Europe Ethics by Design, and ACM/NeurIPS guidelines, mapped to the EU Charter of Fundamental Rights. A free-text research proposal goes in; a structured, traceable ethics assessment comes out, backed by a SHACL symbolic assessor and a retrieval-augmented LLM pipeline, with a full diagnostic methodology (perspective-stratified annotation, reliability analysis, perturbation testing) proving the assessor actually works.",
+    architecture:
+      "OWL ontology and knowledge graph published at a persistent w3id.org URI, SHACL shapes for symbolic rule-based assessment, a Groq/Ollama-backed RAG pipeline for LLM-assisted evaluation, a diagnostic pipeline generating reliability and perturbation results as LaTeX tables, and a Next.js demo webapp.",
+    decisions: [
+      "Ontology over prompt engineering alone, so every finding traces to a specific requirement, not a model's guess",
+      "Four frameworks in one graph instead of four separate checklists, because real research proposals get reviewed against all of them",
+      "A full diagnostic methodology, including perturbation testing, so the assessor's reliability is measured, not assumed",
+    ],
+    tech: ["Python", "OWL", "SHACL", "RDF", "SPARQL", "Groq LLM API", "RAG", "Next.js", "TypeScript"],
+    metrics: ["207 governance requirements", "4 frameworks in one ontology", "Published persistent URI (w3id.org/aief)"],
+    lesson: "Ethics review that cannot show its work is not review, it is opinion.",
+    github: "https://github.com/navinaamuthan/ai-ethics-framework-tool",
+    live: "https://w3id.org/aief/",
+  },
+  {
+    name: "AuditAI",
+    featured: true,
     tag: "Full-stack · Responsible AI",
     summary:
       "An automated EU AI Act audit pipeline that catches bias and writes the compliance report itself.",

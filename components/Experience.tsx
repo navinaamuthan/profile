@@ -4,13 +4,13 @@ import { experience } from "@/data/experience";
 
 export default function Experience() {
   return (
-    <Section id="experience" index="02" label="Experience" color="#4FD1D9" dark>
+    <Section id="experience" index="02" label="Experience" color="#D4B896" dark>
       <ol className="timeline timeline-dark space-y-12 pl-8">
         {experience.map((e, i) => (
           <li key={e.company} className="timeline-item relative">
             <span className="timeline-node" style={{ left: "-32px" }} aria-hidden />
             <Reveal delay={Math.min(i * 60, 180)}>
-              <p className="text-[13px] font-semibold tabular-nums text-[#4FD1D9]">{e.period}</p>
+              <p className="text-[13px] font-semibold tabular-nums text-accentSoft">{e.period}</p>
               <h3 className="mt-1.5 font-display text-xl font-bold sm:text-2xl">
                 {e.role} <span className="font-medium text-paper/60">· {e.company}</span>
               </h3>

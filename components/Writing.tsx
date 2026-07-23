@@ -6,7 +6,7 @@ export default function Writing() {
   const published = articles.filter((a) => a.status === "published");
 
   return (
-    <Section id="writing" index="05" label="Writing" color="#E4573D">
+    <Section id="writing" index="05" label="Writing" color="#1B3A4B">
       <div>
         {published.map((a, i) => (
           <div key={a.title} className={i === 0 ? "" : "border-t border-line"}>

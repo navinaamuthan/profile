@@ -60,13 +60,17 @@ export default function Skills() {
   const chipClass = (emphasis?: boolean) => (emphasis ? "chip chip-emphasis" : "chip");
 
   return (
-    <Section id="skills" index="04" label="Skills" color="#D97706">
+    <Section id="skills" index="04" label="Skills" color="#A67C52">
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((c, i) => (
           <Reveal
             key={c.id}
             delay={Math.min((i % 2) * 80, 160)}
-            className={c.id === "languages" || c.id === "frontend" ? "md:col-span-2" : undefined}
+            className={
+              c.id === "languages" || c.id === "genai" || c.id === "engineering" || c.id === "bi"
+                ? "md:col-span-2"
+                : undefined
+            }
           >
             <div className="tile h-full" style={{ ["--tile-color" as string]: c.color }}>
               <div className="flex items-center gap-3">

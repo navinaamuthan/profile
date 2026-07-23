@@ -11,7 +11,6 @@ const nameLines: { text: string; accent?: boolean }[] = [
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh flex-col px-6 md:px-10">
-      {/* The game bar hangs directly off the nav, full content width */}
       <div
         className="rise mx-auto hidden w-full max-w-6xl pt-[60px] lg:block"
         style={{ animationDelay: "1100ms" }}
@@ -26,7 +25,8 @@ export default function Hero() {
         >
           <p className="meta-chip">
             <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-leaf" />
-            Open to software engineering, AI/ML and data roles · available immediately
+            Open to software engineering, AI/ML &amp; data / business analyst roles · available
+            immediately
           </p>
           <span className="flex flex-wrap gap-2">
             <span className="meta-chip">
@@ -48,6 +48,12 @@ export default function Hero() {
 
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_27rem] lg:gap-14">
           <div>
+            <p
+              className="rise mb-4 font-display text-[12px] font-bold uppercase tracking-[0.2em] text-bronze"
+              style={{ animationDelay: "200ms" }}
+            >
+              Software · AI/ML · Dublin
+            </p>
             <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-bold leading-[0.98] tracking-[-0.03em]">
               {nameLines.map((l, i) => (
                 <span key={l.text} className="mask">
@@ -63,7 +69,7 @@ export default function Hero() {
 
             <div
               aria-hidden
-              className="draw-line mt-8 h-px w-full bg-line"
+              className="draw-line draw-line-brass mt-8 w-full"
               style={{ animationDelay: "500ms" }}
             />
 
@@ -71,10 +77,10 @@ export default function Hero() {
               className="rise mt-7 max-w-lg text-[17px] font-medium leading-relaxed text-ink/80"
               style={{ animationDelay: "700ms" }}
             >
-              Full-stack software engineer: React and TypeScript on the front, Python and Node on
-              the back, shipped to production. Fortune 500 systems across 120+ countries, an
-              agentic product built in 48 hours, and an MSc in Computer Science at Trinity College
-              Dublin, with distinction.
+              Hands-on software engineer for AI/ML solutions: production Python and Java, React
+              frontends, RAG and agent workflows, evaluation harnesses, APIs and Docker — shipped
+              for Fortune 500 clients and top 0.5% at Google&apos;s Agentic AI Hackathon. MSc CS,
+              Trinity College Dublin, Distinction.
             </p>
           </div>
 

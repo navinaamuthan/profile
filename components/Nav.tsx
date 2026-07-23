@@ -7,43 +7,49 @@ const items: { label: string; id: string; color: string; icon: React.ReactNode }
   {
     label: "About",
     id: "about",
-    color: "#0071E3",
+    color: "#A67C52",
     icon: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 0114 0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
+  },
+  {
+    label: "Fit",
+    id: "fit",
+    color: "#C9A66B",
+    icon: <path d="M12 3l2.2 4.5L19 8.2l-3.5 3.4.8 4.9L12 14.8 7.7 16.5l.8-4.9L5 8.2l4.8-.7L12 3z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />,
   },
   {
     label: "Experience",
     id: "experience",
-    color: "#0F8B8D",
+    color: "#5C7C6A",
     icon: <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2m-9 0h10a2 2 0 012 2v9a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
   },
   {
     label: "Work",
     id: "work",
-    color: "#7048E8",
+    color: "#8B6914",
     icon: <path d="M4 7c0-1.1.9-2 2-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
   {
     label: "Skills",
     id: "skills",
-    color: "#D97706",
+    color: "#B08D57",
     icon: <path d="M5 5h5v5H5V5zm9 0h5v5h-5V5zM5 14h5v5H5v-5zm9 0h5v5h-5v-5z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
   {
     label: "Writing",
     id: "writing",
-    color: "#E4573D",
+    color: "#1B3A4B",
     icon: <path d="M4 20l4-1L20 7l-3-3L5 16l-1 4zm11-14l3 3" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
   {
     label: "Recognition",
     id: "recognition",
-    color: "#2F9E44",
+    color: "#2F5D50",
     icon: <path d="M12 15a5 5 0 100-10 5 5 0 000 10zm-3 0l-1 6 4-2 4 2-1-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
   {
     label: "Contact",
     id: "contact",
-    color: "#3B5BDB",
+    color: "#D4B896",
     icon: <path d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm1 1l7 5 7-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
 ];
@@ -114,7 +120,7 @@ export default function Nav() {
           </div>
           <a
             href={personal.resumeUrl}
-            className="rounded-full bg-accent px-4 py-1.5 text-[13px] font-semibold text-white transition-colors hover:bg-graphite"
+            className="rounded-full bg-navy px-4 py-1.5 text-[13px] font-semibold text-gold transition-colors hover:bg-bronze hover:text-paper"
           >
             CV
           </a>

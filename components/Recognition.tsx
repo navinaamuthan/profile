@@ -66,7 +66,7 @@ export default function Recognition() {
   const roles = awards.filter((a) => !isCompetition(a));
 
   return (
-    <Section id="recognition" index="06" label="Recognition" color="#2F9E44">
+    <Section id="recognition" index="06" label="Recognition" color="#A67C52">
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
           <Reveal>

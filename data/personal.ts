@@ -1,10 +1,10 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Software engineer · AI/ML · data · Dublin, Ireland",
+  roleLine: "Software & AI/ML engineer · Dublin, Ireland",
   intro: [
-    "I design and ship full-stack software: clean components, careful error handling, and production systems that stay diagnosable under load. Most recently I finished an MSc in Computer Science at Trinity College Dublin with distinction. Before that I spent a year at E2open as an Associate Implementation Engineer delivering data-driven systems for Fortune 500 clients across 120+ countries in Python and SQL, and two years as a Product Manager leading 8 to 10 engineers while shipping AI/ML features to 10,000+ users.",
-    "My recent builds are end-to-end. IGNITRIX is a React and Node.js dual-agent financial product that placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. AuditAI is a Python fairness pipeline with a Next.js dashboard that turns EU AI Act obligations into something you can rerun. I write modular, testable code and care about security, reliability, and user experience in the same breath.",
+    "I am a hands-on software engineer who writes production-quality code at the intersection of software engineering and applied AI/ML. MSc Computer Science (Intelligent Systems) at Trinity College Dublin, Distinction. Before that: Associate Implementation Engineer at E2open delivering production systems for Fortune 500 clients across 120+ countries (Python, SQL, APIs), and Product Manager at iQube leading 8 to 10 engineers while shipping AI/ML features to 10,000+ users.",
+    "I build and integrate AI-powered features end to end: RAG and agent workflows, evaluation harnesses, backend APIs, and React frontends — with security, testing, and governance built in. IGNITRIX (React, Node, MCP agents) placed top 0.5% of 50,000+ at Google's Cloud Agentic AI Hackathon. AuditAI is a Python fairness and EU AI Act pipeline with a Next.js dashboard. Open to software engineering and AI/ML roles first; also data and business analyst roles.",
   ],
   location: "Dublin, Ireland",
   email: "navinagamuthan@gmail.com",
@@ -12,7 +12,7 @@ export const personal = {
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
   workAuth: "Valid visa. No sponsorship required.",
-  openTo: "Software engineering, AI/ML, and data roles.",
+  openTo: "Software engineering, AI/ML engineering, and data / business analyst roles.",
   availability: "Available immediately.",
 
   education: [
