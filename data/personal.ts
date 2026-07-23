@@ -1,10 +1,10 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Solutions engineering, data science and applied AI · Dublin, Ireland",
+  roleLine: "Software engineer · AI/ML · data · Dublin, Ireland",
   intro: [
-    "I work where engineering meets the client. Before Dublin I spent two years as a product manager, leading a team of 8 to 10 and taking a platform past 10,000 users while CSAT climbed from 3.2 to 4.6. Then a year at E2open owning technical delivery for Fortune 500 clients across 120+ countries: Python, SQL pipelines, API integrations, and explaining root cause to a VP the next morning in language they could act on. This year I finished an MSc in Computer Science at Trinity College Dublin, with distinction.",
-    "Most of my recent work is AI you can check up on. IGNITRIX, a two-agent financial advisor where one agent attacks the other's conclusions, placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. My dissertation turned EU AI Act obligations into a working compliance tool for financial AI, and AuditAI does the same for fairness audits.",
+    "I design and ship full-stack software: clean components, careful error handling, and production systems that stay diagnosable under load. Most recently I finished an MSc in Computer Science at Trinity College Dublin with distinction. Before that I spent a year at E2open as an Associate Implementation Engineer delivering data-driven systems for Fortune 500 clients across 120+ countries in Python and SQL, and two years as a Product Manager leading 8 to 10 engineers while shipping AI/ML features to 10,000+ users.",
+    "My recent builds are end-to-end. IGNITRIX is a React and Node.js dual-agent financial product that placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. AuditAI is a Python fairness pipeline with a Next.js dashboard that turns EU AI Act obligations into something you can rerun. I write modular, testable code and care about security, reliability, and user experience in the same breath.",
   ],
   location: "Dublin, Ireland",
   email: "navinagamuthan@gmail.com",
@@ -12,19 +12,19 @@ export const personal = {
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
   workAuth: "Valid visa. No sponsorship required.",
-  openTo: "Solutions engineering, data science and AI/ML roles, plus analyst and product.",
+  openTo: "Software engineering, AI/ML, and data roles.",
   availability: "Available immediately.",
 
   education: [
     {
       school: "Trinity College Dublin",
       degree: "MSc Computer Science, Intelligent Systems",
-      detail: "Distinction",
+      detail: "Distinction · 2025 to 2026",
     },
     {
       school: "Anna University",
       degree: "B.E. Information Science & Engineering",
-      detail: "9.2/10 CGPA",
+      detail: "9.2/10 CGPA · 2020 to 2024",
     },
   ],
   resumeUrl: "/resume.pdf",

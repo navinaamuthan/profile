@@ -12,31 +12,58 @@ export const experience: Experience[] = [
     role: "Project Lead",
     period: "Apr 2026 to Jun 2026",
     summary:
-      "Led a team of 6 building strategy and stakeholder frameworks for a UNESCO water access programme. The programme team kept using them after handover.",
-    tools: ["Strategy frameworks", "Stakeholder analysis", "Requirements gathering", "Workshop facilitation", "Project planning", "Team leadership", "Excel"],
+      "Led a 6-person team delivering corporate strategy and stakeholder-engagement frameworks for a UNESCO water-access programme. The programme team kept using them after handover.",
+    tools: [
+      "Stakeholder management",
+      "Requirements gathering",
+      "Workshop facilitation",
+      "Project planning",
+      "Team leadership",
+      "Excel",
+    ],
   },
   {
     company: "E2open",
     role: "Associate Implementation Engineer",
     period: "Sep 2024 to Jun 2025",
     summary:
-      "Owned technical delivery for Fortune 500 clients across 120+ countries: Python scripts, SQL pipelines across 100k+ records, API integration debugging, and root cause analysis explained to client VPs in language they could act on. Systematised configuration work that used to be bespoke every time, cutting setup time by roughly 70%, and built the financial dashboards clients saw.",
-    tools: ["Python", "SQL", "APIs", "Power BI", "Excel", "Data pipelines", "ETL", "Root cause analysis", "Client consulting", "Agile"],
+      "Delivered end-to-end data-driven implementations for Fortune 500 clients across 120+ countries in production environments: owned client calls, requirements, and configuration debugging with Python and SQL. Cut client setup time by roughly 70% with standardised configuration templates and playbooks across 3 to 4 enterprise implementations. Built Power BI financial dashboards that surfaced client business performance for stakeholder decisions.",
+    tools: [
+      "Python",
+      "SQL",
+      "APIs",
+      "Power BI",
+      "Data pipelines",
+      "ETL",
+      "Root cause analysis",
+      "Agile",
+      "Client delivery",
+    ],
   },
   {
-    company: "iQube, R&D Hub",
+    company: "iQube R&D Hub",
     role: "Product Manager",
     period: "Sep 2021 to Dec 2023",
     summary:
-      "Led 8 to 10 engineers and designers on a platform that grew past 10,000 users. Shipped 4 to 5 AI/ML features from discovery to launch; CSAT moved from 3.2 to 4.6.",
-    tools: ["Python", "TensorFlow", "NLP", "Computer vision", "SQL", "Analytics", "Roadmapping", "User research", "Agile & Jira"],
+      "Shipped 4 to 5 machine learning features to 10,000+ production users, including ML-powered image classification and an NLP customer-service bot, raising CSAT from 3.2 to 4.6. Led and mentored an 8 to 10 person engineering and design team; authored 3 to 4 PRDs and 2 roadmaps.",
+    tools: [
+      "Python",
+      "TensorFlow",
+      "NLP",
+      "Computer vision",
+      "SQL",
+      "PRDs",
+      "Roadmapping",
+      "Agile & Jira",
+      "Mentoring",
+    ],
   },
   {
     company: "IIT Madras",
     role: "Research Intern",
     period: "Jun 2023 to Aug 2023",
     summary:
-      "Analysed behavioural data from 500+ study participants and turned noisy human signals into research-grade findings.",
+      "Conducted statistical analysis and data mining on a 500+ participant behavioural dataset for a character-strengths research project at the Department of Management Studies.",
     tools: ["Python", "Pandas", "Statistical analysis", "EDA", "Data mining", "Research methods"],
   },
   {
@@ -44,7 +71,7 @@ export const experience: Experience[] = [
     role: "ML Research Intern",
     period: "Nov 2022 to Mar 2023",
     summary:
-      "Built an NLP model against a hard accuracy bar, because below it the feature would not ship. Delivered at 90%+.",
+      "Achieved 90%+ accuracy on a code-optimisation classification model recommending time and space complexity reductions, validated on 100 to 200 real company code samples.",
     tools: ["Python", "NLP", "TensorFlow", "Model evaluation", "Research", "Technical writing"],
   },
 ];

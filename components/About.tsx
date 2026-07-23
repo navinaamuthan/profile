@@ -3,9 +3,9 @@ import Reveal from "@/components/Reveal";
 import { personal } from "@/data/personal";
 
 const stats: [string, string, string][] = [
-  ["Top 0.5%", "of 50,000+ teams, Google Cloud Agentic AI Hackathon", "#7048E8"],
-  ["10,000+", "users on the platform I led as a product manager", "#0F8B8D"],
-  ["120+", "countries covered by Fortune 500 implementations I delivered", "#E4573D"],
+  ["Top 0.5%", "of 50,000+ teams — full-stack agentic product, Google Cloud Agentic AI Hackathon", "#7048E8"],
+  ["10,000+", "production users on AI/ML features I shipped end to end", "#0F8B8D"],
+  ["120+", "countries covered by Fortune 500 production implementations I delivered", "#E4573D"],
 ];
 
 const facts: [string, string][] = [

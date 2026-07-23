@@ -23,14 +23,14 @@ const entries: Entry[] = [
     keywords: ["experience", "background", "career", "worked", "history", "summary"],
     phrases: ["tell me about", "who is navina"],
     answer: {
-      text: "Short version: two years as a product manager leading a team of 8 to 10 on a 10,000+ user platform (CSAT 3.2 to 4.6), then a year at E2open delivering Fortune 500 supply chain implementations across 120+ countries, then an MSc in Computer Science at Trinity College Dublin, finished with distinction. Recent work is applied AI: agentic systems, LLM evaluation, EU AI Act compliance.",
+      text: "Short version: full-stack builder with a TCD MSc in Computer Science (Distinction). A year at E2open as Associate Implementation Engineer delivering Fortune 500 production systems across 120+ countries in Python and SQL, then two years as Product Manager at iQube shipping AI/ML features to 10,000+ users. Recent work: React and Node agentic products, EU AI Act audit tooling, LLM evaluation.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
   {
     keywords: ["e2open", "implementation", "supply", "chain", "fortune"],
     answer: {
-      text: "At E2open (Sep 2024 to Jun 2025) she delivered Fortune 500 supply chain implementations across 120+ countries, systematised configuration work that used to be bespoke every time, and cut setup time by roughly 70%. Stack: Python, SQL, Power BI, data pipelines.",
+      text: "At E2open (Sep 2024 to Jun 2025) as Associate Implementation Engineer she delivered end-to-end data-driven implementations for Fortune 500 clients across 120+ countries in production: Python, SQL, client calls, requirements, and configuration debugging. Standardised templates cut setup time by roughly 70%. She also built the Power BI financial dashboards stakeholders used.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
@@ -38,14 +38,14 @@ const entries: Entry[] = [
     keywords: ["iqube", "product", "manager", "pm", "csat", "roadmap"],
     phrases: ["product management"],
     answer: {
-      text: "As Product Manager at iQube (Sep 2021 to Dec 2023) she led 8 to 10 engineers and designers, shipped 4 to 5 AI/ML features from discovery to launch, and moved CSAT from 3.2 to 4.6 while the platform grew past 10,000 users.",
+      text: "As Product Manager at iQube R&D Hub (Sep 2021 to Dec 2023) she shipped 4 to 5 machine learning features to 10,000+ production users, including image classification and an NLP customer-service bot, raising CSAT from 3.2 to 4.6. She led and mentored an 8 to 10 person engineering and design team.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
   {
     keywords: ["ignitrix", "agent", "agentic", "adversarial", "maya", "nash", "hackathon", "google"],
     answer: {
-      text: "IGNITRIX is a dual-agent financial advisor built in 48 hours at the Google Cloud Agentic AI Hackathon: Maya diagnoses your financial health, Nash attacks her conclusions, and a collaboration engine reconciles the argument before anything reaches the user. It placed in the top 0.5% of 50,000+ teams, Grand Finalist.",
+      text: "IGNITRIX is a full-stack dual-agent financial advisor built in 48 hours at the Google Cloud Agentic AI Hackathon: React frontend, Node.js gateway, Maya diagnoses financial health, Nash attacks her conclusions, MCP retrieval for grounding. Top 0.5% of 50,000+ teams, Grand Finalist, handling about 50 to 60 real users' financial data.",
       links: [
         { label: "Project card", href: "#project-ignitrix" },
         { label: "GitHub", href: "https://github.com/navinaamuthan/ignitrix-financial-dual-agent-ai" },
@@ -55,7 +55,7 @@ const entries: Entry[] = [
   {
     keywords: ["auditai", "audit", "fairness", "bias", "compliance"],
     answer: {
-      text: "AuditAI is an automated EU AI Act audit pipeline: it trains a credit risk model, quantifies bias across protected attributes (statistical parity, disparate impact, equalized odds), classifies the system under the Act, and has an LLM write the audit report so every sentence traces to a number.",
+      text: "AuditAI is a full-stack EU AI Act audit product: Python services train a credit risk model, quantify bias (statistical parity, disparate impact, equalized odds), classify risk under the Act, and an LLM writes the report. Next.js and TypeScript dashboard on top. GitHub: github.com/navinaamuthan/audit-ai.",
       links: [
         { label: "Project card", href: "#project-auditai" },
         { label: "GitHub", href: "https://github.com/navinaamuthan/audit-ai" },
@@ -79,7 +79,7 @@ const entries: Entry[] = [
   {
     keywords: ["skills", "stack", "tools", "technologies", "tech", "python", "sql", "tableau", "know"],
     answer: {
-      text: "Nine groups, starting with programming languages (Java, C, ReactJS, Python, TypeScript, SQL), then GenAI & agents, machine learning, data science, data engineering, BI, cloud & engineering, product & business, and AI governance. The Skills section lists every one, and chips with a dot jump to the project that proves the skill.",
+      text: "Programming languages first (Java, C, JavaScript, Python, TypeScript, SQL), then Frontend & UX (React, Next.js), Software engineering (Node, APIs, Docker, CI/CD), GenAI, machine learning, data science, data engineering & cloud (AWS, Azure, GCP), BI, and security/governance. Chips with a dot jump to the proving project.",
       links: [{ label: "Skills section", href: "#skills" }],
     },
   },
@@ -111,15 +111,27 @@ const entries: Entry[] = [
     keywords: ["available", "availability", "start", "notice", "when", "open"],
     phrases: ["start date"],
     answer: {
-      text: "Available immediately, Dublin based, no sponsorship needed. She is looking at solutions engineering, data science and AI/ML roles first, with analyst and product roles also on the table.",
+      text: "Available immediately, Dublin based, no sponsorship needed. She is open to software engineering, AI/ML, and data roles.",
       links: [{ label: `Email ${personal.email}`, href: `mailto:${personal.email}` }],
+    },
+  },
+  {
+    keywords: ["software", "engineer", "fullstack", "full-stack", "frontend", "react", "javascript", "coding", "code"],
+    phrases: ["software engineer", "full stack", "software engineering"],
+    answer: {
+      text: "She positions as a software engineer who ships full-stack end to end: React and TypeScript UIs, Node and Python services, modular design, security-minded gateways, and production delivery. AuditAI and IGNITRIX are the clearest receipts; E2open shows she can own production systems for Fortune 500 clients.",
+      links: [
+        { label: "Skills", href: "#skills" },
+        { label: "AuditAI", href: "#project-auditai" },
+        { label: "IGNITRIX", href: "#project-ignitrix" },
+      ],
     },
   },
   {
     keywords: ["solutions", "solution", "gtech", "ads", "scale", "scaling", "client", "clients"],
     phrases: ["solutions engineer", "solutions engineering"],
     answer: {
-      text: "Solutions engineering is the intersection she works at: build the technical thing, then make it work for the client at scale. At E2open that meant owning delivery for Fortune 500 clients across 120+ countries, from Python and SQL pipelines to explaining root cause to a VP the next morning. IGNITRIX shows the build speed: a production-grade multi-agent system (React, Node.js gateway, Python agents, Firebase) in 48 hours.",
+      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software roles, the sharper fit is full-stack engineering: React, Node, Python, modular services, and secure UX — see AuditAI and IGNITRIX.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
@@ -137,7 +149,7 @@ const entries: Entry[] = [
     keywords: ["hire", "why", "fit", "strengths", "different", "special", "unique"],
     phrases: ["why should"],
     answer: {
-      text: "Three reasons with receipts. She ships end to end, fast: a production-grade multi-agent AI system built in 48 hours, top 0.5% of 50,000+ teams at Google's agentic AI hackathon. She has real client-delivery scars: Fortune 500 implementations in 120+ countries, SQL pipelines over 100k+ records, setup time cut by 70%. And she translates between the two worlds: the same root cause analysis that fixed the pipeline gets explained to a VP in language they can act on.",
+      text: "Three reasons with receipts. She ships full-stack end to end: React frontends, Node and Python services, modular and security-minded design — IGNITRIX in 48 hours, top 0.5% of 50,000+ teams. She has production scars: Fortune 500 implementations in 120+ countries as Associate Implementation Engineer. And she proves AI systems: AuditAI turns EU AI Act fairness checks into a rerunnable pipeline with a Next.js dashboard.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },
@@ -152,7 +164,7 @@ const entries: Entry[] = [
     keywords: ["solutions", "solution", "gtech", "ads", "client", "clients", "consulting", "scale", "troubleshoot", "troubleshooting"],
     phrases: ["solutions engineer", "solutions engineering", "client facing"],
     answer: {
-      text: "Solutions engineering is her natural habitat: technical and client-facing at the same time. At E2open she owned delivery for Fortune 500 clients across 120+ countries, writing Python and SQL, debugging API integrations, then explaining root cause to VPs in plain language. And she builds fast when it counts: IGNITRIX went from zero to a working multi-agent system (React, Node.js, Python, Firebase) in 48 hours, top 0.5% of 50,000+ teams.",
+      text: "Client-facing delivery is real: at E2open she owned Fortune 500 implementations across 120+ countries, writing Python and SQL, debugging integrations, then explaining root cause in plain language. For software engineering roles, pair that with her full-stack builds — React, Node, Python — on IGNITRIX and AuditAI.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
@@ -197,14 +209,14 @@ const entries: Entry[] = [
   {
     keywords: ["samsung", "iit", "madras", "research", "intern", "internship"],
     answer: {
-      text: "Two research stints: an ML research internship at Samsung R&D (PRISM), where she built an NLP model and shipped at 90%+ accuracy, and a research internship at IIT Madras analysing behavioural data from 500+ study participants.",
+      text: "Two research stints: an ML research internship at Samsung R&D (PRISM), where she hit 90%+ accuracy on a code-optimisation classification model validated on 100 to 200 real company samples, and a research internship at IIT Madras analysing behavioural data from 500+ study participants.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
   {
     keywords: ["projects", "work", "built", "portfolio", "case", "studies"],
     answer: {
-      text: "Twelve projects live in the folder above, from IGNITRIX (adversarial financial agents) to AuditAI (EU AI Act audits) to Atlas (a PRD shipped as a product). Open any file for the full story and the skills it proves.",
+      text: "Twelve projects live in the folder above. CV-featured first: AuditAI (github.com/navinaamuthan/audit-ai), IGNITRIX (github.com/navinaamuthan/ignitrix-financial-dual-agent-ai), and EIREVAL (github.com/navinaamuthan/eireval). Open any file for the full story.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },
@@ -231,20 +243,20 @@ const commands: Record<string, NaviAnswer> = {
     links: [{ label: "Selected work", href: "#work" }],
   },
   skills: {
-    text: "All of them are in the Skills section, starting with programming languages, then GenAI & agents, machine learning, data science, data engineering, BI, cloud & engineering, product, and governance.",
+    text: "All of them are in the Skills section: programming languages, frontend & UX, software engineering, GenAI, ML, data, cloud, BI, and security/governance.",
     links: [{ label: "Skills", href: "#skills" }],
   },
   whoami: {
-    text: "A guest on Navina's site. If you are hiring in Dublin, you are exactly where you should be.",
+    text: "A guest on Navina's site. If you are hiring a software engineer, AI/ML or data person in Dublin, you are exactly where you should be.",
   },
 };
 
 export const suggestions = [
   "Does she need sponsorship?",
   "Why should I hire her?",
+  "Is she a software engineer?",
   "What did she do at E2open?",
-  "What awards has she won?",
-  "Any leadership experience?",
+  "What is AuditAI?",
   "What is IGNITRIX?",
 ];
 

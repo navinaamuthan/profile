@@ -50,8 +50,8 @@ export default function Contact() {
             Say hello<span className="text-accentSoft">.</span>
           </h3>
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/70">
-            If you are hiring for solutions engineering, data or AI work in Dublin, I would like to
-            hear about it. Available immediately; email is the fastest way to reach me.
+            If you are hiring for software engineering, AI/ML or data roles in Dublin, I would like
+            to hear about it. Available immediately; email is the fastest way to reach me.
           </p>
 
           <p className="mt-10">

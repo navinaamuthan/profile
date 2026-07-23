@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Navina Ganapathy Amuthan | Data Scientist & Solutions Engineer in Dublin";
+export const alt = "Navina Ganapathy Amuthan | Software Engineer in Dublin";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -22,18 +22,18 @@ export default function OG() {
       >
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#0071E3", fontWeight: 700 }}>
-            Solutions Engineering · Data Science · Dublin
+            Software Engineering · AI/ML · Data · Dublin
           </div>
           <div style={{ fontSize: 78, lineHeight: 1.04, color: "#1D1D1F", marginTop: 28, fontWeight: 700, letterSpacing: -2 }}>
             Navina Ganapathy Amuthan
           </div>
           <div style={{ fontSize: 32, color: "#6E6E73", marginTop: 24 }}>
-            I build technical solutions for clients, then make them scale.
+            Full-stack software: React, Python, Java. Shipped to production.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
           <div style={{ display: "flex", flexDirection: "column", fontSize: 23, color: "#6E6E73", lineHeight: 1.6 }}>
-            <div>Python · SQL · APIs · agentic AI · Fortune 500 delivery, 120+ countries</div>
+            <div>React · TypeScript · Python · Java · Node.js · Fortune 500 systems, 120+ countries</div>
             <div>TCD MSc CS, Distinction · Top 0.5% of 50,000+, Google Agentic AI Hackathon</div>
           </div>
           <div

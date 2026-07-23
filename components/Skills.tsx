@@ -66,7 +66,7 @@ export default function Skills() {
           <Reveal
             key={c.id}
             delay={Math.min((i % 2) * 80, 160)}
-            className={c.id === "languages" ? "md:col-span-2" : undefined}
+            className={c.id === "languages" || c.id === "frontend" ? "md:col-span-2" : undefined}
           >
             <div className="tile h-full" style={{ ["--tile-color" as string]: c.color }}>
               <div className="flex items-center gap-3">
