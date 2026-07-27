@@ -5,6 +5,7 @@ import RoleFit from "@/components/RoleFit";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Writing from "@/components/Writing";
 import Recognition from "@/components/Recognition";
 import Contact from "@/components/Contact";
@@ -24,6 +25,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Skills />
+        <Certifications />
         <Writing />
         <Recognition />
       </main>

@@ -41,7 +41,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-6 pb-10 pt-20 sm:pt-28 md:px-10">
         <Reveal>
           <p className="font-display text-4xl font-bold leading-none text-accentSoft" aria-hidden>
-            07
+            08
           </p>
           <h2 className="mt-2 font-display text-[15px] font-bold uppercase tracking-[0.14em] text-paper">
             Contact

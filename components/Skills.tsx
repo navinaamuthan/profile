@@ -3,6 +3,7 @@
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { skillCategories, evidence, type SkillCategory } from "@/data/skills";
+import { skillToCerts } from "@/data/certifications";
 import { projects } from "@/data/projects";
 import { projectId } from "@/lib/slug";
 
@@ -39,7 +40,6 @@ const icons: Record<SkillCategory["icon"], React.ReactNode> = {
 export default function Skills() {
   const jumpToProjects = (names: string[]) => {
     const first = projects.find((p) => p.name === names[0]);
-    // Projects that live in the Finder open their Quick Look directly.
     if (first && !first.flagship && !first.featured) {
       window.dispatchEvent(new CustomEvent("finder-open", { detail: first.name }));
       return;
@@ -55,6 +55,13 @@ export default function Skills() {
       t.classList.add("is-highlighted");
       setTimeout(() => t.classList.remove("is-highlighted"), 2600);
     }
+  };
+
+  const jumpToCert = (certId: string) => {
+    document.getElementById("certifications")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("cert-spotlight", { detail: certId }));
+    }, 350);
   };
 
   const chipClass = (emphasis?: boolean) => (emphasis ? "chip chip-emphasis" : "chip");
@@ -83,23 +90,48 @@ export default function Skills() {
                 <span className="tile-count">{c.skills.length}</span>
               </div>
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {c.skills.map((s) =>
-                  s.projects ? (
-                    <button
-                      key={s.name}
-                      className={chipClass(s.emphasis)}
-                      onClick={() => jumpToProjects(s.projects!)}
-                      title={`Used in ${s.projects.join(", ")}`}
-                    >
-                      {s.name}
-                      <span className="chip-dot" aria-hidden />
-                    </button>
-                  ) : (
-                    <span key={s.name} className={chipClass(s.emphasis)}>
-                      {s.name}
+                {c.skills.map((s) => {
+                  const certs = skillToCerts[s.name];
+                  const hasProjects = Boolean(s.projects?.length);
+                  const hasCerts = Boolean(certs?.length);
+                  if (!hasProjects && !hasCerts) {
+                    return (
+                      <span key={s.name} className={chipClass(s.emphasis)}>
+                        {s.name}
+                      </span>
+                    );
+                  }
+                  return (
+                    <span key={s.name} className="inline-flex items-center gap-1">
+                      <button
+                        type="button"
+                        className={chipClass(s.emphasis)}
+                        onClick={() => {
+                          if (hasProjects) jumpToProjects(s.projects!);
+                          else jumpToCert(certs![0]);
+                        }}
+                        title={
+                          hasProjects
+                            ? `Used in ${s.projects!.join(", ")}`
+                            : "Open linked certification"
+                        }
+                      >
+                        {s.name}
+                        {hasProjects && <span className="chip-dot" aria-hidden />}
+                        {hasCerts && !hasProjects && <span className="chip-seal" aria-hidden />}
+                      </button>
+                      {hasCerts && hasProjects && (
+                        <button
+                          type="button"
+                          className="chip-seal-btn"
+                          aria-label={`View certification for ${s.name}`}
+                          title="Open linked certification"
+                          onClick={() => jumpToCert(certs![0])}
+                        />
+                      )}
                     </span>
-                  )
-                )}
+                  );
+                })}
               </div>
             </div>
           </Reveal>
@@ -108,12 +140,11 @@ export default function Skills() {
 
       <Reveal>
         <p className="mt-6 text-[15px] font-medium text-ink/80">
-          A coloured dot on a chip means there is a real project behind it on this page. Click the
-          chip and the project opens.
+          A coloured dot means a project on this page. A bronze seal means a linked certification —
+          click the seal to open it.
         </p>
       </Reveal>
 
-      {/* Where the proof sits: one dot per project or role */}
       <Reveal delay={80}>
         <div className="mt-14 rounded-2xl border border-line bg-white p-7 sm:p-9">
           <h3 className="font-display text-2xl font-bold">Where the proof sits</h3>

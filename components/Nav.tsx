@@ -35,6 +35,12 @@ const items: { label: string; id: string; color: string; icon: React.ReactNode }
     icon: <path d="M5 5h5v5H5V5zm9 0h5v5h-5V5zM5 14h5v5H5v-5zm9 0h5v5h-5v-5z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
   },
   {
+    label: "Certs",
+    id: "certifications",
+    color: "#8B6914",
+    icon: <path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.9 7.2 18l.9-5.4L4.2 8.7l5.4-.8L12 3z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />,
+  },
+  {
     label: "Writing",
     id: "writing",
     color: "#1B3A4B",

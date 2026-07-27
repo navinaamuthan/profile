@@ -721,7 +721,175 @@ button.chip:hover {
   .project-card::before,
   .project-card-front,
   .timeline-node,
-  .role-fit-card {
+  .role-fit-card,
+  .cert-card,
+  .cert-medal,
+  .cert-filter {
     transition: none;
   }
+}
+
+/* ---------- certifications ---------- */
+
+.chip-seal,
+.chip-seal-btn {
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #d4b896, #a67c52 55%, #8b6914);
+  box-shadow: 0 0 0 1.5px color-mix(in srgb, #a67c52 35%, transparent);
+}
+
+.chip-seal-btn {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chip-seal-btn:hover {
+  transform: scale(1.25);
+}
+
+.cert-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--bronze) 35%, var(--line));
+  background:
+    linear-gradient(135deg, rgba(166, 124, 82, 0.08), transparent 45%),
+    #fffefb;
+  padding: 1.5rem 1.75rem;
+}
+
+.cert-medal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cert-medal:hover {
+  transform: translateY(-6px) scale(1.04);
+}
+
+.cert-medal-ring {
+  position: absolute;
+  top: -6px;
+  height: 120px;
+  width: 120px;
+  border-radius: 9999px;
+  border: 2px dashed transparent;
+  animation: cert-spin 18s linear infinite;
+}
+
+@keyframes cert-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cert-medal-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cert-rail-stat {
+  margin-left: auto;
+  min-width: 7rem;
+  border-left: 1px solid var(--line);
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .cert-rail-stat {
+    margin-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 1rem;
+    width: 100%;
+  }
+}
+
+.cert-filter {
+  @apply rounded-full border border-line px-3.5 py-1.5 text-[13px] font-medium text-muted;
+  background: #fffefb;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.cert-filter:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--bronze) 45%, var(--line));
+}
+
+.cert-filter.is-on {
+  color: #fffefb;
+  background: var(--navy);
+  border-color: var(--navy);
+  box-shadow: 0 8px 22px -14px rgba(15, 28, 46, 0.7);
+}
+
+.cert-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.15rem;
+  border: 1px solid var(--line);
+  background: #fffefb;
+  padding: 1.25rem 1.35rem;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s,
+    border-color 0.35s, opacity 0.35s;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--bronze) 50%, var(--line));
+  box-shadow: 0 22px 48px -30px rgba(166, 124, 82, 0.55);
+}
+
+.cert-card.is-active {
+  border-color: var(--bronze);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--bronze) 45%, transparent),
+    0 22px 48px -28px rgba(166, 124, 82, 0.6);
+}
+
+.cert-card.is-dimmed {
+  opacity: 0.45;
+}
+
+.cert-card-glow {
+  position: absolute;
+  right: -20%;
+  top: -40%;
+  height: 140px;
+  width: 140px;
+  border-radius: 9999px;
+  opacity: 0.12;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.cert-badge-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--bronze) 28%, var(--line));
+  background: linear-gradient(160deg, rgba(212, 184, 150, 0.18), rgba(255, 254, 251, 0.9));
+  padding: 0.35rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.cert-skill-chip {
+  @apply inline-flex rounded-full px-2.5 py-1 text-[11px] font-medium;
+  color: var(--navy);
+  background: color-mix(in srgb, var(--bronze) 12%, #fff);
+  border: 1px solid color-mix(in srgb, var(--bronze) 26%, #fff);
 }
