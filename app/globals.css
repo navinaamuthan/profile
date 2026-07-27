@@ -36,7 +36,7 @@ body {
   color: #f2ede4;
 }
 
-/* Skip to content — keyboard / ATS-friendly */
+/* Skip to content: keyboard / ATS-friendly */
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -57,7 +57,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Thin mounted frame — brass edge */
+/* Thin mounted frame: brass edge */
 .site-frame {
   position: fixed;
   inset: 10px;

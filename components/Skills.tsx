@@ -140,7 +140,7 @@ export default function Skills() {
 
       <Reveal>
         <p className="mt-6 text-[15px] font-medium text-ink/80">
-          A coloured dot means a project on this page. A bronze seal means a linked certification —
+          A coloured dot means a project on this page. A bronze seal means a linked certification:
           click the seal to open it.
         </p>
       </Reveal>

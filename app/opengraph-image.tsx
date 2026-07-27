@@ -45,7 +45,7 @@ export default function OG() {
             Navina Ganapathy Amuthan
           </div>
           <div style={{ fontSize: 28, color: "#6B6560", marginTop: 24 }}>
-            Production code for AI/ML — Python, Java, React, RAG, agents.
+            Production code for AI/ML: Python, Java, React, RAG, agents.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>

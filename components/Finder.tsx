@@ -171,7 +171,7 @@ export default function Finder() {
                 <span className="h-3 w-3 rounded-full bg-[#28C840]" aria-hidden />
               </button>
               <p className="flex-1 truncate text-center text-[13px] text-muted">
-                {openProject.name} — preview
+                {openProject.name} · preview
               </p>
               <span className="w-12" aria-hidden />
             </div>

@@ -79,7 +79,7 @@ export const projects: Project[] = [
       "Backend gateway between frontend and agents, so no unauthenticated request ever triggers reasoning",
     ],
     tech: ["React", "JavaScript", "Node.js", "Google ADK", "Vertex AI", "MCP", "Firebase", "Python"],
-    metrics: ["Top 0.5% of 50,000+ teams", "Grand Finalist", "Built in 48 hours", "~50–60 real users' data"],
+    metrics: ["Top 0.5% of 50,000+ teams", "Grand Finalist", "Built in 48 hours", "~50-60 real users' data"],
     lesson: "The fastest way to make AI trustworthy is to make it argue with itself in public.",
     github: "https://github.com/navinaamuthan/ignitrix-financial-dual-agent-ai",
   },

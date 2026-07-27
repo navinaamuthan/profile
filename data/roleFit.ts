@@ -61,7 +61,7 @@ export const roleFits: RoleFit[] = [
     role: "Data / Business Analyst",
     priority: "secondary",
     summary:
-      "SQL, Excel, Power BI and Tableau — turning production data into stakeholder-ready insights (E2open Fortune 500 delivery).",
+      "SQL, Excel, Power BI and Tableau: turning production data into stakeholder-ready insights (E2open Fortune 500 delivery).",
     matches: ["SQL", "Excel", "Power BI", "Tableau", "Python", "Reporting", "Dashboards"],
   },
 ];

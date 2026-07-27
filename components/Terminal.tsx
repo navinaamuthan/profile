@@ -61,7 +61,7 @@ export function TerminalWindow({
           <svg viewBox="0 0 24 24" className="mr-1.5 inline-block h-3 w-3 -translate-y-px" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
             <path d="M4 17l6-5-6-5m8 10h8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          guest — navi — 80×24
+          guest · navi · 80×24
         </p>
         <span className="w-12" aria-hidden />
       </div>

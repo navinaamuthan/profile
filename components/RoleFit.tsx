@@ -7,8 +7,8 @@ export default function RoleFit() {
     <Section id="fit" index="01b" label="Role fit" color="#A67C52">
       <Reveal>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ink/80">
-          Optimised for two primary IC tracks — full-stack software engineering and AI/ML associate
-          engineering — with data / business analysis as a secondary fit. Every keyword below maps
+          Optimised for two primary IC tracks: full-stack software engineering and AI/ML associate
+          engineering, with data / business analysis as a secondary fit. Every keyword below maps
           to work on this page.
         </p>
       </Reveal>

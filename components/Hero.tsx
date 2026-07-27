@@ -77,10 +77,7 @@ export default function Hero() {
               className="rise mt-7 max-w-lg text-[17px] font-medium leading-relaxed text-ink/80"
               style={{ animationDelay: "700ms" }}
             >
-              Hands-on software engineer for AI/ML solutions: production Python and Java, React
-              frontends, RAG and agent workflows, evaluation harnesses, APIs and Docker — shipped
-              for Fortune 500 clients and top 0.5% at Google&apos;s Agentic AI Hackathon. MSc CS,
-              Trinity College Dublin, Distinction.
+              Software Engineer | AI | Tech
             </p>
           </div>
 

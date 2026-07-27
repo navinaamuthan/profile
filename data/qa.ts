@@ -131,7 +131,7 @@ const entries: Entry[] = [
     keywords: ["jpmorgan", "jpmc", "chase", "associate", "copilot", "rag", "mlops", "docker", "azure", "genai"],
     phrases: ["ai/ml", "aiml", "associate engineer", "machine learning"],
     answer: {
-      text: "Strong match for AI/ML Associate Engineer profiles: production Python and Java, RAG and agent workflows (IGNITRIX), evaluation harnesses (EIREVAL), bias and fairness monitoring (AuditAI), REST APIs, Docker, CI/CD, and Azure exposure — plus enterprise governance from EU AI Act work.",
+      text: "Strong match for AI/ML Associate Engineer profiles: production Python and Java, RAG and agent workflows (IGNITRIX), evaluation harnesses (EIREVAL), bias and fairness monitoring (AuditAI), REST APIs, Docker, CI/CD, and Azure exposure, plus enterprise governance from EU AI Act work.",
       links: [
         { label: "Role fit", href: "#fit" },
         { label: "Skills", href: "#skills" },
@@ -143,7 +143,7 @@ const entries: Entry[] = [
     keywords: ["solutions", "solution", "gtech", "ads", "scale", "scaling", "client", "clients"],
     phrases: ["solutions engineer", "solutions engineering"],
     answer: {
-      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software and AI/ML roles, the sharper fit is production engineering: React, Node, Python, RAG, modular services — see AuditAI and IGNITRIX.",
+      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software and AI/ML roles, the sharper fit is production engineering: React, Node, Python, RAG, modular services. See AuditAI and IGNITRIX.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
@@ -154,7 +154,7 @@ const entries: Entry[] = [
     keywords: ["analyst", "analysis", "dashboard", "reporting", "excel", "tableau", "powerbi", "insights", "visualisation", "visualization"],
     phrases: ["data analyst", "business analyst", "power bi"],
     answer: {
-      text: "Yes — data and business analysis sit alongside her software engineering work. At E2open she owned SQL pipelines and Power BI financial dashboards for Fortune 500 stakeholders. Stack for analyst roles: SQL, Excel, Power BI, Tableau, Python, and turning messy data into decisions people can act on.",
+      text: "Yes: data and business analysis sit alongside her software engineering work. At E2open she owned SQL pipelines and Power BI financial dashboards for Fortune 500 stakeholders. Stack for analyst roles: SQL, Excel, Power BI, Tableau, Python, and turning messy data into decisions people can act on.",
       links: [
         { label: "Skills", href: "#skills" },
         { label: "Experience", href: "#experience" },
@@ -172,7 +172,7 @@ const entries: Entry[] = [
     keywords: ["hire", "why", "fit", "strengths", "different", "special", "unique"],
     phrases: ["why should"],
     answer: {
-      text: "Three reasons with receipts. She ships full-stack end to end: React frontends, Node and Python services, modular and security-minded design — IGNITRIX in 48 hours, top 0.5% of 50,000+ teams. She has production scars: Fortune 500 implementations in 120+ countries as Associate Implementation Engineer. And she proves AI systems: AuditAI turns EU AI Act fairness checks into a rerunnable pipeline with a Next.js dashboard.",
+      text: "Three reasons with receipts. She ships full-stack end to end: React frontends, Node and Python services, modular and security-minded design. IGNITRIX in 48 hours, top 0.5% of 50,000+ teams. She has production scars: Fortune 500 implementations in 120+ countries as Associate Implementation Engineer. And she proves AI systems: AuditAI turns EU AI Act fairness checks into a rerunnable pipeline with a Next.js dashboard.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },
@@ -187,7 +187,7 @@ const entries: Entry[] = [
     keywords: ["solutions", "solution", "gtech", "ads", "client", "clients", "consulting", "scale", "troubleshoot", "troubleshooting"],
     phrases: ["solutions engineer", "solutions engineering", "client facing"],
     answer: {
-      text: "Client-facing delivery is real: at E2open she owned Fortune 500 implementations across 120+ countries, writing Python and SQL, debugging integrations, then explaining root cause in plain language. For software engineering roles, pair that with her full-stack builds — React, Node, Python — on IGNITRIX and AuditAI.",
+      text: "Client-facing delivery is real: at E2open she owned Fortune 500 implementations across 120+ countries, writing Python and SQL, debugging integrations, then explaining root cause in plain language. For software engineering roles, pair that with her full-stack builds (React, Node, Python) on IGNITRIX and AuditAI.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
