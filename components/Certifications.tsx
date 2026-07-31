@@ -10,9 +10,9 @@ const filters: { id: string; label: string }[] = [
   { id: "all", label: "All" },
   { id: "languages", label: "Python & code" },
   { id: "ml", label: "ML & deep learning" },
-  { id: "mlops", label: "Big data" },
+  { id: "data-eng", label: "Big data" },
   { id: "governance", label: "Security" },
-  { id: "bi", label: "Product" },
+  { id: "reporting", label: "Reporting & product" },
 ];
 
 function issuerInitials(issuer: string) {

@@ -42,15 +42,15 @@ export const projects: Project[] = [
   {
     name: "AuditAI",
     featured: true,
-    tag: "Full-stack · Responsible AI",
+    tag: "Credit risk · Responsible AI",
     summary:
-      "An automated EU AI Act audit pipeline that catches bias and writes the compliance report itself.",
+      "A credit-risk model, fairness checks, and an automated audit report you can rerun when the data changes.",
     problem:
-      "The EU AI Act makes fairness audits mandatory for high-risk AI, but most compliance work is manual, expensive, and inconsistent.",
+      "Credit and high-risk AI systems need repeatable risk reporting: bias metrics, data quality checks, and documentation that stakeholders can trust, not a one-off spreadsheet.",
     solution:
-      "End-to-end product: a Python pipeline trains a credit risk model, quantifies bias across protected attributes (statistical parity, disparate impact, equalized odds), classifies the system under the EU AI Act, and uses an LLM to write the audit report so every sentence traces back to a number. Interactive Next.js dashboard included.",
+      "End-to-end product: a Python pipeline trains a credit risk model, quantifies bias across protected attributes (statistical parity, disparate impact, equalized odds), classifies the system under the EU AI Act, and uses an LLM to write the audit report so every sentence traces back to a number. Interactive Next.js dashboard for monitoring outputs.",
     architecture:
-      "Modular Python audit services (data quality, model training, fairness engine, risk classifier), Groq-hosted Llama 3.3 70B for the narrative report, Next.js and TypeScript dashboard with Recharts. Clear module boundaries so each stage is testable and reusable.",
+      "Modular Python services for data quality, model training, fairness engine, and risk classification; Groq-hosted Llama 3.3 70B for the narrative report; Next.js and TypeScript dashboard with Recharts. Clear module boundaries so each stage is testable and reusable.",
     decisions: [
       "Quantitative findings first, LLM narrative second, so every sentence in the report traces to a number",
       "German Credit dataset because regulators and researchers already use it to study lending bias",

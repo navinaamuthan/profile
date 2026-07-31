@@ -11,12 +11,6 @@ const items: { label: string; id: string; color: string; icon: React.ReactNode }
     icon: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 0114 0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
   },
   {
-    label: "Fit",
-    id: "fit",
-    color: "#C9A66B",
-    icon: <path d="M12 3l2.2 4.5L19 8.2l-3.5 3.4.8 4.9L12 14.8 7.7 16.5l.8-4.9L5 8.2l4.8-.7L12 3z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />,
-  },
-  {
     label: "Experience",
     id: "experience",
     color: "#5C7C6A",

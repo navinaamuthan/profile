@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Navina Ganapathy Amuthan | Software & AI/ML Engineer Dublin";
+export const alt = "Navina Ganapathy Amuthan | Software Engineer · AI · Data · Dublin";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default function OG() {
               fontWeight: 700,
             }}
           >
-            Software Engineering · AI/ML · Dublin
+            Software Engineer · AI · Tech · Dublin
           </div>
           <div
             style={{
@@ -45,7 +45,7 @@ export default function OG() {
             Navina Ganapathy Amuthan
           </div>
           <div style={{ fontSize: 28, color: "#6B6560", marginTop: 24 }}>
-            Production code for AI/ML: Python, Java, React, RAG, agents.
+            Python, SQL, React, Tableau, Power BI, risk-aware reporting.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
@@ -58,7 +58,7 @@ export default function OG() {
               lineHeight: 1.6,
             }}
           >
-            <div>Python · Java · React · RAG · Docker · Azure · APIs</div>
+            <div>Python · SQL · React · Tableau · Power BI · Excel</div>
             <div>TCD MSc CS, Distinction · Top 0.5% Google Agentic AI Hackathon</div>
           </div>
           <div

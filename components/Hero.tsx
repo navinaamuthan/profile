@@ -25,7 +25,7 @@ export default function Hero() {
         >
           <p className="meta-chip">
             <span className="breathe inline-block h-1.5 w-1.5 rounded-full bg-leaf" />
-            Open to software engineering, AI/ML &amp; data / business analyst roles · available
+            Open to software engineering, AI/ML, risk reporting &amp; data roles · available
             immediately
           </p>
           <span className="flex flex-wrap gap-2">
@@ -52,7 +52,7 @@ export default function Hero() {
               className="rise mb-4 font-display text-[12px] font-bold uppercase tracking-[0.2em] text-bronze"
               style={{ animationDelay: "200ms" }}
             >
-              Software · AI/ML · Dublin
+              Software Engineer · AI · Tech · Dublin
             </p>
             <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-bold leading-[0.98] tracking-[-0.03em]">
               {nameLines.map((l, i) => (

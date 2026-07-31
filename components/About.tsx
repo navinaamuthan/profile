@@ -5,7 +5,7 @@ import { personal } from "@/data/personal";
 const stats: [string, string, string][] = [
   ["Top 0.5%", "of 50,000+: production agentic AI system, Google Cloud Hackathon", "#8B6914"],
   ["10,000+", "users on AI/ML features shipped end to end in production", "#5C7C6A"],
-  ["120+", "countries: Fortune 500 production delivery (Python, SQL, APIs)", "#A67C52"],
+  ["120+", "countries: Fortune 500 delivery with SQL, Python and Power BI reporting", "#A67C52"],
 ];
 
 const facts: [string, string][] = [
