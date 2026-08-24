@@ -74,7 +74,11 @@ export default function Skills() {
             key={c.id}
             delay={Math.min((i % 2) * 80, 160)}
             className={
-              c.id === "languages" || c.id === "reporting" || c.id === "genai" || c.id === "engineering"
+              c.id === "csoc" ||
+              c.id === "languages" ||
+              c.id === "reporting" ||
+              c.id === "genai" ||
+              c.id === "engineering"
                 ? "md:col-span-2"
                 : undefined
             }

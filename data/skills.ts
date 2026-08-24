@@ -16,6 +16,32 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
+    id: "csoc",
+    label: "Cyber security & CSOC analysis",
+    icon: "shield",
+    color: "#0F4C5C",
+    skills: [
+      { name: "Security Operations / SOC / CSOC analysis", emphasis: true },
+      { name: "SIEM log analysis (Splunk preferred)", emphasis: true },
+      { name: "Security alert triage & event analysis", emphasis: true },
+      { name: "Playbooks, runbooks & SOPs", emphasis: true },
+      { name: "False-positive validation & severity assessment", emphasis: true },
+      { name: "Initial investigation & contextual analysis", emphasis: true },
+      { name: "Incident escalation with actionable case notes", emphasis: true },
+      { name: "Multi-source telemetry (endpoint, network, identity, cloud)", emphasis: true },
+      { name: "EDR, antivirus, firewalls, VPNs & identity systems", emphasis: true },
+      { name: "Enterprise networking & TCP/IP", emphasis: true },
+      { name: "Endpoint & network security controls" },
+      { name: "Windows, Linux & macOS operating systems" },
+      { name: "Event correlation, enrichment & alert tuning" },
+      { name: "Investigation documentation & shift handovers" },
+      { name: "Cloud platforms (AWS, Azure, GCP) exposure" },
+      { name: "Scripting & automation (Python, PowerShell, Bash)" },
+      { name: "Emerging threats & attacker techniques awareness" },
+      { name: "Stakeholder communication for remediation support" },
+    ],
+  },
+  {
     id: "languages",
     label: "Programming languages",
     icon: "code",
@@ -30,6 +56,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "R" },
       { name: "MATLAB" },
       { name: "Bash" },
+      { name: "PowerShell" },
     ],
   },
   {
@@ -155,6 +182,7 @@ export const skillCategories: SkillCategory[] = [
  * each count is the number of projects or jobs above that evidence the domain.
  */
 export const evidence: { domain: string; count: number; note: string; color: string }[] = [
+  { domain: "Security & CSOC", color: "#0F4C5C", count: 4, note: "Enterprise security handling, secure service design, risk/compliance reporting, GDPR & governance work" },
   { domain: "Reporting & analytics", color: "#B08D57", count: 5, note: "E2open Power BI, AuditAI dashboards, IIT Madras analysis, iQube analytics, AIEF assessments" },
   { domain: "Software & APIs", color: "#1B3A4B", count: 5, note: "IGNITRIX, AuditAI, Nova, PPD Talkbot, E2open production delivery" },
   { domain: "GenAI & agents", color: "#8B6914", count: 5, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI, AIEF" },

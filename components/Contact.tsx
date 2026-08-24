@@ -106,25 +106,6 @@ export default function Contact() {
               </a>
             ))}
           </div>
-
-          <p className="mt-6">
-            <a
-              href={personal.resumeUrl}
-              className="inline-flex items-center gap-2 text-[14px] font-medium text-paper/60 transition-colors hover:text-accentSoft"
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
-                <path
-                  d="M7 3h7l4 4v14H7V3zm7 0v4h4M10 12h5m-5 3.5h5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Download CV (PDF)
-            </a>
-          </p>
         </Reveal>
 
         <footer className="mt-20 flex flex-wrap items-baseline justify-between gap-2 border-t border-paper/15 pt-6 text-[13px] text-paper/50 sm:mt-28">

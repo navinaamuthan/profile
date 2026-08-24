@@ -36,9 +36,6 @@ export default function About() {
             <a href={personal.github} className="link" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a href={personal.resumeUrl} className="link">
-              CV
-            </a>
           </nav>
         </Reveal>
         <Reveal delay={120}>

@@ -99,11 +99,11 @@ const entries: Entry[] = [
   {
     keywords: ["contact", "email", "reach", "linkedin", "touch", "call", "connect"],
     answer: {
-      text: `Email is fastest: ${personal.email}. LinkedIn and GitHub are linked below, and the CV is one click away.`,
+      text: `Email is fastest: ${personal.email}. LinkedIn and GitHub are linked on the page.`,
       links: [
         { label: "Email", href: `mailto:${personal.email}` },
         { label: "LinkedIn", href: personal.linkedin },
-        { label: "CV (PDF)", href: personal.resumeUrl },
+        { label: "GitHub", href: personal.github },
       ],
     },
   },
@@ -256,14 +256,10 @@ const entries: Entry[] = [
 ];
 
 const HELP_TEXT =
-  "You can ask me things like: does she need sponsorship? what is IGNITRIX? what is her stack? why should I hire her? Commands work too: projects, skills, cv, contact, clear.";
+  "You can ask me things like: does she need sponsorship? what is IGNITRIX? what is her stack? why should I hire her? Commands work too: projects, skills, contact, clear.";
 
 const commands: Record<string, NaviAnswer> = {
   help: { text: HELP_TEXT },
-  cv: {
-    text: "Here it is.",
-    links: [{ label: "CV (PDF)", href: personal.resumeUrl }],
-  },
   contact: {
     text: `Email ${personal.email}, or LinkedIn if you prefer.`,
     links: [

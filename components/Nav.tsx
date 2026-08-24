@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { personal } from "@/data/personal";
 
 const items: { label: string; id: string; color: string; icon: React.ReactNode }[] = [
   {
@@ -118,12 +117,6 @@ export default function Nav() {
               );
             })}
           </div>
-          <a
-            href={personal.resumeUrl}
-            className="rounded-full bg-navy px-4 py-1.5 text-[13px] font-semibold text-gold transition-colors hover:bg-bronze hover:text-paper"
-          >
-            CV
-          </a>
         </nav>
       </div>
     </header>
