@@ -14,7 +14,7 @@ export const articles: Article[] = [
   {
     title: "How Consulting Teams Can Validate AI-Generated Recommendations: A Quality Assurance Framework",
     summary:
-      "AI hallucination is now a consulting risk, not a research curiosity. From the Deloitte GPT-4o scandal to how McKinsey and BCG are adopting AI, this essay builds a practical validation framework for teams shipping AI-assisted work.",
+      "Consulting firms using AI face practical risks and business obligations, not only research questions. In the context of the Deloitte GPT-4o controversy and how McKinsey and BCG are adopting AI, this essay develops a validation framework for teams shipping AI-assisted work.",
     tags: ["AI Ethics", "Consulting", "Quality Assurance"],
     date: "2026",
     readingTime: "12 min read",

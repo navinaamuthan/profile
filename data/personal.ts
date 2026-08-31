@@ -4,7 +4,7 @@ export const personal = {
   roleLine: "Product and AI — Development and Management · Dublin, Ireland",
   intro: [
     "I work across product, software, and data: defining what to build, shipping it with engineering teams, and making sure it holds up in production. MSc Computer Science (Intelligent Systems) at Trinity College Dublin, Distinction.",
-    "At E2open I delivered data platforms and reporting for Fortune 500 clients across 120+ countries, owning requirements, integrations, and onboarding in Python and SQL. As Product Manager at iQube R&D Hub I led 8 to 10 engineers, set the roadmap, and launched AI and ML features used by 10,000+ people.",
+    "At e2open I implemented planning systems and data pipelines for supply chain clients across 120+ countries, including ML efficiency work and financial reporting for Fortune 500 accounts. As Product Manager for the AI/ML team at iQube I owned the roadmap for four production systems used by 10,000+ people, leading 12+ engineers and researchers. I have also worked as a business analyst on manufacturing data, and as a project lead on a UNESCO-backed water programme.",
     "Recent work includes client-facing data products, API-backed services, and applied AI with clear evaluation and governance. Comfortable moving between product strategy, technical delivery, and stakeholder communication.",
   ],
   location: "Dublin, Ireland",

@@ -7,7 +7,7 @@ export default function Experience() {
     <Section id="experience" index="02" label="Experience" color="#D4B896" dark>
       <ol className="timeline timeline-dark space-y-12 pl-8">
         {experience.map((e, i) => (
-          <li key={e.company} className="timeline-item relative">
+          <li key={`${e.role}-${e.company}`} className="timeline-item relative">
             <span className="timeline-node" style={{ left: "-32px" }} aria-hidden />
             <Reveal delay={Math.min(i * 60, 180)}>
               <p className="text-[13px] font-semibold tabular-nums text-accentSoft">{e.period}</p>
@@ -15,6 +15,14 @@ export default function Experience() {
                 {e.role} <span className="font-medium text-paper/60">· {e.company}</span>
               </h3>
               <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-paper/75">{e.summary}</p>
+              <ul className="mt-3 max-w-xl space-y-2 text-[14.5px] leading-relaxed text-paper/70">
+                {e.points.map((p) => (
+                  <li key={p.slice(0, 48)} className="pl-4" style={{ textIndent: "-0.85rem" }}>
+                    <span className="mr-2 text-accentSoft">·</span>
+                    {p}
+                  </li>
+                ))}
+              </ul>
               <div className="mt-3.5 flex max-w-xl flex-wrap gap-1.5">
                 {e.tools.map((t) => (
                   <span key={t} className="chip-dark">

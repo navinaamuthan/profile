@@ -15,6 +15,7 @@ const roleColor = (a: Award) => {
   if (/IEEE/i.test(a.title)) return "#0F8B8D";
   if (/Trinity|Class Representative|STEM/i.test(a.title + a.outcome)) return "#1E3A8A";
   if (/FemTech/i.test(a.title)) return "#E4573D";
+  if (/AWS|SheBuilds/i.test(a.title)) return "#FF9900";
   return "#2F9E44";
 };
 

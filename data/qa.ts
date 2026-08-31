@@ -23,14 +23,14 @@ const entries: Entry[] = [
     keywords: ["experience", "background", "career", "worked", "history", "summary"],
     phrases: ["tell me about", "who is navina"],
     answer: {
-      text: "Short version: MSc Computer Science at Trinity College Dublin (Distinction). Product Manager at iQube, leading 8 to 10 engineers and launching AI features to 10,000+ users. Associate Implementation Engineer at E2open, delivering Fortune 500 data platforms across 120+ countries. Recent work covers product specs, APIs, and applied AI with evaluation and governance.",
+      text: "Short version: MSc Computer Science at Trinity College Dublin (Distinction). Product Manager for AI/ML at iQube, leading 12+ engineers and launching four production systems to 10,000+ users. Product Engineer at e2open, implementing planning systems for clients across 120+ countries. Also: business analysis at White House India, project lead on a UNESCO-backed pS-Eau programme, and ML research at Samsung and IIT Madras.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
   {
     keywords: ["e2open", "implementation", "supply", "chain", "fortune"],
     answer: {
-      text: "At E2open (Sep 2024 to Jun 2025) as Associate Implementation Engineer she delivered end-to-end data-driven implementations for Fortune 500 clients across 120+ countries in production: Python, SQL, client calls, requirements, and configuration debugging. Standardised templates cut setup time by roughly 70%. She also built the Power BI financial dashboards stakeholders used.",
+      text: "At e2open (Aug 2024 to Jul 2025) as Product Engineer (Implementation) on the Planning Suite she owned enterprise implementation and data pipelines for supply chain clients across 120+ countries. She improved ML model efficiency by 80% for three Fortune 500 clients, cut operational overhead 25% across 100,000+ records, and delivered financial dashboards used by client leadership.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
@@ -38,7 +38,7 @@ const entries: Entry[] = [
     keywords: ["product", "roadmap", "prd", "stakeholder", "launch", "onboarding", "pm"],
     phrases: ["product manager", "product management", "product experience"],
     answer: {
-      text: "As Product Manager at iQube she defined strategy and roadmaps, wrote PRDs, and launched 4 to 5 ML features to 10,000+ users while leading 8 to 10 engineers. At E2open she owned client discovery, onboarding, and API-backed data-platform delivery. Atlas is a full product spec published as a live site.",
+      text: "As Product Manager for the AI/ML team at iQube (Feb 2021 to Dec 2023) she owned vision and roadmap for four production AI systems used by 10,000+ people, leading 12+ engineers and researchers. CSAT moved from 3.2 to 4.6. She shipped a chatbot, NLP recommender, ML prediction model, and agent-based automation, generating about €110K in platform revenue. At e2open she owned client implementation and data pipelines. Atlas is a full product spec published as a live site.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "Atlas", href: "https://atlas-prd.vercel.app" },
@@ -210,14 +210,14 @@ const entries: Entry[] = [
   {
     keywords: ["awards", "award", "won", "recognition", "prizes", "achievements", "hackathons"],
     answer: {
-      text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022 and the Bosch Fit.Kovai Hackathon 2022, winner of Bloomberg BPuzzled at Trinity, finalist in the Deloitte Case Competition, and winner of ICT Youthtalk.",
+      text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022 and the Bosch Fit.Kovai Hackathon 2022, winner of Bloomberg BPuzzled at Trinity, finalist in the Deloitte Case Competition, winner of ICT Youthtalk, and selected as a mentee for the AWS SheBuilds Mentorship Community 2026.",
       links: [{ label: "Recognition section", href: "#recognition" }],
     },
   },
   {
     keywords: ["leadership", "lead", "led", "team", "mentoring", "community", "chair"],
     answer: {
-      text: "She led 8 to 10 engineers and designers as a PM, a team of 6 on a UNESCO water access programme, chaired her IEEE Women in Engineering chapter, and was elected Class Representative and STEM Convenor at Trinity College Dublin. FemTechConf made her a Women in Tech Ambassador.",
+      text: "She led 12+ engineers and researchers as Product Manager for AI/ML at iQube, independently owned delivery on a UNESCO-backed pS-Eau programme, chaired her IEEE Women in Engineering chapter, and was elected Class Representative and STEM Convenor at Trinity College Dublin. FemTechConf named her a Women in Tech Ambassador. In 2026 she was selected as a mentee for the AWS SheBuilds Mentorship Community.",
       links: [{ label: "Recognition section", href: "#recognition" }],
     },
   },
@@ -245,7 +245,7 @@ const entries: Entry[] = [
   {
     keywords: ["samsung", "iit", "madras", "research", "intern", "internship"],
     answer: {
-      text: "Two research stints: an ML research internship at Samsung R&D (PRISM), where she hit 90%+ accuracy on a code-optimisation classification model validated on 100 to 200 real company samples, and a research internship at IIT Madras analysing behavioural data from 500+ study participants.",
+      text: "At Samsung R&D Institute India (Nov 2022 to Apr 2023) she built a generative AI chatbot and an energy-efficiency pipeline for code execution, improving production Python performance by 65% and shipping monitoring dashboards. At IIT Madras she applied ensemble models (Random Forest, XGBoost) to a 500+ participant behavioural dataset, reaching 92% predictive accuracy.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },

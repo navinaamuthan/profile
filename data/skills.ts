@@ -174,8 +174,8 @@ export const skillCategories: SkillCategory[] = [
  * each count is the number of projects or jobs above that evidence the domain.
  */
 export const evidence: { domain: string; count: number; note: string; color: string }[] = [
-  { domain: "Product & delivery", color: "#1B3A4B", count: 5, note: "iQube product leadership, E2open client implementations, UNESCO programme, Atlas PRD, launch work" },
-  { domain: "Data & analytics", color: "#B08D57", count: 5, note: "E2open Power BI, AuditAI dashboards, IIT Madras analysis, iQube analytics, AIEF assessments" },
+  { domain: "Product & delivery", color: "#1B3A4B", count: 6, note: "iQube product leadership, e2open implementation, White House analysis, UNESCO programme, Atlas PRD, launch work" },
+  { domain: "Data & analytics", color: "#B08D57", count: 6, note: "e2open dashboards, White House forecasting, AuditAI, IIT Madras, iQube analytics, AIEF" },
   { domain: "Software & APIs", color: "#A67C52", count: 5, note: "IGNITRIX, AuditAI, Nova, PPD Talkbot, E2open production delivery" },
   { domain: "Applied AI", color: "#8B6914", count: 5, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI, AIEF" },
   { domain: "Machine learning", color: "#5C7C6A", count: 7, note: "PPD Talkbot, autism screening, traffic CV, Samsung NLP, iQube features, smart farming, Lublin chatbot" },
