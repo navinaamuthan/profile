@@ -6,9 +6,9 @@ import LocalTime from "@/components/LocalTime";
 const items: { label: string; id: string; color: string }[] = [
   { label: "About", id: "about", color: "#A67C52" },
   { label: "Experience", id: "experience", color: "#5C7C6A" },
-  { label: "Work", id: "work", color: "#8B6914" },
   { label: "Skills", id: "skills", color: "#B08D57" },
   { label: "Certs", id: "certifications", color: "#8B6914" },
+  { label: "Work", id: "work", color: "#8B6914" },
   { label: "Writing", id: "writing", color: "#1B3A4B" },
   { label: "Recognition", id: "recognition", color: "#2F5D50" },
   { label: "Contact", id: "contact", color: "#D4B896" },
@@ -75,6 +75,25 @@ export default function Nav() {
               );
             })}
           </div>
+          <label className="sr-only" htmlFor="section-jump">
+            Jump to section
+          </label>
+          <select
+            id="section-jump"
+            className="nav-jump lg:hidden"
+            value={current ?? "about"}
+            onChange={(e) => {
+              const id = e.target.value;
+              setCurrent(id);
+              document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            {items.map((i) => (
+              <option key={i.id} value={i.id}>
+                {i.label}
+              </option>
+            ))}
+          </select>
           <p className="meta-chip shrink-0">
             Dublin · <LocalTime />
           </p>

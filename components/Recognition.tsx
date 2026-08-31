@@ -55,7 +55,7 @@ function Row({ a, icon, color }: { a: Award; icon: React.ReactNode; color: strin
             {a.outcome}
           </span>
           <span className="text-[12px] tabular-nums text-muted">{a.year}</span>
-          <span className="text-[12px] text-muted">· {a.scale}</span>
+          {a.scale ? <span className="text-[12px] text-muted">· {a.scale}</span> : null}
         </div>
       </div>
     </div>

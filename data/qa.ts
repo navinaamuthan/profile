@@ -210,14 +210,14 @@ const entries: Entry[] = [
   {
     keywords: ["awards", "award", "won", "recognition", "prizes", "achievements", "hackathons"],
     answer: {
-      text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022 and the Bosch Fit.Kovai Hackathon 2022, winner of Bloomberg BPuzzled at Trinity, finalist in the Deloitte Case Competition, winner of ICT Youthtalk, and selected as a mentee for the AWS SheBuilds Mentorship Community 2026.",
+      text: "Grand Finalist (top 0.5% of 50,000+) at the Google Cloud Agentic AI Hackathon, Grand Finalist at Smart India Hackathon 2022, Bosch Fit.Kovai Hackathon 2022, and the Deloitte Case Competition, winner of Bloomberg BPuzzled, winner of ICT Youthtalk, and selected as a mentee for the AWS SheBuilds Mentorship Community 2026.",
       links: [{ label: "Recognition section", href: "#recognition" }],
     },
   },
   {
     keywords: ["leadership", "lead", "led", "team", "mentoring", "community", "chair"],
     answer: {
-      text: "She led 12+ engineers and researchers as Product Manager for AI/ML at iQube, independently owned delivery on a UNESCO-backed pS-Eau programme, chaired her IEEE Women in Engineering chapter, and was elected Class Representative and STEM Convenor at Trinity College Dublin. FemTechConf named her a Women in Tech Ambassador. In 2026 she was selected as a mentee for the AWS SheBuilds Mentorship Community.",
+      text: "She led 12+ engineers and researchers as Product Manager for AI/ML at iQube, independently owned delivery on a UNESCO-backed pS-Eau programme, chaired her IEEE Women in Engineering chapter, and was elected Class Representative and STEM Convenor at Trinity College Dublin. FemTechConf named her a Women in Tech Ambassador in 2026. She was selected as a mentee for the AWS SheBuilds Mentorship Community.",
       links: [{ label: "Recognition section", href: "#recognition" }],
     },
   },

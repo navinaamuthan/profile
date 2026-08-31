@@ -710,6 +710,85 @@ button.chip:hover {
   color: #d4b896;
 }
 
+.nav-jump {
+  appearance: none;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: #fffefb;
+  padding: 0.4rem 0.85rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.social-icon {
+  display: inline-flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: #fffefb;
+  color: var(--ink);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.social-icon:hover {
+  border-color: var(--bronze);
+  background: var(--navy);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.expand-btn {
+  display: inline-flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid var(--bronze);
+  background: var(--navy);
+  color: #f2ede4;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.expand-btn:hover {
+  background: var(--bronze);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.expand-btn-dark {
+  border-color: #e8c98a;
+  background: #e8c98a;
+  color: #0f1c2e;
+  box-shadow: 0 0 0 3px rgba(232, 201, 138, 0.28);
+}
+
+.expand-btn-dark:hover {
+  background: #f2ede4;
+  color: #0f1c2e;
+}
+
+.exp-row {
+  transition: background-color 0.2s;
+  border-radius: 0.75rem;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.exp-row:hover {
+  background: rgba(242, 237, 228, 0.06);
+}
+
 /* ---------- misc ---------- */
 
 .scroll-cue {
@@ -785,7 +864,10 @@ button.chip:hover {
   .role-fit-card,
   .cert-card,
   .cert-medal,
-  .cert-filter {
+  .cert-filter,
+  .expand-btn,
+  .social-icon,
+  .exp-row {
     transition: none;
   }
 }

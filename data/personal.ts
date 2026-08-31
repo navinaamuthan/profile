@@ -1,7 +1,7 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Product and AI — Development and Management · Dublin, Ireland",
+  roleLine: "Product and AI: Development & Management · Dublin, Ireland",
   intro: [
     "I work across product, software, and data: deciding what to build, shipping it with engineering teams, and keeping it reliable in production. MSc Computer Science (Intelligent Systems), Trinity College Dublin, Distinction.",
     "Product Manager for AI/ML at iQube (four production systems, 10,000+ users, 12+ engineers). Product Engineer at e2open across 120+ countries. Also business analysis, UNESCO programme delivery, and ML research at Samsung and IIT Madras.",

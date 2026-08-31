@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Navina Ganapathy Amuthan | Product and AI — Development and Management · Dublin",
+      "Navina Ganapathy Amuthan | Product and AI: Development & Management · Dublin",
     template: "%s | Navina Ganapathy Amuthan",
   },
   description:
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Navina Ganapathy Amuthan | Product and AI — Development and Management",
+    title: "Navina Ganapathy Amuthan | Product and AI: Development & Management",
     description:
       "Product strategy, software delivery, and applied AI. Dublin based, no sponsorship required.",
     siteName: "Navina Ganapathy Amuthan",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Navina Ganapathy Amuthan | Product and AI — Development and Management",
+    title: "Navina Ganapathy Amuthan | Product and AI: Development & Management",
     description:
       "Product strategy, software delivery, and applied AI. Dublin based, no sponsorship required.",
   },

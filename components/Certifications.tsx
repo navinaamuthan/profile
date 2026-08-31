@@ -151,7 +151,7 @@ export default function Certifications() {
   );
 
   return (
-    <Section id="certifications" index="05" label="Certifications" color="#A67C52">
+    <Section id="certifications" index="04" label="Certifications" color="#A67C52">
       <Reveal>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ink/80">
           Verified credentials that back the Skills section: Python, deep learning, big-data ML,
@@ -189,14 +189,6 @@ export default function Certifications() {
               <span className="cert-medal-label">{c.issuer.split("·")[0].trim()}</span>
             </a>
           ))}
-          <div className="cert-rail-stat">
-            <p className="font-display text-4xl font-bold text-bronze">{certifications.length}</p>
-            <p className="mt-1 text-[13px] font-medium leading-snug text-muted">
-              credentials
-              <br />
-              linked to skills
-            </p>
-          </div>
         </div>
       </Reveal>
 

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Navina Ganapathy Amuthan | Product and AI — Development and Management";
+export const alt = "Navina Ganapathy Amuthan | Product and AI: Development & Management";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default function OG() {
               fontWeight: 700,
             }}
           >
-            Product and AI — Development and Management
+            Product and AI: Development & Management
           </div>
           <div
             style={{
