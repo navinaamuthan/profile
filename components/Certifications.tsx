@@ -8,11 +8,11 @@ import { certifications, type Certification } from "@/data/certifications";
 
 const filters: { id: string; label: string }[] = [
   { id: "all", label: "All" },
-  { id: "languages", label: "Python & code" },
-  { id: "ml", label: "ML & deep learning" },
-  { id: "data-eng", label: "Big data" },
+  { id: "languages", label: "Code" },
+  { id: "ai", label: "AI & ML" },
+  { id: "data", label: "Data" },
   { id: "governance", label: "Security" },
-  { id: "reporting", label: "Reporting & product" },
+  { id: "product", label: "Product" },
 ];
 
 function issuerInitials(issuer: string) {
@@ -155,7 +155,7 @@ export default function Certifications() {
       <Reveal>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ink/80">
           Verified credentials that back the Skills section: Python, deep learning, big-data ML,
-          security, and product. Click a skill chip above and matching badges light up here.
+          security, and product.
         </p>
       </Reveal>
 

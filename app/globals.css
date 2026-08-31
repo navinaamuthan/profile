@@ -305,6 +305,68 @@ section[id] {
 
 /* ---------- skills ---------- */
 
+.skills-matrix {
+  border-top: 1px solid var(--line);
+}
+
+.skills-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.35rem 1.25rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills-row h3 {
+  margin: 0;
+  font-family: var(--font-grotesk), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.skills-row p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.skill-term {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+button.skill-term {
+  cursor: pointer;
+  text-underline-offset: 3px;
+}
+
+button.skill-term:hover {
+  color: var(--bronze);
+  text-decoration: underline;
+}
+
+.skill-sep {
+  margin: 0 0.4em;
+  color: color-mix(in srgb, var(--muted) 55%, transparent);
+}
+
+@media (max-width: 640px) {
+  .skills-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.85rem 0;
+  }
+}
+
 .tile {
   @apply rounded-xl border border-line p-5;
   background: #fffefb;
@@ -715,6 +777,7 @@ button.chip:hover {
   .portrait,
   .tile,
   button.chip,
+  button.skill-term,
   .file-tile,
   .term-launcher,
   .bar,

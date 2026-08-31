@@ -82,7 +82,7 @@ const entries: Entry[] = [
   {
     keywords: ["skills", "stack", "tools", "technologies", "tech", "python", "sql", "tableau", "know"],
     answer: {
-      text: "Programming languages (Python, SQL, Java, JavaScript), product and delivery, data and analytics, GenAI, machine learning, software engineering, data engineering, frontend, and governance.",
+      text: "Product, languages, data, AI and ML, software, and governance. Names that link jump to a project or certification.",
       links: [{ label: "Skills section", href: "#skills" }],
     },
   },
@@ -275,7 +275,7 @@ const commands: Record<string, NaviAnswer> = {
     links: [{ label: "Selected work", href: "#work" }],
   },
   skills: {
-    text: "All of them are in the Skills section: product and delivery, languages, data and analytics, GenAI, ML, software engineering, data engineering, frontend, and governance.",
+    text: "Six groups: Product, Languages, Data, AI & ML, Software, and Governance.",
     links: [{ label: "Skills", href: "#skills" }],
   },
   whoami: {
