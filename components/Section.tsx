@@ -15,7 +15,7 @@ export default function Section({
 }) {
   return (
     <section id={id} className={dark ? "bg-graphite text-paper" : "border-t border-line"}>
-      <div className="mx-auto grid max-w-6xl gap-x-16 px-6 py-20 sm:py-24 md:px-10 lg:grid-cols-[180px_1fr] lg:py-28">
+      <div className="mx-auto grid max-w-6xl gap-x-16 px-6 py-14 sm:py-16 md:px-10 lg:grid-cols-[160px_1fr] lg:py-20">
         <div className="mb-10 lg:mb-0">
           <div className="lg:sticky lg:top-28">
             <p className="font-display text-4xl font-bold leading-none" style={{ color }} aria-hidden>

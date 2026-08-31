@@ -71,7 +71,7 @@ export default function Projects() {
       </div>
 
       <Reveal>
-        <h3 className="mt-20 border-t border-line pt-10 font-display text-2xl font-bold text-ink">
+        <h3 className="mt-12 border-t border-line pt-8 font-display text-xl font-bold text-ink">
           Additional work
         </h3>
         <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-ink/70">

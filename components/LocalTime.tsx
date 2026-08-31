@@ -18,6 +18,6 @@ export default function LocalTime() {
     return () => clearInterval(id);
   }, []);
 
-  if (!time) return null;
-  return <span suppressHydrationWarning>{time} in Dublin</span>;
+  if (!time) return <span suppressHydrationWarning>—</span>;
+  return <span suppressHydrationWarning>{time}</span>;
 }

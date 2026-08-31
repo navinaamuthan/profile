@@ -3,40 +3,21 @@ import Reveal from "@/components/Reveal";
 import { personal } from "@/data/personal";
 
 const stats: [string, string, string][] = [
-  ["Top 0.5%", "Google Cloud Agentic AI Hackathon, among 50,000+ teams", "#8B6914"],
-  ["10,000+", "users on AI and ML features launched in production", "#5C7C6A"],
-  ["120+", "countries covered in Fortune 500 data-platform delivery", "#A67C52"],
-];
-
-const facts: [string, string][] = [
-  ["Location", personal.location],
-  ["Work authorisation", personal.workAuth],
-  ["Availability", personal.availability],
-  ["Education", "MSc Computer Science, Trinity College Dublin, Distinction"],
-  ["Open to", personal.openTo],
+  ["Top 0.5%", "Google Cloud Agentic AI Hackathon", "#8B6914"],
+  ["10,000+", "users on production AI features", "#5C7C6A"],
+  ["120+", "countries, Fortune 500 delivery", "#A67C52"],
 ];
 
 export default function About() {
   return (
     <Section id="about" index="01" label="About" color="#A67C52">
-      <div className="grid gap-12 md:grid-cols-[1fr_260px] md:gap-16">
+      <div className="grid items-start gap-10 md:grid-cols-[1fr_220px] md:gap-14">
         <Reveal>
-          <div className="space-y-5 font-display text-xl font-medium leading-relaxed text-ink sm:text-[1.35rem]">
+          <div className="space-y-4 font-display text-lg font-medium leading-relaxed text-ink sm:text-xl">
             {personal.intro.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
           </div>
-          <nav className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[15px]" aria-label="Profiles">
-            <a href={`mailto:${personal.email}`} className="link">
-              Email
-            </a>
-            <a href={personal.linkedin} className="link" target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </a>
-            <a href={personal.github} className="link" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </nav>
         </Reveal>
         <Reveal delay={120}>
           <img
@@ -48,27 +29,16 @@ export default function About() {
       </div>
 
       <Reveal delay={80}>
-        <div className="mt-16 grid gap-10 border-t border-line pt-10 sm:grid-cols-3">
+        <div className="mt-12 grid gap-8 border-t border-line pt-8 sm:grid-cols-3">
           {stats.map(([n, label, color]) => (
             <div key={n}>
-              <p className="font-display text-4xl font-bold tracking-tight sm:text-5xl" style={{ color }}>
+              <p className="font-display text-3xl font-bold tracking-tight sm:text-4xl" style={{ color }}>
                 {n}
               </p>
-              <p className="mt-2 max-w-[16rem] text-[13px] leading-relaxed text-muted">{label}</p>
+              <p className="mt-1.5 max-w-[14rem] text-[13px] leading-relaxed text-muted">{label}</p>
             </div>
           ))}
         </div>
-      </Reveal>
-
-      <Reveal delay={80}>
-        <dl className="mt-14 space-y-3 border-t border-line pt-8">
-          {facts.map(([k, v]) => (
-            <div key={k} className="grid gap-0.5 sm:grid-cols-[12rem_1fr] sm:gap-6">
-              <dt className="text-[13px] text-muted sm:pt-[2px]">{k}</dt>
-              <dd className="text-[15px] leading-relaxed">{v}</dd>
-            </div>
-          ))}
-        </dl>
       </Reveal>
     </Section>
   );

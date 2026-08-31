@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import LocalTime from "@/components/LocalTime";
 
 const items: { label: string; id: string; color: string }[] = [
   { label: "About", id: "about", color: "#A67C52" },
@@ -55,7 +56,7 @@ export default function Nav() {
         <a href="#top" className="font-display text-[15px] font-bold tracking-tight">
           Navina Ganapathy Amuthan
         </a>
-        <nav className="flex items-center gap-2" aria-label="Site">
+        <nav className="flex items-center gap-3" aria-label="Site">
           <div className="nav-pill hidden lg:flex">
             {items.map((i) => {
               const state =
@@ -74,6 +75,9 @@ export default function Nav() {
               );
             })}
           </div>
+          <p className="meta-chip shrink-0">
+            Dublin · <LocalTime />
+          </p>
         </nav>
       </div>
     </header>

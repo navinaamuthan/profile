@@ -39,38 +39,39 @@ export default function Skills() {
         {skillCategories.map((c) => (
           <div key={c.id} className="skills-row">
             <h3>{c.label}</h3>
-            <p>
-              {c.skills.map((s, i) => {
+            <div className="flex flex-wrap gap-1.5">
+              {c.skills.map((s) => {
                 const certs = skillToCerts[s.name];
                 const hasProjects = Boolean(s.projects?.length);
                 const hasCerts = Boolean(certs?.length);
                 const interactive = hasProjects || hasCerts;
+                if (!interactive) {
+                  return (
+                    <span key={s.name} className="skill-pill">
+                      {s.name}
+                    </span>
+                  );
+                }
                 return (
-                  <span key={s.name}>
-                    {interactive ? (
-                      <button
-                        type="button"
-                        className="skill-term"
-                        onClick={() => {
-                          if (hasProjects) jumpToProjects(s.projects!);
-                          else jumpToCert(certs![0]);
-                        }}
-                        title={
-                          hasProjects
-                            ? `Used in ${s.projects!.join(", ")}`
-                            : "Open linked certification"
-                        }
-                      >
-                        {s.name}
-                      </button>
-                    ) : (
-                      <span className="skill-term is-static">{s.name}</span>
-                    )}
-                    {i < c.skills.length - 1 ? <span className="skill-sep">·</span> : null}
-                  </span>
+                  <button
+                    key={s.name}
+                    type="button"
+                    className="skill-pill is-link"
+                    onClick={() => {
+                      if (hasProjects) jumpToProjects(s.projects!);
+                      else jumpToCert(certs![0]);
+                    }}
+                    title={
+                      hasProjects
+                        ? `Used in ${s.projects!.join(", ")}`
+                        : "Open linked certification"
+                    }
+                  >
+                    {s.name}
+                  </button>
                 );
               })}
-            </p>
+            </div>
           </div>
         ))}
       </div>

@@ -1,38 +1,64 @@
+"use client";
+
+import { useState } from "react";
 import Section from "@/components/Section";
-import Reveal from "@/components/Reveal";
 import { experience } from "@/data/experience";
 
 export default function Experience() {
+  const [open, setOpen] = useState<string | null>(null);
+
   return (
     <Section id="experience" index="02" label="Experience" color="#D4B896" dark>
-      <ol className="timeline timeline-dark space-y-12 pl-8">
-        {experience.map((e, i) => (
-          <li key={`${e.role}-${e.company}`} className="timeline-item relative">
-            <span className="timeline-node" style={{ left: "-32px" }} aria-hidden />
-            <Reveal delay={Math.min(i * 60, 180)}>
-              <p className="text-[13px] font-semibold tabular-nums text-accentSoft">{e.period}</p>
-              <h3 className="mt-1.5 font-display text-xl font-bold sm:text-2xl">
-                {e.role} <span className="font-medium text-paper/60">· {e.company}</span>
-              </h3>
-              <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-paper/75">{e.summary}</p>
-              <ul className="mt-3 max-w-xl space-y-2 text-[14.5px] leading-relaxed text-paper/70">
-                {e.points.map((p) => (
-                  <li key={p.slice(0, 48)} className="pl-4" style={{ textIndent: "-0.85rem" }}>
-                    <span className="mr-2 text-accentSoft">·</span>
-                    {p}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-3.5 flex max-w-xl flex-wrap gap-1.5">
-                {e.tools.map((t) => (
-                  <span key={t} className="chip-dark">
-                    {t}
+      <ol className="divide-y divide-paper/15">
+        {experience.map((e) => {
+          const id = `${e.role}-${e.company}`;
+          const isOpen = open === id;
+          return (
+            <li key={id}>
+              <button
+                type="button"
+                className="flex w-full items-start justify-between gap-4 py-4 text-left"
+                aria-expanded={isOpen}
+                onClick={() => setOpen(isOpen ? null : id)}
+              >
+                <span>
+                  <span className="block font-display text-lg font-bold sm:text-xl">
+                    {e.role}
                   </span>
-                ))}
-              </div>
-            </Reveal>
-          </li>
-        ))}
+                  <span className="mt-0.5 block text-[14px] text-paper/60">{e.company}</span>
+                </span>
+                <span className="shrink-0 pt-1 text-right">
+                  <span className="block text-[12px] font-medium tabular-nums text-accentSoft">
+                    {e.period}
+                  </span>
+                  <span className="mt-1 inline-block text-[13px] text-paper/45" aria-hidden>
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </span>
+              </button>
+              {isOpen && (
+                <div className="pb-5">
+                  <p className="max-w-xl text-[15px] leading-relaxed text-paper/75">{e.summary}</p>
+                  <ul className="mt-3 max-w-xl space-y-1.5 text-[14.5px] leading-relaxed text-paper/70">
+                    {e.points.map((p) => (
+                      <li key={p.slice(0, 48)}>
+                        <span className="mr-2 text-accentSoft">·</span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-3 flex max-w-xl flex-wrap gap-1.5">
+                    {e.tools.map((t) => (
+                      <span key={t} className="chip-dark">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </li>
+          );
+        })}
       </ol>
     </Section>
   );

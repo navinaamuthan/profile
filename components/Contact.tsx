@@ -38,7 +38,7 @@ const primary = [
 export default function Contact() {
   return (
     <section id="contact" className="bg-graphite text-paper">
-      <div className="mx-auto max-w-6xl px-6 pb-10 pt-20 sm:pt-28 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 pb-10 pt-14 sm:pt-16 md:px-10">
         <Reveal>
           <p className="font-display text-4xl font-bold leading-none text-accentSoft" aria-hidden>
             08
@@ -46,11 +46,11 @@ export default function Contact() {
           <h2 className="mt-2 font-display text-[15px] font-bold uppercase tracking-[0.14em] text-paper">
             Contact
           </h2>
-          <h3 className="mt-8 font-display text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
+          <h3 className="mt-6 font-display text-[clamp(2.2rem,6vw,4.2rem)] font-bold leading-[1.02] tracking-tight">
             Get in touch<span className="text-accentSoft">.</span>
           </h3>
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/70">
-            Based in Dublin and available immediately. Email is the most reliable way to reach me.
+          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-paper/70">
+            Email is the most reliable way to reach me.
           </p>
 
           <p className="mt-10">
@@ -106,13 +106,13 @@ export default function Contact() {
           </div>
         </Reveal>
 
-        <footer className="mt-20 flex flex-wrap items-baseline justify-between gap-2 border-t border-paper/15 pt-6 text-[13px] text-paper/50 sm:mt-28">
+        <footer className="mt-16 flex flex-wrap items-baseline justify-between gap-2 border-t border-paper/15 pt-6 text-[13px] text-paper/50 sm:mt-20">
           <p>
             © {new Date().getFullYear()} {personal.name}
           </p>
-          <p>
-            Set in Space Grotesk and Inter · <LocalTime />
-          </p>
+            <p>
+              Dublin · <LocalTime />
+            </p>
           <a href="#top" className="link-dark">
             Back to top ↑
           </a>
