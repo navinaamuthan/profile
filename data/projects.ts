@@ -66,7 +66,7 @@ export const projects: Project[] = [
     featured: true,
     tag: "Full-stack · Agentic AI",
     summary:
-      "Two AI agents argue over your finances so you never have to trust just one.",
+      "A dual-agent financial advisor with a React frontend, Node gateway, and retrieval grounding.",
     problem:
       "Financial guidance from a single LLM is confident, fluent, and sometimes wrong. Users cannot tell which.",
     solution:
@@ -74,13 +74,13 @@ export const projects: Project[] = [
     architecture:
       "Maya (diagnostic agent), Nash (adversarial strategy agent), Collaboration Engine for challenge cycles and reconciliation, FI Money MCP retrieval layer, React frontend behind a Node.js gateway. Services are modular, actively gated, and never expose unauthenticated reasoning paths.",
     decisions: [
-      "Adversarial pairing over single-model confidence scores, because self-reported confidence is theatre",
+      "Adversarial pairing rather than relying on a single model's self-reported confidence",
       "MCP retrieval instead of full data ingestion, so each agent sees only what its reasoning step needs",
       "Backend gateway between frontend and agents, so no unauthenticated request ever triggers reasoning",
     ],
     tech: ["React", "JavaScript", "Node.js", "Google ADK", "Vertex AI", "MCP", "Firebase", "Python"],
     metrics: ["Top 0.5% of 50,000+ teams", "Grand Finalist", "Built in 48 hours", "~50-60 real users' data"],
-    lesson: "The fastest way to make AI trustworthy is to make it argue with itself in public.",
+    lesson: "Adversarial review between agents surfaces errors that a single model will miss.",
     github: "https://github.com/navinaamuthan/ignitrix-financial-dual-agent-ai",
   },
   {
@@ -102,14 +102,14 @@ export const projects: Project[] = [
     name: "Atlas PRD",
     tag: "Product Thinking",
     summary:
-      "A full product spec for a cross-border credit passport, shipped as a live site.",
+      "Product specification for a cross-border credit passport, published as a live site.",
     problem:
       "Migrants lose their credit history at every border. A cash credit passport needs a spec before it needs code.",
     solution:
       "Problem framing, user segments, success metrics and a rollout strategy for a product that would let migrants carry their credit history across borders. Published as a site rather than a PDF so people actually read it.",
     tech: ["Product Strategy", "PRD", "Fintech", "UX writing"],
     metrics: ["Live hosted spec"],
-    lesson: "A PRD is a product. Ship it like one.",
+    lesson: "A specification is easier to review when it is treated as a product, not a document.",
     github: "https://github.com/navinaamuthan/atlas-prd",
     live: "https://atlas-prd.vercel.app",
   },

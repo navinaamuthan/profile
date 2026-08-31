@@ -8,7 +8,6 @@ import Certifications from "@/components/Certifications";
 import Writing from "@/components/Writing";
 import Recognition from "@/components/Recognition";
 import Contact from "@/components/Contact";
-import Terminal from "@/components/Terminal";
 
 export default function Home() {
   return (
@@ -28,7 +27,6 @@ export default function Home() {
         <Recognition />
       </main>
       <Contact />
-      <Terminal />
     </>
   );
 }

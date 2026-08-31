@@ -16,29 +16,21 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: "csoc",
-    label: "Cyber security & CSOC analysis",
-    icon: "shield",
-    color: "#0F4C5C",
+    id: "product",
+    label: "Product & delivery",
+    icon: "kanban",
+    color: "#1B3A4B",
     skills: [
-      { name: "Security Operations / SOC / CSOC analysis", emphasis: true },
-      { name: "SIEM log analysis (Splunk preferred)", emphasis: true },
-      { name: "Security alert triage & event analysis", emphasis: true },
-      { name: "Playbooks, runbooks & SOPs", emphasis: true },
-      { name: "False-positive validation & severity assessment", emphasis: true },
-      { name: "Initial investigation & contextual analysis", emphasis: true },
-      { name: "Incident escalation with actionable case notes", emphasis: true },
-      { name: "Multi-source telemetry (endpoint, network, identity, cloud)", emphasis: true },
-      { name: "EDR, antivirus, firewalls, VPNs & identity systems", emphasis: true },
-      { name: "Enterprise networking & TCP/IP", emphasis: true },
-      { name: "Endpoint & network security controls" },
-      { name: "Windows, Linux & macOS operating systems" },
-      { name: "Event correlation, enrichment & alert tuning" },
-      { name: "Investigation documentation & shift handovers" },
-      { name: "Cloud platforms (AWS, Azure, GCP) exposure" },
-      { name: "Scripting & automation (Python, PowerShell, Bash)" },
-      { name: "Emerging threats & attacker techniques awareness" },
-      { name: "Stakeholder communication for remediation support" },
+      { name: "Product strategy & roadmaps", emphasis: true, projects: ["Atlas PRD"] },
+      { name: "PRDs & requirements", emphasis: true, projects: ["Atlas PRD"] },
+      { name: "Client-facing delivery", emphasis: true },
+      { name: "Stakeholder management", emphasis: true },
+      { name: "Launch & onboarding" },
+      { name: "User insights & analytics" },
+      { name: "Agile collaboration" },
+      { name: "Process design & automation" },
+      { name: "Cross-functional coordination" },
+      { name: "API product thinking", projects: ["IGNITRIX"] },
     ],
   },
   {
@@ -61,7 +53,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "reporting",
-    label: "Reporting, BI & risk analytics",
+    label: "Data, reporting & analytics",
     icon: "kanban",
     color: "#B08D57",
     skills: [
@@ -76,7 +68,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Ad-hoc analysis & stakeholder requests" },
       { name: "Credit risk modelling & reporting", projects: ["AuditAI"] },
       { name: "Data quality & control checks", projects: ["AuditAI"] },
-      { name: "Reporting documentation & controls" },
+      { name: "Cloud data platforms (AWS, Azure, GCP)" },
     ],
   },
   {
@@ -182,10 +174,10 @@ export const skillCategories: SkillCategory[] = [
  * each count is the number of projects or jobs above that evidence the domain.
  */
 export const evidence: { domain: string; count: number; note: string; color: string }[] = [
-  { domain: "Security & CSOC", color: "#0F4C5C", count: 4, note: "Enterprise security handling, secure service design, risk/compliance reporting, GDPR & governance work" },
-  { domain: "Reporting & analytics", color: "#B08D57", count: 5, note: "E2open Power BI, AuditAI dashboards, IIT Madras analysis, iQube analytics, AIEF assessments" },
-  { domain: "Software & APIs", color: "#1B3A4B", count: 5, note: "IGNITRIX, AuditAI, Nova, PPD Talkbot, E2open production delivery" },
-  { domain: "GenAI & agents", color: "#8B6914", count: 5, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI, AIEF" },
+  { domain: "Product & delivery", color: "#1B3A4B", count: 5, note: "iQube product leadership, E2open client implementations, UNESCO programme, Atlas PRD, launch work" },
+  { domain: "Data & analytics", color: "#B08D57", count: 5, note: "E2open Power BI, AuditAI dashboards, IIT Madras analysis, iQube analytics, AIEF assessments" },
+  { domain: "Software & APIs", color: "#A67C52", count: 5, note: "IGNITRIX, AuditAI, Nova, PPD Talkbot, E2open production delivery" },
+  { domain: "Applied AI", color: "#8B6914", count: 5, note: "IGNITRIX, EIREVAL, Few-Shot LLMs, AuditAI, AIEF" },
   { domain: "Machine learning", color: "#5C7C6A", count: 7, note: "PPD Talkbot, autism screening, traffic CV, Samsung NLP, iQube features, smart farming, Lublin chatbot" },
-  { domain: "Risk & governance", color: "#2F5D50", count: 4, note: "MSc dissertation / AIEF, AuditAI credit-risk fairness, EIREVAL, GDPR" },
+  { domain: "Governance", color: "#2F5D50", count: 4, note: "MSc dissertation / AIEF, AuditAI credit-risk fairness, EIREVAL, GDPR" },
 ];

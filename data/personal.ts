@@ -1,10 +1,11 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Software Engineer | AI | Tech · Dublin, Ireland",
+  roleLine: "Product and AI — Development and Management · Dublin, Ireland",
   intro: [
-    "I write production-quality code across software engineering, applied AI/ML, and data reporting. MSc Computer Science (Intelligent Systems) at Trinity College Dublin, Distinction. Before that I was Associate Implementation Engineer at E2open, delivering data-driven systems and Power BI reporting for Fortune 500 clients across 120+ countries in Python and SQL, and Product Manager at iQube R&D Hub, leading 8 to 10 engineers while shipping AI/ML features to 10,000+ users.",
-    "Recent work spans full-stack AI products and risk-aware analytics: IGNITRIX (React, Node, MCP agents) placed top 0.5% of 50,000+ at Google's Cloud Agentic AI Hackathon; AuditAI trains a credit-risk model, monitors fairness and data quality, and produces traceable reports. Comfortable owning scheduled reporting, ad-hoc analysis, SQL against relational data, Tableau/Power BI dashboards, and automation with Python.",
+    "I work across product, software, and data: defining what to build, shipping it with engineering teams, and making sure it holds up in production. MSc Computer Science (Intelligent Systems) at Trinity College Dublin, Distinction.",
+    "At E2open I delivered data platforms and reporting for Fortune 500 clients across 120+ countries, owning requirements, integrations, and onboarding in Python and SQL. As Product Manager at iQube R&D Hub I led 8 to 10 engineers, set the roadmap, and launched AI and ML features used by 10,000+ people.",
+    "Recent work includes client-facing data products, API-backed services, and applied AI with clear evaluation and governance. Comfortable moving between product strategy, technical delivery, and stakeholder communication.",
   ],
   location: "Dublin, Ireland",
   email: "navinagamuthan@gmail.com",
@@ -12,7 +13,7 @@ export const personal = {
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
   workAuth: "Valid visa. No sponsorship required.",
-  openTo: "Software engineering, AI/ML, risk reporting, and data / business analyst roles.",
+  openTo: "Roles spanning product, software engineering, data, and applied AI.",
   availability: "Available immediately.",
 
   education: [

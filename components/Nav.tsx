@@ -2,55 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-const items: { label: string; id: string; color: string; icon: React.ReactNode }[] = [
-  {
-    label: "About",
-    id: "about",
-    color: "#A67C52",
-    icon: <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 8a7 7 0 0114 0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
-  },
-  {
-    label: "Experience",
-    id: "experience",
-    color: "#5C7C6A",
-    icon: <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2m-9 0h10a2 2 0 012 2v9a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />,
-  },
-  {
-    label: "Work",
-    id: "work",
-    color: "#8B6914",
-    icon: <path d="M4 7c0-1.1.9-2 2-2h5l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
-  },
-  {
-    label: "Skills",
-    id: "skills",
-    color: "#B08D57",
-    icon: <path d="M5 5h5v5H5V5zm9 0h5v5h-5V5zM5 14h5v5H5v-5zm9 0h5v5h-5v-5z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
-  },
-  {
-    label: "Certs",
-    id: "certifications",
-    color: "#8B6914",
-    icon: <path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.9 7.2 18l.9-5.4L4.2 8.7l5.4-.8L12 3z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />,
-  },
-  {
-    label: "Writing",
-    id: "writing",
-    color: "#1B3A4B",
-    icon: <path d="M4 20l4-1L20 7l-3-3L5 16l-1 4zm11-14l3 3" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
-  },
-  {
-    label: "Recognition",
-    id: "recognition",
-    color: "#2F5D50",
-    icon: <path d="M12 15a5 5 0 100-10 5 5 0 000 10zm-3 0l-1 6 4-2 4 2-1-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
-  },
-  {
-    label: "Contact",
-    id: "contact",
-    color: "#D4B896",
-    icon: <path d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm1 1l7 5 7-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />,
-  },
+const items: { label: string; id: string; color: string }[] = [
+  { label: "About", id: "about", color: "#A67C52" },
+  { label: "Experience", id: "experience", color: "#5C7C6A" },
+  { label: "Work", id: "work", color: "#8B6914" },
+  { label: "Skills", id: "skills", color: "#B08D57" },
+  { label: "Certs", id: "certifications", color: "#8B6914" },
+  { label: "Writing", id: "writing", color: "#1B3A4B" },
+  { label: "Recognition", id: "recognition", color: "#2F5D50" },
+  { label: "Contact", id: "contact", color: "#D4B896" },
 ];
 
 export default function Nav() {
@@ -109,9 +69,6 @@ export default function Nav() {
                   aria-current={current === i.id ? "true" : undefined}
                   title={visited.has(i.id) && current !== i.id ? `${i.label} · seen` : i.label}
                 >
-                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" aria-hidden>
-                    {i.icon}
-                  </svg>
                   {i.label}
                 </a>
               );

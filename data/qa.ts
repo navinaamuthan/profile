@@ -23,7 +23,7 @@ const entries: Entry[] = [
     keywords: ["experience", "background", "career", "worked", "history", "summary"],
     phrases: ["tell me about", "who is navina"],
     answer: {
-      text: "Short version: full-stack builder with a TCD MSc in Computer Science (Distinction). A year at E2open as Associate Implementation Engineer delivering Fortune 500 production systems across 120+ countries in Python and SQL, then two years as Product Manager at iQube shipping AI/ML features to 10,000+ users. Recent work: React and Node agentic products, EU AI Act audit tooling, LLM evaluation.",
+      text: "Short version: MSc Computer Science at Trinity College Dublin (Distinction). Product Manager at iQube, leading 8 to 10 engineers and launching AI features to 10,000+ users. Associate Implementation Engineer at E2open, delivering Fortune 500 data platforms across 120+ countries. Recent work covers product specs, APIs, and applied AI with evaluation and governance.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
@@ -35,11 +35,14 @@ const entries: Entry[] = [
     },
   },
   {
-    keywords: ["iqube", "product", "manager", "pm", "csat", "roadmap"],
-    phrases: ["product management"],
+    keywords: ["product", "roadmap", "prd", "stakeholder", "launch", "onboarding", "pm"],
+    phrases: ["product manager", "product management", "product experience"],
     answer: {
-      text: "As Product Manager at iQube R&D Hub (Sep 2021 to Dec 2023) she shipped 4 to 5 machine learning features to 10,000+ production users, including image classification and an NLP customer-service bot, raising CSAT from 3.2 to 4.6. She led and mentored an 8 to 10 person engineering and design team.",
-      links: [{ label: "Experience section", href: "#experience" }],
+      text: "As Product Manager at iQube she defined strategy and roadmaps, wrote PRDs, and launched 4 to 5 ML features to 10,000+ users while leading 8 to 10 engineers. At E2open she owned client discovery, onboarding, and API-backed data-platform delivery. Atlas is a full product spec published as a live site.",
+      links: [
+        { label: "Experience", href: "#experience" },
+        { label: "Atlas", href: "https://atlas-prd.vercel.app" },
+      ],
     },
   },
   {
@@ -79,7 +82,7 @@ const entries: Entry[] = [
   {
     keywords: ["skills", "stack", "tools", "technologies", "tech", "python", "sql", "tableau", "know"],
     answer: {
-      text: "Programming languages (Python, SQL, Java, JavaScript), reporting and risk analytics (Tableau, Power BI, Excel), GenAI/RAG/agents, machine learning, software engineering, data engineering, frontend, and governance. Chips with a dot jump to the proving project.",
+      text: "Programming languages (Python, SQL, Java, JavaScript), product and delivery, data and analytics, GenAI, machine learning, software engineering, data engineering, frontend, and governance.",
       links: [{ label: "Skills section", href: "#skills" }],
     },
   },
@@ -111,7 +114,7 @@ const entries: Entry[] = [
     keywords: ["available", "availability", "start", "notice", "when", "open"],
     phrases: ["start date"],
     answer: {
-      text: "Available immediately, Dublin based, no sponsorship needed. Open to software engineering, AI/ML, risk reporting, and data / business analyst roles.",
+      text: "Available immediately, Dublin based, no sponsorship needed.",
       links: [{ label: `Email ${personal.email}`, href: `mailto:${personal.email}` }],
     },
   },
@@ -153,7 +156,7 @@ const entries: Entry[] = [
     keywords: ["solutions", "solution", "gtech", "ads", "scale", "scaling", "client", "clients"],
     phrases: ["solutions engineer", "solutions engineering"],
     answer: {
-      text: "She has deep client-delivery experience from E2open (Fortune 500, 120+ countries) and still builds product end to end. For IC software and AI/ML roles, the sharper fit is production engineering: React, Node, Python, RAG, modular services. See AuditAI and IGNITRIX.",
+      text: "She has owned client-facing delivery at E2open (Fortune 500, 120+ countries) and product leadership at iQube. She also builds software end to end: React, Node, Python, APIs. See AuditAI, IGNITRIX, and the Atlas product spec.",
       links: [
         { label: "Experience", href: "#experience" },
         { label: "IGNITRIX", href: "#project-ignitrix" },
@@ -182,7 +185,7 @@ const entries: Entry[] = [
     keywords: ["hire", "why", "fit", "strengths", "different", "special", "unique"],
     phrases: ["why should"],
     answer: {
-      text: "Three reasons with receipts. She ships full-stack end to end: React frontends, Node and Python services, modular and security-minded design. IGNITRIX in 48 hours, top 0.5% of 50,000+ teams. She has production scars: Fortune 500 implementations in 120+ countries as Associate Implementation Engineer. And she proves AI systems: AuditAI turns EU AI Act fairness checks into a rerunnable pipeline with a Next.js dashboard.",
+      text: "She combines product leadership, production software, and applied AI. At iQube she set the roadmap and launched ML features to 10,000+ users. At E2open she delivered data platforms for Fortune 500 clients. IGNITRIX placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. AuditAI turns fairness and risk checks into a repeatable pipeline.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },
@@ -272,19 +275,18 @@ const commands: Record<string, NaviAnswer> = {
     links: [{ label: "Selected work", href: "#work" }],
   },
   skills: {
-    text: "All of them are in the Skills section: languages, reporting/BI/risk analytics, GenAI, ML, software engineering, data engineering, frontend, and governance.",
+    text: "All of them are in the Skills section: product and delivery, languages, data and analytics, GenAI, ML, software engineering, data engineering, frontend, and governance.",
     links: [{ label: "Skills", href: "#skills" }],
   },
   whoami: {
-    text: "A guest on Navina's site. If you are hiring for software engineering, AI/ML, risk reporting, or data roles, you are exactly where you should be.",
+    text: "A guest on Navina's site.",
   },
 };
 
 export const suggestions = [
   "Does she need sponsorship?",
-  "Why should I hire her?",
-  "What is her reporting stack?",
-  "Is she a software engineer?",
+  "What is her product experience?",
+  "What is her stack?",
   "What is AuditAI?",
   "What is IGNITRIX?",
 ];

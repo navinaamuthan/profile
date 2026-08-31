@@ -74,7 +74,7 @@ export default function Skills() {
             key={c.id}
             delay={Math.min((i % 2) * 80, 160)}
             className={
-              c.id === "csoc" ||
+              c.id === "product" ||
               c.id === "languages" ||
               c.id === "reporting" ||
               c.id === "genai" ||
@@ -151,9 +151,9 @@ export default function Skills() {
 
       <Reveal delay={80}>
         <div className="mt-14 rounded-2xl border border-line bg-white p-7 sm:p-9">
-          <h3 className="font-display text-2xl font-bold">Where the proof sits</h3>
+          <h3 className="font-display text-2xl font-bold">Practice areas</h3>
           <p className="mt-1.5 text-[14px] text-muted">
-            One dot = one project or job on this page. No self-ratings, just a count.
+            Counts reflect projects and roles listed on this site.
           </p>
           <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {evidence.map((e) => (

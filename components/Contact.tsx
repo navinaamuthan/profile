@@ -47,12 +47,10 @@ export default function Contact() {
             Contact
           </h2>
           <h3 className="mt-8 font-display text-[clamp(2.6rem,7vw,5.5rem)] font-bold leading-[1.02] tracking-tight">
-            Say hello<span className="text-accentSoft">.</span>
+            Get in touch<span className="text-accentSoft">.</span>
           </h3>
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/70">
-            If you are hiring for software engineering, AI/ML, risk reporting, or data roles in
-            Dublin, I would like to hear about it. Available immediately; email is the fastest way
-            to reach me.
+            Based in Dublin and available immediately. Email is the most reliable way to reach me.
           </p>
 
           <p className="mt-10">

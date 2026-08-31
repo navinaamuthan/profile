@@ -26,7 +26,7 @@ export const articles: Article[] = [
   {
     title: "Atlas: A PRD for a Cross-Border Credit Passport",
     summary:
-      "A full senior-PM product spec, live as a website. Corridor-based market sizing, competitive positioning against Nova Credit, EU AI Act high-risk compliance mapped to shipped features, north-star metrics with guardrails, and an honest risk register. FinTech thinking, end to end.",
+      "Product specification for a cross-border credit passport: market sizing, competitive positioning, compliance mapped to features, success metrics, and a risk register. Published as a site so stakeholders can review it in context.",
     tags: ["FinTech", "EU AI Act", "Product Strategy", "Case Study"],
     date: "Jul 2026",
     readingTime: "14 min read",

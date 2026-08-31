@@ -72,10 +72,10 @@ export default function Projects() {
 
       <Reveal>
         <h3 className="mt-20 border-t border-line pt-10 font-display text-2xl font-bold text-ink">
-          Everything else I&apos;ve built
+          Additional work
         </h3>
         <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-ink/70">
-          Twelve folders, colour-coded by category. Click around.
+          Further projects across product, software, and machine learning.
         </p>
       </Reveal>
       <Reveal delay={100}>
