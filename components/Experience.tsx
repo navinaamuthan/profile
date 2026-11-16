@@ -8,7 +8,7 @@ export default function Experience() {
   const [open, setOpen] = useState<string | null>(null);
 
   return (
-    <Section id="experience" index="03" label="Experience" color="#D4B896" dark>
+    <Section id="experience" index="03" label="Experience" dark>
       <ol>
         {experience.map((e) => {
           const id = `${e.role}-${e.company}`;
@@ -17,38 +17,38 @@ export default function Experience() {
             <li key={id} className="border-b border-paper/20 last:border-b-0">
               <button
                 type="button"
-                className="exp-row group flex w-full items-center gap-4 py-4 text-left sm:py-5"
+                className="exp-row group flex w-full items-center gap-4 py-6 text-left"
                 aria-expanded={isOpen}
                 onClick={() => setOpen(isOpen ? null : id)}
               >
                 <span className="min-w-0 flex-1">
-                  <span className="block font-display text-lg font-bold text-paper sm:text-xl">
+                  <span className="block font-display text-xl font-bold text-paper">
                     {e.role}
                   </span>
-                  <span className="mt-1 block text-[16px] font-semibold text-paper">{e.company}</span>
+                  <span className="mt-1 block text-base text-paper/80">{e.company}</span>
+                  <span className="mt-2 block text-sm tabular-nums text-accentSoft sm:hidden">
+                    {e.period}
+                  </span>
                 </span>
-                <span className="hidden shrink-0 text-[13px] font-semibold tabular-nums text-gold sm:block">
+                <span className="hidden shrink-0 text-sm tabular-nums text-accentSoft sm:block">
                   {e.period}
                 </span>
                 <span className="expand-btn expand-btn-dark" aria-hidden>
                   {isOpen ? "−" : "+"}
                 </span>
               </button>
-              <p className="pb-1 text-[12.5px] font-medium tabular-nums text-accentSoft sm:hidden">
-                {e.period}
-              </p>
               {isOpen && (
-                <div className="pb-5">
-                  <p className="max-w-xl text-[15px] leading-relaxed text-paper/80">{e.summary}</p>
-                  <ul className="mt-3 max-w-xl space-y-1.5 text-[14.5px] leading-relaxed text-paper/75">
+                <div className="pb-8">
+                  <p className="max-w-2xl text-base leading-relaxed text-paper/90">{e.summary}</p>
+                  <ul className="mt-4 max-w-2xl space-y-2 text-sm leading-relaxed text-paper/80">
                     {e.points.map((p) => (
                       <li key={p.slice(0, 48)}>
-                        <span className="mr-2 text-gold">·</span>
+                        <span className="mr-2 text-accentSoft">·</span>
                         {p}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-3 flex max-w-xl flex-wrap gap-1.5">
+                  <div className="mt-4 flex max-w-2xl flex-wrap gap-2">
                     {e.tools.map((t) => (
                       <span key={t} className="chip-dark">
                         {t}

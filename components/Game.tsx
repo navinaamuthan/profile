@@ -163,7 +163,7 @@ export default function Game() {
   }, []);
 
   return (
-    <div className="overflow-hidden rounded-b-2xl border border-t-0 border-white/10 bg-graphite shadow-xl">
+    <div className="overflow-hidden rounded-b-2xl border border-t-0 border-white/10 bg-navy shadow-xl">
       <div className="flex items-center justify-between px-5 pt-2.5">
         <p className="font-mono text-[11px] text-paper/60">
           offer run · space or click to jump

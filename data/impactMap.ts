@@ -1,10 +1,12 @@
+export type ImpactCategory = "governance" | "ai" | "product" | "fullstack" | "oss";
+
 export type ImpactProject = {
   name: string;
   tag: string;
   summary: string;
   x: number; // 0–100: Technical Depth (left=strategy, right=deep-tech)
   y: number; // 0–100: Business Impact (bottom=learning, top=production)
-  color: string; // Tailwind color token
+  category: ImpactCategory;
 };
 
 export const impactProjects: ImpactProject[] = [
@@ -14,7 +16,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Ontology-driven AI ethics assessor — 207 requirements, 4 frameworks, published URI.",
     x: 82,
     y: 78,
-    color: "#0F8B8D", // teal — governance
+    category: "governance",
   },
   {
     name: "AuditAI",
@@ -22,7 +24,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Credit-risk fairness pipeline with automated EU AI Act audit reports.",
     x: 70,
     y: 72,
-    color: "#0F8B8D", // teal — governance
+    category: "governance",
   },
   {
     name: "IGNITRIX",
@@ -30,7 +32,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Dual-agent financial advisor — Top 0.5% of 50,000+ teams at Google Cloud hackathon.",
     x: 75,
     y: 85,
-    color: "#8B6914", // violet — AI/ML
+    category: "ai",
   },
   {
     name: "EIREVAL",
@@ -38,7 +40,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Benchmarking LLM understanding of Irish and EU financial regulation.",
     x: 85,
     y: 55,
-    color: "#8B6914", // violet — AI/ML
+    category: "ai",
   },
   {
     name: "Atlas PRD",
@@ -46,7 +48,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Product spec for a cross-border credit passport — live hosted PRD.",
     x: 20,
     y: 65,
-    color: "#A67C52", // bronze — product
+    category: "product",
   },
   {
     name: "PPD Talkbot",
@@ -54,7 +56,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Fine-tuned chatbot for postpartum depression early recognition.",
     x: 65,
     y: 60,
-    color: "#8B6914", // violet — AI/ML
+    category: "ai",
   },
   {
     name: "RetailCache",
@@ -62,7 +64,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Customer sentiment research and market sizing for fashion retail — ISCG engagement.",
     x: 30,
     y: 90,
-    color: "#A67C52", // bronze — product/consulting
+    category: "product",
   },
   {
     name: "Ready72",
@@ -70,7 +72,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Power-outage resilience planner — Build for Ireland hackathon.",
     x: 50,
     y: 70,
-    color: "#E4573D", // coral — full-stack
+    category: "fullstack",
   },
   {
     name: "Omdena (3 projects)",
@@ -78,7 +80,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "Smart farming, autism screening, inflation coping — global volunteer ML teams.",
     x: 60,
     y: 45,
-    color: "#2F5D50", // leaf — open-source
+    category: "oss",
   },
   {
     name: "iQube (PM)",
@@ -86,7 +88,7 @@ export const impactProjects: ImpactProject[] = [
     summary: "4 production AI systems, 10,000+ users, 12+ engineers managed.",
     x: 25,
     y: 95,
-    color: "#A67C52", // bronze — product
+    category: "product",
   },
   {
     name: "e2open",
@@ -94,6 +96,6 @@ export const impactProjects: ImpactProject[] = [
     summary: "Fortune 500 supply chain product across 120+ countries.",
     x: 40,
     y: 88,
-    color: "#A67C52", // bronze — product
+    category: "product",
   },
 ];

@@ -34,12 +34,12 @@ export default function Skills() {
   };
 
   return (
-    <Section id="skills" index="04" label="Skills" color="#A67C52">
+    <Section id="skills" index="04" label="Skills">
       <div className="skills-matrix">
         {skillCategories.map((c) => (
           <div key={c.id} className="skills-row">
-            <h3>{c.label}</h3>
-            <div className="flex flex-wrap gap-1.5">
+            <h3 className="label">{c.label}</h3>
+            <div className="flex flex-wrap gap-2">
               {c.skills.map((s) => {
                 const certs = skillToCerts[s.name];
                 const hasProjects = Boolean(s.projects?.length);

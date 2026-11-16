@@ -14,39 +14,20 @@ const groups: { label: string; tags: string[] | null }[] = [
   { label: "Open source", tags: ["Open Source ML"] },
 ];
 
-const tagColors: Record<string, string> = {
-  "Agentic AI": "#7048E8",
-  "LLM Evaluation": "#7048E8",
-  "LLM Education": "#7048E8",
-  "Responsible AI": "#2F9E44",
-  "AI for Health": "#0F8B8D",
-  "Product Thinking": "#E4573D",
-  "Personal Build": "#E4573D",
-  "Hackathon · AI for Public Safety": "#D97706",
-  "Computer Vision": "#D97706",
-  "Open Source ML": "#0B7285",
-};
-
-function FolderIcon({ color }: { color: string }) {
+function FolderIcon({ flagship }: { flagship: boolean }) {
   return (
-    <svg viewBox="0 0 64 48" className="h-11 w-14" aria-hidden>
+    <svg
+      viewBox="0 0 64 48"
+      className={`h-9 w-12 ${flagship ? "text-accent" : "text-muted"}`}
+      aria-hidden
+    >
       <path
         d="M4 10c0-2.2 1.8-4 4-4h16l6 6h26c2.2 0 4 1.8 4 4v24c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V10z"
-        fill={color}
-        opacity="0.75"
+        fill="currentColor"
+        opacity="0.55"
       />
-      <path d="M4 18h56v22c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V18z" fill={color} />
+      <path d="M4 18h56v22c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V18z" fill="currentColor" />
     </svg>
-  );
-}
-
-function TrafficLights() {
-  return (
-    <span className="flex gap-1.5" aria-hidden>
-      <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
-      <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
-      <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-    </span>
   );
 }
 
@@ -79,26 +60,24 @@ export default function Finder() {
   return (
     <>
       <div className="window overflow-hidden">
-        {/* Title bar */}
-        <div className="flex items-center gap-4 border-b border-line bg-white/60 px-4 py-3">
-          <TrafficLights />
-          <p className="flex-1 text-center text-[13px] text-muted">
-            ~/navina/projects · {visible.length} items
-          </p>
-          <span className="w-12" aria-hidden />
+        <div className="flex items-center justify-between gap-4 border-b border-line px-4 py-3">
+          <p className="label">Projects</p>
+          <p className="text-sm tabular-nums text-muted">{visible.length} items</p>
         </div>
 
         <div className="grid sm:grid-cols-[11rem_1fr]">
-          {/* Sidebar */}
-          <div className="flex gap-1.5 overflow-x-auto border-b border-line bg-white/40 p-3 sm:flex-col sm:border-b-0 sm:border-r">
+          {/* Category filter */}
+          <div className="flex gap-1 overflow-x-auto border-b border-line p-2 sm:flex-col sm:border-b-0 sm:border-r sm:p-3">
             {groups.map((g) => (
               <button
                 key={g.label}
+                type="button"
                 onClick={() => setGroup(g)}
-                className={`whitespace-nowrap rounded-md px-3 py-1.5 text-left text-[13px] transition-colors ${
+                aria-pressed={g.label === group.label}
+                className={`min-h-10 whitespace-nowrap rounded-sm px-3 py-2 text-left text-sm transition-colors ${
                   g.label === group.label
-                    ? "bg-accent/10 text-accent"
-                    : "text-muted hover:bg-line/40 hover:text-ink"
+                    ? "bg-navy font-semibold text-paper"
+                    : "text-muted hover:text-ink"
                 }`}
               >
                 {g.label}
@@ -106,89 +85,80 @@ export default function Finder() {
             ))}
           </div>
 
-          {/* File grid */}
-          <div className="grid min-h-[16rem] grid-cols-2 content-start gap-1 p-4 sm:grid-cols-3 md:grid-cols-4">
-            {visible.map((p) => (
-              <button
-                key={p.name}
-                id={p.flagship || p.featured ? undefined : projectId(p.name)}
-                onClick={() => setOpenProject(p)}
-                className="file-tile flex flex-col items-center gap-2 rounded-lg p-4 text-center"
-                title={p.summary}
-              >
-                <FolderIcon color={tagColors[p.tag] ?? "#1E3A8A"} />
-                <span className="text-[13px] font-medium leading-snug">
-                  {(p.flagship || p.featured) && (
-                    <span className="mr-1 text-accent" aria-hidden>
-                      ★
-                    </span>
-                  )}
-                  {p.name}
-                </span>
-                <span
-                  className="rounded-full px-2 py-0.5 text-[10px] font-medium"
-                  style={{
-                    color: tagColors[p.tag] ?? "#1E3A8A",
-                    backgroundColor: `${tagColors[p.tag] ?? "#1E3A8A"}1A`,
-                  }}
+          {/* Project grid */}
+          <div className="grid min-h-[16rem] grid-cols-2 content-start gap-1 p-3 sm:grid-cols-3 sm:p-4 md:grid-cols-4">
+            {visible.map((p) => {
+              const flagship = Boolean(p.flagship || p.featured);
+              return (
+                <button
+                  key={p.name}
+                  type="button"
+                  id={flagship ? undefined : projectId(p.name)}
+                  onClick={() => setOpenProject(p)}
+                  className="file-tile flex flex-col items-center gap-2 px-2 py-4 text-center"
+                  title={p.summary}
                 >
-                  {p.tag}
-                </span>
-              </button>
-            ))}
+                  <FolderIcon flagship={flagship} />
+                  <span className="text-sm font-semibold leading-snug">
+                    {flagship && (
+                      <span className="mr-1 text-accent" aria-hidden>
+                        ★
+                      </span>
+                    )}
+                    {p.name}
+                  </span>
+                  <span className="text-xs leading-snug text-muted">{p.tag}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        <div className="border-t border-line bg-white/40 px-4 py-2 text-[11px] text-muted">
-          Folder colours follow the category. ★ marks the flagship work. Click any folder for the
-          full story.
+        <div className="border-t border-line px-4 py-3 text-xs text-muted">
+          ★ and bronze folders mark the flagship work. Click any folder for the full story.
         </div>
       </div>
 
       {/* Quick Look */}
       {openProject && (
         <div
-          className="quicklook-overlay fixed inset-0 z-[70] flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm"
+          className="quicklook-overlay fixed inset-0 z-[70] flex items-center justify-center bg-navy/60 p-4"
           onClick={() => setOpenProject(null)}
           role="dialog"
           aria-modal="true"
           aria-label={openProject.name}
         >
           <div
-            className="quicklook window max-h-[85vh] w-full max-w-xl overflow-y-auto bg-paper"
+            className="quicklook window max-h-[85vh] w-full max-w-xl overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 flex items-center gap-4 border-b border-line bg-paper/95 px-4 py-3 backdrop-blur">
+            <div className="sticky top-0 flex items-center justify-between gap-4 border-b border-line bg-surface py-2 pl-6 pr-2">
+              <p className="label truncate">{openProject.name} · preview</p>
               <button
+                type="button"
                 onClick={() => setOpenProject(null)}
                 aria-label="Close preview"
-                className="group flex gap-1.5"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-paper hover:text-ink"
               >
-                <span className="flex h-3 w-3 items-center justify-center rounded-full bg-[#FF5F57] text-[9px] text-ink/0 transition-colors group-hover:text-ink/70">
-                  ×
-                </span>
-                <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" aria-hidden />
-                <span className="h-3 w-3 rounded-full bg-[#28C840]" aria-hidden />
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
               </button>
-              <p className="flex-1 truncate text-center text-[13px] text-muted">
-                {openProject.name} · preview
-              </p>
-              <span className="w-12" aria-hidden />
             </div>
 
             <div className="p-6 sm:p-8">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-accent">{openProject.tag}</p>
-              <h3 className="mt-2 font-display text-3xl tracking-tight">{openProject.name}</h3>
-              <p className="mt-3 font-display text-lg leading-relaxed text-ink/90">
+              <p className="tag-pill">{openProject.tag}</p>
+              <h3 className="mt-2 font-display text-2xl font-bold tracking-tight">{openProject.name}</h3>
+              <p className="mt-4 text-base leading-relaxed text-ink">
                 {openProject.summary}
               </p>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted">{openProject.solution}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{openProject.solution}</p>
 
               {openProject.metrics.length > 0 && (
-                <p className="mt-4 text-[13px] text-accent">{openProject.metrics.join(" · ")}</p>
+                <p className="mt-4 text-sm font-semibold text-accent">{openProject.metrics.join(" · ")}</p>
               )}
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {openProject.tech.map((t) => (
                   <span key={t} className="chip">
                     {t}
@@ -197,7 +167,7 @@ export default function Finder() {
               </div>
 
               {(openProject.github || openProject.live) && (
-                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5 text-[15px]">
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-4 text-base">
                   {openProject.live && (
                     <a
                       href={openProject.live}

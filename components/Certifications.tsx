@@ -36,70 +36,50 @@ function CertCard({
 }) {
   const href = c.url;
   const body = (
-    <>
-      <div className="cert-card-glow" style={{ background: c.color }} aria-hidden />
-      <div className="relative flex gap-4">
+    <div className="flex gap-4">
+      <div className="cert-thumb">
         {c.image ? (
-          <div className="cert-badge-frame shrink-0">
-            <Image
-              src={c.image}
-              alt={`${c.title} badge`}
-              width={88}
-              height={88}
-              className="h-[88px] w-[88px] object-contain"
-            />
-          </div>
+          <Image
+            src={c.image}
+            alt={`${c.title} badge`}
+            width={64}
+            height={64}
+            className="h-full w-full object-contain"
+          />
         ) : (
-          <div
-            className="flex h-[88px] w-[88px] shrink-0 flex-col items-center justify-center rounded-2xl border text-center"
-            style={{
-              borderColor: `${c.color}55`,
-              background: `linear-gradient(145deg, ${c.color}22, ${c.color}08)`,
-              color: c.color,
-            }}
-          >
-            <span className="font-display text-2xl font-bold tracking-tight">
-              {issuerInitials(c.issuer)}
-            </span>
-            <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] opacity-70">
-              Cert
-            </span>
-          </div>
+          <span className="font-display text-xl font-bold tracking-tight text-accent" aria-hidden>
+            {issuerInitials(c.issuer)}
+          </span>
         )}
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <span
-              className="rounded-full px-2.5 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.12em]"
-              style={{ color: c.color, background: `${c.color}14` }}
-            >
-              {c.issuer.split("·")[0].trim()}
-            </span>
-            <span className="text-[12px] tabular-nums text-muted">{c.issued}</span>
-          </div>
-          <h3 className="mt-2 font-display text-[17px] font-bold leading-snug text-ink">{c.title}</h3>
-          <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{c.summary}</p>
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {c.skills.slice(0, 4).map((s) => (
-              <span key={s} className="cert-skill-chip">
-                {s}
-              </span>
-            ))}
-          </div>
-          {(c.credentialId || href) && (
-            <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-muted">
-              {c.credentialId && (
-                <span className="font-mono text-[11px] text-ink/55">ID {c.credentialId}</span>
-              )}
-              {href && (
-                <span className="font-semibold text-bronze">
-                  {href.endsWith(".pdf") ? "View PDF →" : "Verify credential →"}
-                </span>
-              )}
-            </p>
-          )}
-        </div>
       </div>
-    </>
+      <div className="min-w-0 flex-1">
+        <p className="flex flex-wrap items-baseline gap-x-2 text-xs">
+          <span className="font-semibold uppercase tracking-[0.12em] text-accent">
+            {c.issuer.split("·")[0].trim()}
+          </span>
+          <span className="tabular-nums text-muted">{c.issued}</span>
+        </p>
+        <h3 className="mt-1 font-display text-lg font-bold leading-snug text-ink">{c.title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{c.summary}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {c.skills.slice(0, 4).map((s) => (
+            <span key={s} className="cert-skill-chip">
+              {s}
+            </span>
+          ))}
+        </div>
+        {(c.credentialId || href) && (
+          <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
+            {c.credentialId && <span className="break-all tabular-nums">ID {c.credentialId}</span>}
+            {href && (
+              <span className="text-sm font-semibold text-accent">
+                {href.endsWith(".pdf") ? "View PDF →" : "Verify credential →"}
+              </span>
+            )}
+          </p>
+        )}
+      </div>
+    </div>
   );
 
   const className = `cert-card block h-full ${active ? "is-active" : ""} ${dimmed ? "is-dimmed" : ""}`;
@@ -151,9 +131,9 @@ export default function Certifications() {
   );
 
   return (
-    <Section id="certifications" index="05" label="Certifications" color="#A67C52">
+    <Section id="certifications" index="05" label="Certifications">
       <Reveal>
-        <p className="max-w-2xl text-[16px] leading-relaxed text-ink/80">
+        <p className="max-w-2xl text-base leading-relaxed text-muted">
           Verified credentials that back the Skills section: Python, deep learning, big-data ML,
           security, and product.
         </p>
@@ -161,13 +141,12 @@ export default function Certifications() {
 
       {/* Badge medal rail */}
       <Reveal delay={60}>
-        <div className="cert-rail mt-10">
-          {featured.map((c, i) => (
+        <div className="cert-rail mt-8">
+          {featured.map((c) => (
             <a
               key={c.id}
               href={`#cert-${c.id}`}
               className="cert-medal"
-              style={{ animationDelay: `${i * 90}ms` }}
               onClick={(e) => {
                 e.preventDefault();
                 setSpotlight(c.id);
@@ -178,15 +157,17 @@ export default function Certifications() {
                 window.setTimeout(() => setSpotlight(null), 2800);
               }}
             >
-              <span className="cert-medal-ring" style={{ borderColor: `${c.color}66` }} />
               <Image
                 src={c.image!}
-                alt={c.title}
-                width={120}
-                height={120}
-                className="relative z-[1] h-[108px] w-[108px] object-contain drop-shadow-md"
+                alt=""
+                width={72}
+                height={72}
+                className="h-[72px] w-[72px] object-contain"
               />
-              <span className="cert-medal-label">{c.issuer.split("·")[0].trim()}</span>
+              <span>
+                <span className="block text-sm font-semibold text-ink">{c.title}</span>
+                <span className="label mt-1 block">{c.issuer.split("·")[0].trim()}</span>
+              </span>
             </a>
           ))}
         </div>
@@ -194,7 +175,7 @@ export default function Certifications() {
 
       {/* Filters */}
       <Reveal delay={100}>
-        <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter certifications">
+        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Filter certifications">
           {filters.map((f) => (
             <button
               key={f.id}
@@ -210,7 +191,7 @@ export default function Certifications() {
         </div>
       </Reveal>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
         {visible.map((c, i) => (
           <Reveal key={c.id} delay={Math.min(i * 50, 200)}>
             <CertCard
@@ -223,7 +204,7 @@ export default function Certifications() {
       </div>
 
       {visible.length === 0 && (
-        <p className="mt-8 text-[14px] text-muted">No certifications in this filter.</p>
+        <p className="mt-8 text-sm text-muted">No certifications in this filter.</p>
       )}
     </Section>
   );

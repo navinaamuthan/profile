@@ -45,17 +45,17 @@ const social = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[calc(100svh-4.5rem)] flex-col px-6 md:px-10">
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center py-16 sm:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_22rem] lg:gap-20">
+    <section id="top" className="relative flex min-h-[100svh] flex-col px-6 pt-16 md:px-10">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center py-12 sm:py-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
           <div>
             <p
-              className="rise mb-5 font-display text-[12px] font-bold uppercase tracking-[0.2em] text-bronze"
+              className="rise label mb-4 !text-accent"
               style={{ animationDelay: "120ms" }}
             >
               Product Manager &amp; AI Engineer
             </p>
-            <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-bold leading-[0.98] tracking-[-0.03em]">
+            <h1 className="font-display text-[clamp(2.75rem,8vw,6rem)] font-bold leading-none tracking-[-0.03em]">
               {["Navina", "Ganapathy", "Amuthan"].map((l, i) => (
                 <span key={l} className="mask">
                   <span
@@ -73,7 +73,7 @@ export default function Hero() {
               style={{ animationDelay: "400ms" }}
             />
             <p
-              className="rise mt-7 max-w-md text-[17px] font-medium leading-relaxed text-ink/80"
+              className="rise mt-6 max-w-md text-lg leading-relaxed text-ink"
               style={{ animationDelay: "550ms" }}
             >
               I build AI products people trust — from roadmap to production to audit.
@@ -81,38 +81,38 @@ export default function Hero() {
           </div>
 
           <dl
-            className="rise space-y-6 border-l border-line pl-8"
+            className="rise space-y-6 border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0"
             style={{ animationDelay: "700ms" }}
           >
             <div>
-              <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">Education</dt>
-              <dd className="mt-1.5 text-[15px] leading-relaxed">
+              <dt className="label">Education</dt>
+              <dd className="mt-2 text-base leading-relaxed">
                 MSc Computer Science, Trinity College Dublin
-                <span className="mt-0.5 block text-muted">Distinction</span>
+                <span className="block text-muted">Distinction</span>
               </dd>
             </div>
             <div>
-              <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">Status</dt>
-              <dd className="mt-1.5 text-[15px] leading-relaxed">
+              <dt className="label">Status</dt>
+              <dd className="mt-2 text-base leading-relaxed">
                 Available immediately
-                <span className="mt-0.5 block text-muted">{personal.workAuth}</span>
+                <span className="block text-muted">{personal.workAuth}</span>
                 <span
-                  className="mt-2 block text-[12px] italic leading-relaxed text-muted/70"
+                  className="mt-2 block text-xs leading-relaxed text-muted"
                   lang="ga"
                   title="Irish: Available immediately. Valid visa. No sponsorship required."
                 >
-                  🇮🇪 Ar fáil láithreach · Víosa bailí · Ní theastaíonn urraíocht
+                  Ar fáil láithreach · Víosa bailí · Ní theastaíonn urraíocht
                 </span>
               </dd>
             </div>
             <div>
-              <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">Contact</dt>
+              <dt className="label">Contact</dt>
               <dd className="mt-3 flex gap-4">
                 {social.map((s) => (
                   <a
                     key={s.label}
                     href={s.href}
-                    className="group flex flex-col items-center gap-1.5"
+                    className="group flex flex-col items-center gap-2"
                     aria-label={s.label}
                     title={s.label}
                     {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
@@ -122,7 +122,7 @@ export default function Hero() {
                         {s.icon}
                       </svg>
                     </span>
-                    <span className="text-[11px] font-semibold text-muted group-hover:text-ink">
+                    <span className="text-xs font-semibold text-muted group-hover:text-ink">
                       {s.label}
                     </span>
                   </a>

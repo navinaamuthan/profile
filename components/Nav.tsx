@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 import LocalTime from "@/components/LocalTime";
 
-const items: { label: string; id: string; color: string }[] = [
-  { label: "About", id: "about", color: "#A67C52" },
-  { label: "Impact", id: "impact", color: "#0F8B8D" },
-  { label: "Experience", id: "experience", color: "#5C7C6A" },
-  { label: "Skills", id: "skills", color: "#B08D57" },
-  { label: "Certs", id: "certifications", color: "#8B6914" },
-  { label: "Work", id: "work", color: "#8B6914" },
-  { label: "Writing", id: "writing", color: "#1B3A4B" },
-  { label: "Recognition", id: "recognition", color: "#2F5D50" },
-  { label: "Contact", id: "contact", color: "#D4B896" },
+const items: { label: string; id: string }[] = [
+  { label: "About", id: "about" },
+  { label: "Impact", id: "impact" },
+  { label: "Experience", id: "experience" },
+  { label: "Skills", id: "skills" },
+  { label: "Certs", id: "certifications" },
+  { label: "Work", id: "work" },
+  { label: "Writing", id: "writing" },
+  { label: "Recognition", id: "recognition" },
+  { label: "Contact", id: "contact" },
 ];
 
 export default function Nav() {
@@ -53,9 +53,14 @@ export default function Nav() {
         solid ? "nav-solid" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3 md:px-10">
-        <a href="#top" className="font-display text-[15px] font-bold tracking-tight">
-          Navina Ganapathy Amuthan
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6 md:px-10">
+        <a
+          href="#top"
+          className="flex h-10 items-center whitespace-nowrap font-display text-base font-bold tracking-tight"
+          aria-label="Navina Ganapathy Amuthan, back to top"
+        >
+          <span className="sm:hidden">Navina G. Amuthan</span>
+          <span className="hidden sm:inline">Navina Ganapathy Amuthan</span>
         </a>
         <nav className="flex items-center gap-3" aria-label="Site">
           <div className="nav-pill hidden lg:flex">
@@ -67,7 +72,6 @@ export default function Nav() {
                   key={i.id}
                   href={`#${i.id}`}
                   className={`nav-item ${state}`}
-                  style={{ ["--nav-color" as string]: i.color }}
                   aria-current={current === i.id ? "true" : undefined}
                   title={visited.has(i.id) && current !== i.id ? `${i.label} · seen` : i.label}
                 >
@@ -95,7 +99,7 @@ export default function Nav() {
               </option>
             ))}
           </select>
-          <p className="meta-chip shrink-0">
+          <p className="meta-chip hidden shrink-0 sm:inline-flex lg:hidden xl:inline-flex">
             Dublin · <LocalTime />
           </p>
         </nav>

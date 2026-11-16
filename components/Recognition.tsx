@@ -5,20 +5,8 @@ import { awards, type Award } from "@/data/awards";
 const isCompetition = (a: Award) =>
   /winner|finalist/i.test(a.outcome) || /hackathon/i.test(a.title);
 
-const competitionColor = (outcome: string) => {
-  if (/winner/i.test(outcome)) return "#D97706";
-  if (/grand finalist/i.test(outcome)) return "#7048E8";
-  return "#6E6E73";
-};
-
-/** Distinct accents for leadership roles so the column isn't flat grey. */
-const roleColor = (a: Award) => {
-  if (/IEEE/i.test(a.title)) return "#0F8B8D";
-  if (/Trinity|Class Representative|STEM/i.test(a.title + a.outcome)) return "#1E3A8A";
-  if (/FemTech/i.test(a.title)) return "#E4573D";
-  if (/AWS|SheBuilds/i.test(a.title)) return "#FF9900";
-  return "#2F9E44";
-};
+/** Wins get the solid accent; everything else stays neutral. */
+const isWin = (a: Award) => /winner/i.test(a.outcome);
 
 function TrophyIcon() {
   return (
@@ -32,31 +20,26 @@ function PeopleIcon() {
   );
 }
 
-function Row({ a, icon, color }: { a: Award; icon: React.ReactNode; color: string }) {
+function Row({ a, icon }: { a: Award; icon: React.ReactNode }) {
   return (
-    <div
-      className="index-row flex items-start gap-3.5 rounded-xl border bg-white p-4"
-      style={{ borderColor: `${color}33` }}
-    >
-      <span
-        className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg"
-        style={{ color, background: `${color}17` }}
-      >
+    <div className="card flex items-start gap-4 p-4">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-paper text-accent">
         <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
           {icon}
         </svg>
       </span>
       <div className="min-w-0">
-        <p className="text-[15px] font-semibold leading-snug">{a.title}</p>
-        <div className="mt-1.5 flex flex-wrap items-center gap-2">
+        <p className="text-base font-semibold leading-snug">{a.title}</p>
+        <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
           <span
-            className="rounded-full px-2.5 py-0.5 text-[11.5px] font-semibold"
-            style={{ color, background: `${color}14` }}
+            className={`rounded-full px-3 py-0.5 text-xs font-semibold ${
+              isWin(a) ? "bg-accent text-surface" : "bg-paper text-ink"
+            }`}
           >
             {a.outcome}
           </span>
-          <span className="text-[12px] tabular-nums text-muted">{a.year}</span>
-          {a.scale ? <span className="text-[12px] text-muted">· {a.scale}</span> : null}
+          <span className="text-xs tabular-nums text-muted">{a.year}</span>
+          {a.scale ? <span className="text-xs text-muted">· {a.scale}</span> : null}
         </div>
       </div>
     </div>
@@ -68,28 +51,28 @@ export default function Recognition() {
   const roles = awards.filter((a) => !isCompetition(a));
 
   return (
-    <Section id="recognition" index="08" label="Recognition" color="#A67C52">
-      <div className="grid gap-10 lg:grid-cols-2">
+    <Section id="recognition" index="08" label="Recognition">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
         <div>
           <Reveal>
-            <h3 className="font-display text-2xl font-bold">Competitions</h3>
+            <h3 className="font-display text-xl font-bold">Competitions</h3>
           </Reveal>
-          <div className="mt-5 space-y-3">
+          <div className="mt-4 space-y-3">
             {competitions.map((a, i) => (
               <Reveal key={a.title} delay={Math.min(i * 50, 200)}>
-                <Row a={a} icon={<TrophyIcon />} color={competitionColor(a.outcome)} />
+                <Row a={a} icon={<TrophyIcon />} />
               </Reveal>
             ))}
           </div>
         </div>
         <div>
           <Reveal>
-            <h3 className="font-display text-2xl font-bold">Leadership & community</h3>
+            <h3 className="font-display text-xl font-bold">Leadership & community</h3>
           </Reveal>
-          <div className="mt-5 space-y-3">
+          <div className="mt-4 space-y-3">
             {roles.map((a, i) => (
               <Reveal key={a.title} delay={Math.min(i * 50, 200)}>
-                <Row a={a} icon={<PeopleIcon />} color={roleColor(a)} />
+                <Row a={a} icon={<PeopleIcon />} />
               </Reveal>
             ))}
           </div>
