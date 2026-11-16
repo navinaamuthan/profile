@@ -8,7 +8,7 @@ export default function Experience() {
   const [open, setOpen] = useState<string | null>(null);
 
   return (
-    <Section id="experience" index="02" label="Experience" color="#D4B896" dark>
+    <Section id="experience" index="03" label="Experience" color="#D4B896" dark>
       <ol>
         {experience.map((e) => {
           const id = `${e.role}-${e.company}`;

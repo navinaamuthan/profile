@@ -2,6 +2,7 @@ export type Award = { title: string; scale: string; outcome: string; year: strin
 export const awards: Award[] = [
   { title: "AWS SheBuilds Mentorship Community", scale: "Global programme", outcome: "Selected mentee", year: "2026", story: "Selected as a mentee for the 2026 AWS SheBuilds Mentorship Community." },
   { title: "Google Cloud Agentic AI Hackathon", scale: "50,000+ participants", outcome: "Grand Finalist, top 0.5%", year: "2025", story: "IGNITRIX was built on the bet that adversarial agents beat confident ones. The judges agreed." },
+  { title: "Build for Ireland Hackathon", scale: "National, OpenAI x Give(a)Go x Dogpatch Labs", outcome: "Participant — built Ready72", year: "2026", story: "Built an AI emergency planner that cites its sources. The verifier caught every planted fault." },
   { title: "Smart India Hackathon", scale: "National, India", outcome: "Grand Finalist", year: "2022", story: "36 hours, one national problem statement, and far too much coffee." },
   { title: "Bosch Fit.Kovai Hackathon", scale: "Regional, industry-judged", outcome: "Grand Finalist", year: "2022", story: "Computer vision meets Indian traffic. The traffic won a few rounds first." },
   { title: "Bloomberg BPuzzled", scale: "", outcome: "Winner", year: "2025", story: "Puzzles under time pressure. Basically product management with better feedback loops." },

@@ -2,7 +2,8 @@ import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { awards, type Award } from "@/data/awards";
 
-const isCompetition = (a: Award) => /winner|finalist/i.test(a.outcome);
+const isCompetition = (a: Award) =>
+  /winner|finalist/i.test(a.outcome) || /hackathon/i.test(a.title);
 
 const competitionColor = (outcome: string) => {
   if (/winner/i.test(outcome)) return "#D97706";
@@ -67,7 +68,7 @@ export default function Recognition() {
   const roles = awards.filter((a) => !isCompetition(a));
 
   return (
-    <Section id="recognition" index="07" label="Recognition" color="#A67C52">
+    <Section id="recognition" index="08" label="Recognition" color="#A67C52">
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
           <Reveal>

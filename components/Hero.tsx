@@ -53,7 +53,7 @@ export default function Hero() {
               className="rise mb-5 font-display text-[12px] font-bold uppercase tracking-[0.2em] text-bronze"
               style={{ animationDelay: "120ms" }}
             >
-              Product and AI: Development &amp; Management
+              Product Manager &amp; AI Engineer
             </p>
             <h1 className="font-display text-[clamp(2.9rem,8vw,6.2rem)] font-bold leading-[0.98] tracking-[-0.03em]">
               {["Navina", "Ganapathy", "Amuthan"].map((l, i) => (
@@ -76,7 +76,7 @@ export default function Hero() {
               className="rise mt-7 max-w-md text-[17px] font-medium leading-relaxed text-ink/80"
               style={{ animationDelay: "550ms" }}
             >
-              Product strategy, software delivery, and applied AI.
+              I build AI products people trust — from roadmap to production to audit.
             </p>
           </div>
 
@@ -96,6 +96,13 @@ export default function Hero() {
               <dd className="mt-1.5 text-[15px] leading-relaxed">
                 Available immediately
                 <span className="mt-0.5 block text-muted">{personal.workAuth}</span>
+                <span
+                  className="mt-2 block text-[12px] italic leading-relaxed text-muted/70"
+                  lang="ga"
+                  title="Irish: Available immediately. Valid visa. No sponsorship required."
+                >
+                  🇮🇪 Ar fáil láithreach · Víosa bailí · Ní theastaíonn urraíocht
+                </span>
               </dd>
             </div>
             <div>

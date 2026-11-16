@@ -20,6 +20,18 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    id: "gdpr-certified",
+    title: "GDPR Certified",
+    issuer: "LinkedIn Learning",
+    issued: "Mar 2026",
+    summary:
+      "Data protection regulation grounding: lawful bases, DPIAs, data subject rights, and cross-border transfer mechanisms.",
+    skills: ["GDPR", "Data Privacy", "EU AI Act"],
+    skillCategories: ["governance"],
+    color: "#0A66C2",
+    featured: true,
+  },
+  {
     id: "deep-learning-essentials",
     title: "Deep Learning Essentials",
     issuer: "IBM Skills Network",
@@ -31,19 +43,6 @@ export const certifications: Certification[] = [
     credentialId: "6c5a86c3-1b9a-4db8-a878-de865eab4d5a",
     image: "/certificates/deep-learning-essentials.png",
     color: "#7A103D",
-    featured: true,
-  },
-  {
-    id: "mta-python",
-    title: "MTA: Introduction to Programming Using Python",
-    issuer: "Microsoft",
-    issued: "Aug 2021",
-    summary: "Certified Python programming fundamentals: the base layer under every data and AI build on this site.",
-    skills: ["Python", "Python Programming"],
-    skillCategories: ["languages", "engineering"],
-    credentialId: "89657a11-0ab3-4fac-9f34-926ab3ef644c",
-    image: "/certificates/mta-python.png",
-    color: "#0F6CBD",
     featured: true,
   },
   {
@@ -70,17 +69,6 @@ export const certifications: Certification[] = [
     credentialId: "SE7VSE2KH52J",
     url: "https://www.coursera.org/account/accomplishments/certificate/SE7VSE2KH52J",
     color: "#182B49",
-  },
-  {
-    id: "cisco-programming",
-    title: "Cisco Programming",
-    issuer: "Cisco",
-    issued: "Sep 2022",
-    summary: "Programming fundamentals through Cisco’s curriculum: structured problem-solving and code literacy.",
-    skills: ["Programming", "Software Engineering"],
-    skillCategories: ["languages", "engineering"],
-    url: "/certificates/cisco-programming.pdf",
-    color: "#1BA0D7",
   },
   {
     id: "hacking-patching",
@@ -110,7 +98,9 @@ export const certifications: Certification[] = [
 
 /** Skill display names → certification ids (for Skills chips). */
 export const skillToCerts: Record<string, string[]> = {
-  Python: ["mta-python", "python-data-science-ai"],
+  Python: ["python-data-science-ai"],
+  GDPR: ["gdpr-certified"],
+  "Data Privacy": ["gdpr-certified"],
   SQL: ["python-data-science-ai"],
   "SQL & relational databases": ["python-data-science-ai"],
   TensorFlow: ["deep-learning-essentials"],

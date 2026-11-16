@@ -687,7 +687,7 @@ button.chip:hover {
 }
 
 .nav-pill {
-  @apply flex items-center gap-0.5 rounded-full border border-line bg-white/85 p-1;
+  @apply items-center gap-0.5 rounded-full border border-line bg-white/85 p-1;
   backdrop-filter: blur(10px);
 }
 

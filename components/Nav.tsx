@@ -5,6 +5,7 @@ import LocalTime from "@/components/LocalTime";
 
 const items: { label: string; id: string; color: string }[] = [
   { label: "About", id: "about", color: "#A67C52" },
+  { label: "Impact", id: "impact", color: "#0F8B8D" },
   { label: "Experience", id: "experience", color: "#5C7C6A" },
   { label: "Skills", id: "skills", color: "#B08D57" },
   { label: "Certs", id: "certifications", color: "#8B6914" },

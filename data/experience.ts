@@ -9,15 +9,28 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
+    company: "RetailCache (via ISCG)",
+    role: "Project Lead",
+    period: "Oct 2026 to Present",
+    summary:
+      "Leading a fashion retail consulting engagement through the Irish Strategy Consulting Group, running three coordinated workstreams from research through to a market-facing deliverable.",
+    points: [
+      "Designed and executed customer sentiment research on satisfaction and attrition drivers for a fashion retail client",
+      "Built a quantitative loss-based market sizing model to estimate addressable opportunity",
+      "Coordinating insights across three workstreams — sentiment research, market sizing, and a white paper — so findings flow into one cohesive deliverable",
+    ],
+    tools: ["Market research", "Quantitative modelling", "Strategy", "Client delivery", "Data analysis"],
+  },
+  {
     company: "pS-Eau (LEWAP / UNESCO)",
     role: "Project Lead",
-    period: "Feb 2026 to May 2026",
+    period: "Feb 2026 to Apr 2026",
     summary:
       "Led end-to-end delivery for a UNESCO-backed initiative supporting the Lebanese Water Actors Platform (LEWAP), owning scope, timeline, and stakeholder relationships independently.",
     points: [
       "Owned stakeholder engagement across senior leadership, including communication cadence and dependency mapping for a multi-party international programme",
       "Designed governance frameworks and scalable outreach systems that moved the organisation closer to financial independence",
-      "Automated data collection and reporting pipelines in Python, cutting manual processing overhead by 40%",
+      "Widened scope from 3 to 5 deliverables after identifying a data visibility gap, leading a team of 5 to deliver a partnership development strategy, outreach templates, and stakeholder engagement OKR tracker",
       "Operated in an ambiguous, fast-moving environment, turning undefined scope into structured deliverables on a fixed timeline",
     ],
     tools: ["Stakeholder engagement", "Product management", "Python", "Governance", "Reporting"],

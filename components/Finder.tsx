@@ -10,7 +10,7 @@ const groups: { label: string; tags: string[] | null }[] = [
   { label: "Responsible AI", tags: ["Responsible AI"] },
   { label: "ML for health", tags: ["AI for Health"] },
   { label: "Product", tags: ["Product Thinking", "Personal Build"] },
-  { label: "Hackathons", tags: ["Hackathon", "Computer Vision"] },
+  { label: "Hackathons", tags: ["Hackathon", "Hackathon · AI for Public Safety", "Computer Vision"] },
   { label: "Open source", tags: ["Open Source ML"] },
 ];
 
@@ -22,7 +22,7 @@ const tagColors: Record<string, string> = {
   "AI for Health": "#0F8B8D",
   "Product Thinking": "#E4573D",
   "Personal Build": "#E4573D",
-  Hackathon: "#D97706",
+  "Hackathon · AI for Public Safety": "#D97706",
   "Computer Vision": "#D97706",
   "Open Source ML": "#0B7285",
 };

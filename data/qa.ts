@@ -23,7 +23,7 @@ const entries: Entry[] = [
     keywords: ["experience", "background", "career", "worked", "history", "summary"],
     phrases: ["tell me about", "who is navina"],
     answer: {
-      text: "Short version: MSc Computer Science at Trinity College Dublin (Distinction). Product Manager for AI/ML at iQube, leading 12+ engineers and launching four production systems to 10,000+ users. Product Engineer at e2open, implementing planning systems for clients across 120+ countries. Also: business analysis at White House India, project lead on a UNESCO-backed pS-Eau programme, and ML research at Samsung and IIT Madras.",
+      text: "Short version: MSc Computer Science at Trinity College Dublin (Distinction). Product Manager for AI/ML at iQube, leading 12+ engineers and launching four production systems to 10,000+ users. Product Engineer at e2open, implementing planning systems for clients across 120+ countries. Currently consulting with RetailCache on customer intelligence for fashion retail. Also: business analysis at White House India, project lead on a UNESCO-backed pS-Eau programme, and ML research at Samsung and IIT Madras.",
       links: [{ label: "Experience section", href: "#experience" }],
     },
   },
@@ -185,7 +185,7 @@ const entries: Entry[] = [
     keywords: ["hire", "why", "fit", "strengths", "different", "special", "unique"],
     phrases: ["why should"],
     answer: {
-      text: "She combines product leadership, production software, and applied AI. At iQube she set the roadmap and launched ML features to 10,000+ users. At E2open she delivered data platforms for Fortune 500 clients. IGNITRIX placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. AuditAI turns fairness and risk checks into a repeatable pipeline.",
+      text: "She combines product leadership, production software, applied AI, and governance. At iQube she set the roadmap and launched ML features to 10,000+ users. At e2open she delivered data platforms for Fortune 500 clients across 120+ countries. IGNITRIX placed in the top 0.5% of 50,000+ teams at Google's Cloud Agentic AI Hackathon. AuditAI turns fairness and risk checks into a repeatable pipeline. Right now she's consulting with RetailCache on customer intelligence for fashion retail.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },
@@ -252,7 +252,7 @@ const entries: Entry[] = [
   {
     keywords: ["projects", "work", "built", "portfolio", "case", "studies"],
     answer: {
-      text: "Twelve projects live in the folder above. CV-featured first: AuditAI (github.com/navinaamuthan/audit-ai), IGNITRIX (github.com/navinaamuthan/ignitrix-financial-dual-agent-ai), and EIREVAL (github.com/navinaamuthan/eireval). Open any file for the full story.",
+      text: "Eight projects live in the folder above. CV-featured first: AuditAI (github.com/navinaamuthan/audit-ai), IGNITRIX (github.com/navinaamuthan/ignitrix-financial-dual-agent-ai), and EIREVAL (github.com/navinaamuthan/eireval). Open any file for the full story.",
       links: [{ label: "Selected work", href: "#work" }],
     },
   },

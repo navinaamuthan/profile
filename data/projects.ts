@@ -99,6 +99,19 @@ export const projects: Project[] = [
     github: "https://github.com/navinaamuthan/eireval",
   },
   {
+    name: "Ready72",
+    tag: "Hackathon · AI for Public Safety",
+    summary:
+      "A power-outage resilience planner that turns a government emergency booklet into a cited, household-specific emergency plan.",
+    problem:
+      "Government emergency guides are generic PDFs. When the power goes out, nobody reads 40 pages to figure out what applies to their household.",
+    solution:
+      "Built at the Build for Ireland hackathon (OpenAI x Give(a)Go x Dogpatch Labs): an AI planner and grounding verifier that takes a government booklet and generates a household-specific emergency plan with citations. A built-in verifier caught planted faults in adversarial testing. Team of 4; led the pitch, built the AI planner and integration layer.",
+    tech: ["Python", "OpenAI API", "RAG", "Adversarial Testing"],
+    metrics: ["Build for Ireland hackathon", "Adversarial fault detection verified", "Team of 4"],
+    lesson: "If the AI can't cite where it got the answer, the answer isn't safe to follow.",
+  },
+  {
     name: "Atlas PRD",
     tag: "Product Thinking",
     summary:
@@ -128,97 +141,16 @@ export const projects: Project[] = [
     github: "https://github.com/navinaamuthan/Post-Partum-Depression-Analysis",
   },
   {
-    name: "Omdena: Smart Farming, Kano State",
+    name: "Omdena Open Source Projects",
     tag: "Open Source ML",
     summary:
-      "AI for sustainable smallholder farming in Kano State, Nigeria.",
+      "Three distributed ML projects across global health, agriculture, and cost-of-living — each on a volunteer team spanning multiple countries.",
     problem:
-      "Smallholder farmers in Kano State, Nigeria needed AI-backed guidance for sustainable agriculture, with none of the data luxuries of a Silicon Valley problem.",
+      "Real-world ML problems in underserved communities rarely come with clean data, dedicated infrastructure, or co-located teams.",
     solution:
-      "AI for sustainable agriculture built with the Omdena Kano chapter: a distributed volunteer team turning messy agricultural data into usable models for a real community.",
-    tech: ["Python", "ML", "Remote Collaboration"],
-    metrics: ["Omdena chapter project, Nigeria"],
+      "Contributed as ML Engineer across three Omdena chapters: autism prediction in toddlers (health screening models where a false negative is a missed child), sustainable farming AI for smallholders in Kano State, Nigeria, and a cost-of-living chatbot for Lublin, Poland. Each project ran on a distributed global volunteer team turning messy data into usable models for a real community.",
+    tech: ["Python", "scikit-learn", "NLP", "ML", "Remote Collaboration"],
+    metrics: ["3 projects", "3 countries", "Recommendation for high performance"],
     lesson: "Open source teaches you to write code and docs for strangers. So does good product work.",
-    github: "https://github.com/navinaamuthan/KanoNigeriaChapter_SmartFarming",
-  },
-  {
-    name: "Few-Shot Learning with LLMs",
-    tag: "LLM Education",
-    summary:
-      "An interactive Streamlit playground for learning prompt engineering hands-on.",
-    problem:
-      "Few-shot learning is the cheapest capability upgrade in modern LLMs, and most people still learn it by trial and error.",
-    solution:
-      "An interactive Streamlit app teaching prompt engineering hands-on: three task types, 0 to 5 shots, real-time prompt construction, and accuracy-versus-cost analysis with interactive charts.",
-    tech: ["Python", "Streamlit", "Prompt Engineering", "Data Viz"],
-    metrics: ["3 task types, 0-5 shot interactive demos"],
-    lesson: "If you can teach a technique interactively, you actually understand it.",
-    github: "https://github.com/navinaamuthan/Few_Shot_Learning_with_LLM-s",
-  },
-  {
-    name: "SIH 2022: AUV Speed Measurement",
-    tag: "Hackathon",
-    summary:
-      "Speed measurement for autonomous underwater vehicles, where GPS does not exist.",
-    problem:
-      "Autonomous underwater vehicles need reliable speed measurement in conditions where GPS does not exist and sensors disagree.",
-    solution:
-      "Grand Finalist solution at Smart India Hackathon 2022 (problem NR1173): speed measurement for autonomous underwater vehicles.",
-    tech: ["Python", "C", "Signal Processing", "Embedded"],
-    metrics: ["Grand Finalist, Smart India Hackathon 2022"],
-    lesson: "Constraints you cannot google are the ones worth solving.",
-    github: "https://github.com/navinaamuthan/SiH-2022-Ignitriz",
-  },
-  {
-    name: "Nova",
-    tag: "Frontend · Personal Build",
-    summary:
-      "A zero-cost, zero-server manifestation companion that runs entirely in the browser.",
-    problem:
-      "Manifestation apps charge subscriptions for what a browser can do for free.",
-    solution:
-      "A fairy-tale manifestation companion built solo: daily affirmations, 369 tracking, gratitude journaling, mood orbs, four visual realms. Runs entirely in the browser on localStorage, $0/month. Component-driven React UI, careful state handling, installable as a PWA.",
-    tech: ["React", "JavaScript", "Vite", "Web Speech API", "localStorage"],
-    metrics: ["Zero-cost, zero-server, installable as a PWA"],
-    lesson: "The best side projects solve your own problem beautifully.",
-  },
-  {
-    name: "Traffic Detection Visual System",
-    tag: "Computer Vision",
-    summary:
-      "Traffic detection built for chaotic Indian roads, not benchmark datasets.",
-    problem:
-      "Urban traffic monitoring in Indian cities needed detection that works in chaotic, dense conditions.",
-    solution:
-      "ML-based visual traffic detection system, built for the Bosch Fit.Kovai Hackathon 2022.",
-    tech: ["Computer Vision", "ML", "Python"],
-    metrics: ["Grand Finalist, Bosch Fit.Kovai Hackathon 2022"],
-    lesson: "Real-world CV is 20% model, 80% dealing with the real world.",
-    github: "https://github.com/navinaamuthan/BGSW---Fit.Kovai-Hackathon-22",
-  },
-  {
-    name: "Omdena: Autism Prediction in Toddlers",
-    tag: "AI for Health",
-    summary:
-      "ML screening models where a false negative is a missed child.",
-    problem: "Early autism screening is inconsistent and access depends heavily on geography.",
-    solution:
-      "ML models predicting autism likelihood in toddlers from screening data, built as an ML Engineer on an open source team.",
-    tech: ["Python", "scikit-learn", "ML"],
-    metrics: ["Recommendation received for high performance"],
-    lesson: "In health ML, a false negative is not a metric. It is a missed child.",
-  },
-  {
-    name: "Omdena: Inflation-Coping Chatbot for Lublin",
-    tag: "Open Source ML",
-    summary:
-      "Conversational AI helping Lublin residents cope with the cost of living.",
-    problem:
-      "Residents of Lublin, Poland were being squeezed by rising inflation, and the people hit hardest are the least likely to have access to financial guidance.",
-    solution:
-      "Open source conversational AI helping Lublin residents cope with increased inflation and cost of living, built as an ML Engineer on a distributed global volunteer team.",
-    tech: ["NLP", "Python", "Conversational AI"],
-    metrics: ["Final push recognition for high contribution"],
-    lesson: "Accessibility and plain language beat feature breadth.",
   },
 ];

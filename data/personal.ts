@@ -1,10 +1,10 @@
 export const personal = {
   name: "Navina Ganapathy Amuthan",
   firstName: "Navina",
-  roleLine: "Product and AI: Development & Management · Dublin, Ireland",
+  roleLine: "Product Manager & AI Engineer · Dublin, Ireland",
   intro: [
-    "I work across product, software, and data: deciding what to build, shipping it with engineering teams, and keeping it reliable in production. MSc Computer Science (Intelligent Systems), Trinity College Dublin, Distinction.",
-    "Product Manager for AI/ML at iQube (four production systems, 10,000+ users, 12+ engineers). Product Engineer at e2open across 120+ countries. Also business analysis, UNESCO programme delivery, and ML research at Samsung and IIT Madras.",
+    "I take AI products from idea to production to compliance. MSc Computer Science (Intelligent Systems), Trinity College Dublin, Distinction.",
+    "Product Manager at iQube: four production AI systems, 10,000+ users, 12+ engineers. Product Engineer at e2open: enterprise delivery across 120+ countries. Project Lead on a UNESCO-backed programme. ML research at Samsung R&D and IIT Madras. Currently consulting with RetailCache on customer intelligence for fashion retail.",
   ],
   location: "Dublin, Ireland",
   email: "navinagamuthan@gmail.com",
@@ -12,7 +12,8 @@ export const personal = {
   linkedin: "https://linkedin.com/in/navinagamuthan",
   github: "https://github.com/navinaamuthan",
   workAuth: "Valid visa. No sponsorship required.",
-  openTo: "Roles spanning product, software engineering, data, and applied AI.",
+  openTo:
+    "Product Management, Technical PM, AI/ML Engineering, Data Science, Business Analysis, Tech Consulting, and Software Engineering roles in Dublin.",
   availability: "Available immediately.",
 
   education: [

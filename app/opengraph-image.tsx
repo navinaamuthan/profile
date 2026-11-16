@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Navina Ganapathy Amuthan | Product and AI: Development & Management";
+export const alt = "Navina Ganapathy Amuthan | Product Manager & AI Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default function OG() {
               fontWeight: 700,
             }}
           >
-            Product and AI: Development & Management
+            Product Manager & AI Engineer
           </div>
           <div
             style={{
@@ -45,7 +45,7 @@ export default function OG() {
             Navina Ganapathy Amuthan
           </div>
           <div style={{ fontSize: 28, color: "#6B6560", marginTop: 24 }}>
-            Product strategy, software delivery, and applied AI.
+            I build AI products people trust — from roadmap to production to audit.
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>

@@ -34,7 +34,7 @@ export default function Skills() {
   };
 
   return (
-    <Section id="skills" index="03" label="Skills" color="#A67C52">
+    <Section id="skills" index="04" label="Skills" color="#A67C52">
       <div className="skills-matrix">
         {skillCategories.map((c) => (
           <div key={c.id} className="skills-row">

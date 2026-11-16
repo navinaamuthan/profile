@@ -41,5 +41,7 @@ export const articles: Article[] = [
     date: "2026",
     readingTime: "Dissertation",
     status: "published",
+    link: "https://github.com/navinaamuthan/ai-ethics-framework-tool",
+    linkLabel: "View on GitHub →",
   },
 ];

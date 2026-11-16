@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Navina Ganapathy Amuthan | Product and AI: Development & Management · Dublin",
+      "Navina Ganapathy Amuthan | Product Manager & AI Engineer · Dublin",
     template: "%s | Navina Ganapathy Amuthan",
   },
   description:
-    "Product, software, and applied AI in Dublin. Product management, client-facing data platforms, APIs, and machine learning. TCD MSc Computer Science, Distinction. No sponsorship required.",
+    "Product management, AI engineering, data science, business analysis, and tech consulting in Dublin. TCD MSc Computer Science, Distinction. No sponsorship required.",
   keywords: [
     "Product Manager Dublin",
     "AI Product Dublin",
@@ -35,16 +35,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Navina Ganapathy Amuthan | Product and AI: Development & Management",
+    title: "Navina Ganapathy Amuthan | Product Manager & AI Engineer",
     description:
-      "Product strategy, software delivery, and applied AI. Dublin based, no sponsorship required.",
+      "AI products from roadmap to production to audit. Product, data, consulting, and engineering in Dublin. No sponsorship required.",
     siteName: "Navina Ganapathy Amuthan",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Navina Ganapathy Amuthan | Product and AI: Development & Management",
+    title: "Navina Ganapathy Amuthan | Product Manager & AI Engineer",
     description:
-      "Product strategy, software delivery, and applied AI. Dublin based, no sponsorship required.",
+      "AI products from roadmap to production to audit. Product, data, consulting, and engineering in Dublin. No sponsorship required.",
   },
   robots: { index: true, follow: true },
 };
@@ -53,7 +53,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: personal.name,
-  jobTitle: ["Product Manager", "Software Engineer"],
+  jobTitle: ["Product Manager", "AI Engineer", "Software Engineer"],
   email: `mailto:${personal.email}`,
   url: siteUrl,
   address: { "@type": "PostalAddress", addressLocality: "Dublin", addressCountry: "IE" },
